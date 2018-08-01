@@ -45,11 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsultationClient.cs" />
     <Compile Include="frmAjouterCLient.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAjouterCLient.Designer.cs">
       <DependentUpon>frmAjouterCLient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultClient.Designer.cs">
+      <DependentUpon>frmConsultClient.cs</DependentUpon>
     </Compile>
     <Compile Include="MDI.cs">
       <SubType>Form</SubType>
@@ -59,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmConsultClient.resx">
+      <DependentUpon>frmConsultClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
