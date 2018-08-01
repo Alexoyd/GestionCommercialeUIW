@@ -16,5 +16,17 @@ namespace GestionCommercialeUIW
         {
             InitializeComponent();
         }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); // quitter
+
+        }
+
+        private void aProposDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 frmAbout = new AboutBox1();
+            frmAbout.ShowDialog();
+        }
     }
 }
