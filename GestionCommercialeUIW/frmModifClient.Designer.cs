@@ -75,6 +75,7 @@
             this.grpBoxIdentif.TabIndex = 0;
             this.grpBoxIdentif.TabStop = false;
             this.grpBoxIdentif.Text = "Identification";
+            this.grpBoxIdentif.Enter += new System.EventHandler(this.grpBoxIdentif_Enter);
             // 
             // txtBoxTelephone
             // 
@@ -82,6 +83,7 @@
             this.txtBoxTelephone.Name = "txtBoxTelephone";
             this.txtBoxTelephone.Size = new System.Drawing.Size(160, 20);
             this.txtBoxTelephone.TabIndex = 11;
+            this.txtBoxTelephone.TextChanged += new System.EventHandler(this.txtBoxTelephone_TextChanged);
             // 
             // txtBoxCP
             // 
@@ -89,6 +91,7 @@
             this.txtBoxCP.Name = "txtBoxCP";
             this.txtBoxCP.Size = new System.Drawing.Size(100, 20);
             this.txtBoxCP.TabIndex = 10;
+            this.txtBoxCP.TextChanged += new System.EventHandler(this.txtBoxCP_TextChanged);
             // 
             // txtBoxAdresse
             // 
@@ -96,6 +99,7 @@
             this.txtBoxAdresse.Name = "txtBoxAdresse";
             this.txtBoxAdresse.Size = new System.Drawing.Size(255, 20);
             this.txtBoxAdresse.TabIndex = 9;
+            this.txtBoxAdresse.TextChanged += new System.EventHandler(this.txtBoxAdresse_TextChanged);
             // 
             // txtBoxRaisonSocial
             // 
@@ -103,6 +107,7 @@
             this.txtBoxRaisonSocial.Name = "txtBoxRaisonSocial";
             this.txtBoxRaisonSocial.Size = new System.Drawing.Size(255, 20);
             this.txtBoxRaisonSocial.TabIndex = 8;
+            this.txtBoxRaisonSocial.TextChanged += new System.EventHandler(this.txtBoxRaisonSocial_TextChanged);
             // 
             // txtBoxVille
             // 
@@ -110,6 +115,7 @@
             this.txtBoxVille.Name = "txtBoxVille";
             this.txtBoxVille.Size = new System.Drawing.Size(149, 20);
             this.txtBoxVille.TabIndex = 7;
+            this.txtBoxVille.TextChanged += new System.EventHandler(this.txtBoxVille_TextChanged);
             // 
             // lblNumClient
             // 
@@ -119,6 +125,7 @@
             this.lblNumClient.Size = new System.Drawing.Size(78, 13);
             this.lblNumClient.TabIndex = 1;
             this.lblNumClient.Text = "Numéro client :";
+            this.lblNumClient.Click += new System.EventHandler(this.lblNumClient_Click);
             // 
             // lblRaisonSoiale
             // 
@@ -128,6 +135,7 @@
             this.lblRaisonSoiale.Size = new System.Drawing.Size(84, 13);
             this.lblRaisonSoiale.TabIndex = 2;
             this.lblRaisonSoiale.Text = "Raison Sociale :";
+            this.lblRaisonSoiale.Click += new System.EventHandler(this.lblRaisonSoiale_Click);
             // 
             // lblAdresse
             // 
@@ -137,6 +145,7 @@
             this.lblAdresse.Size = new System.Drawing.Size(51, 13);
             this.lblAdresse.TabIndex = 3;
             this.lblAdresse.Text = "Adresse :";
+            this.lblAdresse.Click += new System.EventHandler(this.lblAdresse_Click);
             // 
             // lblCPVille
             // 
@@ -146,6 +155,7 @@
             this.lblCPVille.Size = new System.Drawing.Size(58, 13);
             this.lblCPVille.TabIndex = 4;
             this.lblCPVille.Text = "CP && Ville :";
+            this.lblCPVille.Click += new System.EventHandler(this.lblCPVille_Click);
             // 
             // lblTelephone
             // 
@@ -155,6 +165,7 @@
             this.lblTelephone.Size = new System.Drawing.Size(64, 13);
             this.lblTelephone.TabIndex = 5;
             this.lblTelephone.Text = "Téléphone :";
+            this.lblTelephone.Click += new System.EventHandler(this.lblTelephone_Click);
             // 
             // lblNUM
             // 
@@ -163,6 +174,7 @@
             this.lblNUM.Name = "lblNUM";
             this.lblNUM.Size = new System.Drawing.Size(100, 23);
             this.lblNUM.TabIndex = 6;
+            this.lblNUM.Click += new System.EventHandler(this.lblNUM_Click);
             // 
             // grpBoxCaract
             // 
@@ -181,6 +193,7 @@
             this.grpBoxCaract.TabIndex = 0;
             this.grpBoxCaract.TabStop = false;
             this.grpBoxCaract.Text = "Caractéristiques";
+            this.grpBoxCaract.Enter += new System.EventHandler(this.grpBoxCaract_Enter);
             // 
             // cmbBoxNature
             // 
@@ -189,6 +202,7 @@
             this.cmbBoxNature.Name = "cmbBoxNature";
             this.cmbBoxNature.Size = new System.Drawing.Size(121, 21);
             this.cmbBoxNature.TabIndex = 8;
+            this.cmbBoxNature.SelectedIndexChanged += new System.EventHandler(this.cmbBoxNature_SelectedIndexChanged);
             // 
             // cmbBoxActivité
             // 
@@ -197,6 +211,7 @@
             this.cmbBoxActivité.Name = "cmbBoxActivité";
             this.cmbBoxActivité.Size = new System.Drawing.Size(121, 21);
             this.cmbBoxActivité.TabIndex = 7;
+            this.cmbBoxActivité.SelectedIndexChanged += new System.EventHandler(this.cmbBoxActivité_SelectedIndexChanged);
             // 
             // txtBoxCA
             // 
@@ -204,6 +219,7 @@
             this.txtBoxCA.Name = "txtBoxCA";
             this.txtBoxCA.Size = new System.Drawing.Size(146, 20);
             this.txtBoxCA.TabIndex = 6;
+            this.txtBoxCA.TextChanged += new System.EventHandler(this.txtBoxCA_TextChanged);
             // 
             // txtBoxEffectif
             // 
@@ -211,6 +227,7 @@
             this.txtBoxEffectif.Name = "txtBoxEffectif";
             this.txtBoxEffectif.Size = new System.Drawing.Size(140, 20);
             this.txtBoxEffectif.TabIndex = 5;
+            this.txtBoxEffectif.TextChanged += new System.EventHandler(this.txtBoxEffectif_TextChanged);
             // 
             // lblNature
             // 
@@ -220,6 +237,7 @@
             this.lblNature.Size = new System.Drawing.Size(48, 13);
             this.lblNature.TabIndex = 4;
             this.lblNature.Text = "Nature : ";
+            this.lblNature.Click += new System.EventHandler(this.lblNature_Click);
             // 
             // lblCA
             // 
@@ -229,6 +247,7 @@
             this.lblCA.Size = new System.Drawing.Size(27, 13);
             this.lblCA.TabIndex = 3;
             this.lblCA.Text = "CA :";
+            this.lblCA.Click += new System.EventHandler(this.lblCA_Click);
             // 
             // lblActivite
             // 
@@ -238,6 +257,7 @@
             this.lblActivite.Size = new System.Drawing.Size(48, 13);
             this.lblActivite.TabIndex = 2;
             this.lblActivite.Text = "Activité :";
+            this.lblActivite.Click += new System.EventHandler(this.lblActivite_Click);
             // 
             // lblEffectif
             // 
@@ -247,6 +267,7 @@
             this.lblEffectif.Size = new System.Drawing.Size(46, 13);
             this.lblEffectif.TabIndex = 1;
             this.lblEffectif.Text = "Effectif :";
+            this.lblEffectif.Click += new System.EventHandler(this.lblEffectif_Click);
             // 
             // chkBoxPrive
             // 
@@ -257,6 +278,7 @@
             this.chkBoxPrive.TabIndex = 0;
             this.chkBoxPrive.Text = "Privé";
             this.chkBoxPrive.UseVisualStyleBackColor = true;
+            this.chkBoxPrive.CheckedChanged += new System.EventHandler(this.chkBoxPrive_CheckedChanged);
             // 
             // btnOK
             // 
@@ -266,6 +288,7 @@
             this.btnOK.TabIndex = 9;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnAnnuler
             // 
@@ -275,6 +298,7 @@
             this.btnAnnuler.TabIndex = 10;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // frmModifClient
             // 
@@ -287,6 +311,7 @@
             this.Controls.Add(this.grpBoxIdentif);
             this.Name = "frmModifClient";
             this.Text = "Modification Client";
+            this.Load += new System.EventHandler(this.frmModifClient_Load);
             this.grpBoxIdentif.ResumeLayout(false);
             this.grpBoxIdentif.PerformLayout();
             this.grpBoxCaract.ResumeLayout(false);
