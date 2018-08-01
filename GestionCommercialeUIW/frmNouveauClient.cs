@@ -30,5 +30,18 @@ namespace GestionCommercialeUIW
         {
             this.Close();
         }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            GestionCommercialeDll.Client nouveauClient = new GestionCommercialeDll.Client();
+
+            nouveauClient.NumClient = txtBoxNumClient.Text;
+
+            GestionCommercialeDll.Donnees.TabClients.Add(nouveauClient);
+
+           
+
+
+        }
     }
 }
