@@ -36,7 +36,9 @@ namespace GestionCommercialeUIW
 
         private void listeClientToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            frmListe = new frmListeClients(); // instancie le form listeClient
+            frmListe.MdiParent = this; // précise le conteneur MDI du form liste client
+            frmListe.Show();//Affiche le form liste dans son form conteneur
         }
     }
 }
