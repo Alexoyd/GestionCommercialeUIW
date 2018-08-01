@@ -86,6 +86,9 @@
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultClient.resx">
+      <DependentUpon>frmConsultClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmListeClients.resx">
       <DependentUpon>frmListeClients.cs</DependentUpon>
     </EmbeddedResource>
