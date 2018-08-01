@@ -93,5 +93,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GestionCommercialeDll\GestionCommercialeDll.csproj">
+      <Project>{9539cfb1-7566-4557-ad17-3e1aa3393da4}</Project>
+      <Name>GestionCommercialeDll</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
