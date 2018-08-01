@@ -19,7 +19,9 @@ namespace GestionCommercialeUIW
 
         private void btnContact_Click(object sender, EventArgs e)
         {
-            
+            frmNouveauContact frmContact = new frmNouveauContact();
+            frmContact.Show();
+
         }
     }
 }
