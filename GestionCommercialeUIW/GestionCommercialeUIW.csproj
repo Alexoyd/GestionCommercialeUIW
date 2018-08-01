@@ -57,6 +57,12 @@
     <Compile Include="frmAjouterCLient.Designer.cs">
       <DependentUpon>frmAjouterCLient.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultClient.Designer.cs">
+      <DependentUpon>frmConsultClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmModifClient.cs">
       <SubType>Form</SubType>
     </Compile>
