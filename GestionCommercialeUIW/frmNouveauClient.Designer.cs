@@ -41,6 +41,7 @@
             this.lblEffectif = new System.Windows.Forms.Label();
             this.chkBoxPrive = new System.Windows.Forms.CheckBox();
             this.grpBoxIdentif = new System.Windows.Forms.GroupBox();
+            this.txtBoxNumClient = new System.Windows.Forms.TextBox();
             this.txtBoxTelephone = new System.Windows.Forms.TextBox();
             this.txtBoxCP = new System.Windows.Forms.TextBox();
             this.txtBoxAdresse = new System.Windows.Forms.TextBox();
@@ -52,7 +53,6 @@
             this.lblCPVille = new System.Windows.Forms.Label();
             this.lblTelephone = new System.Windows.Forms.Label();
             this.btnContact = new System.Windows.Forms.Button();
-            this.txtBoxNumClient = new System.Windows.Forms.TextBox();
             this.grpBoxCaract.SuspendLayout();
             this.grpBoxIdentif.SuspendLayout();
             this.SuspendLayout();
@@ -189,6 +189,13 @@
             this.grpBoxIdentif.TabStop = false;
             this.grpBoxIdentif.Text = "Identification";
             // 
+            // txtBoxNumClient
+            // 
+            this.txtBoxNumClient.Location = new System.Drawing.Point(148, 30);
+            this.txtBoxNumClient.Name = "txtBoxNumClient";
+            this.txtBoxNumClient.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxNumClient.TabIndex = 15;
+            // 
             // txtBoxTelephone
             // 
             this.txtBoxTelephone.Location = new System.Drawing.Point(148, 169);
@@ -278,18 +285,11 @@
             this.btnContact.Text = "Contacts";
             this.btnContact.UseVisualStyleBackColor = true;
             // 
-            // txtBoxNumClient
-            // 
-            this.txtBoxNumClient.Location = new System.Drawing.Point(148, 30);
-            this.txtBoxNumClient.Name = "txtBoxNumClient";
-            this.txtBoxNumClient.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxNumClient.TabIndex = 15;
-            // 
             // frmNouveauClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 436);
+            this.ClientSize = new System.Drawing.Size(459, 436);
             this.Controls.Add(this.btnContact);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnAnnuler);
