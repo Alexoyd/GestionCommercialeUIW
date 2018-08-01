@@ -17,7 +17,7 @@ namespace GestionCommercialeUIW
            public MDI()
         {
             InitializeComponent();
-            frmListe = new frmListeClients(); // instancie le form listeClient
+            frmListe = new frmListeClients(this.frmListe); // instancie le form listeClient
             frmListe.MdiParent = this; // précise le conteneur MDI du form liste client
             frmListe.Show();//Affiche le form liste dans son form conteneur
         }
@@ -36,9 +36,23 @@ namespace GestionCommercialeUIW
 
         private void listeClientToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmListe = new frmListeClients(); // instancie le form listeClient
-            frmListe.MdiParent = this; // précise le conteneur MDI du form liste client
-            frmListe.Show();//Affiche le form liste dans son form conteneur
+            // VERSION 1 sans contrôle pour savoir si la fenêtre est déjà ouverte // 
+
+           /* frmListe = new frmListeClients(); // instancie le form listeClient
+            frmListe.MdiParent = this; // précise le conteneur MDI du form liste client     
+            frmListe.Show();//Affiche le form liste dans son form conteneur*/
+
+            if (this.frmListe == null) // le formListe n'est pas/plus affiché
+            {
+                this.frmListe = new frmListeClients(this.frmListe); // instancie le form
+                this.frmListe.MdiParent = this;
+                this.frmListe.Show(); // affiche le form
+            }
+
+            else
+            {
+                this.frmListe.Activate(); //Réactive le formListe (lui donne également le focus)
+            }
         }
     }
 }
