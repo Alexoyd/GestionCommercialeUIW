@@ -51,12 +51,6 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAjouterCLient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAjouterCLient.Designer.cs">
-      <DependentUpon>frmAjouterCLient.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmModifClient.cs">
       <SubType>Form</SubType>
     </Compile>
