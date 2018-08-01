@@ -15,6 +15,7 @@ namespace GestionCommercialeDll
         private string codePostal;
         private string ville;
         private string telephone;
+        private bool prive;
         private int effectif;
         private int chiffreAffaire;
         private string activite;
@@ -54,6 +55,12 @@ namespace GestionCommercialeDll
         {
             get { return this.telephone; }
             set { this.telephone = value; }
+        }
+
+        public bool Prive
+        {
+            get { return this.prive; }
+            set { this.prive = value; }
         }
 
         public int Effectif
