@@ -33,12 +33,11 @@
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fenêtreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificationClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.créationClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nouveauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ouvrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listeClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,24 +80,10 @@
             // fenêtreToolStripMenuItem
             // 
             this.fenêtreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.créationClientToolStripMenuItem,
-            this.modificationClientToolStripMenuItem});
+            this.listeClientToolStripMenuItem});
             this.fenêtreToolStripMenuItem.Name = "fenêtreToolStripMenuItem";
             this.fenêtreToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.fenêtreToolStripMenuItem.Text = "Fenêtre";
-            // 
-            // modificationClientToolStripMenuItem
-            // 
-            this.modificationClientToolStripMenuItem.Name = "modificationClientToolStripMenuItem";
-            this.modificationClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.modificationClientToolStripMenuItem.Text = "Modification client";
-            this.modificationClientToolStripMenuItem.Click += new System.EventHandler(this.modificationClientToolStripMenuItem_Click);
-            // 
-            // créationClientToolStripMenuItem
-            // 
-            this.créationClientToolStripMenuItem.Name = "créationClientToolStripMenuItem";
-            this.créationClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.créationClientToolStripMenuItem.Text = "Création client";
             // 
             // aideToolStripMenuItem
             // 
@@ -127,12 +112,20 @@
             this.ouvrirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ouvrirToolStripMenuItem.Text = "Ouvrir";
             // 
+            // listeClientToolStripMenuItem
+            // 
+            this.listeClientToolStripMenuItem.Name = "listeClientToolStripMenuItem";
+            this.listeClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listeClientToolStripMenuItem.Text = "Liste Client";
+            this.listeClientToolStripMenuItem.Click += new System.EventHandler(this.listeClientToolStripMenuItem_Click);
+            // 
             // MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MDI";
             this.Text = "Active Bretagne Informatique - Gestion Commerciale";
@@ -152,10 +145,9 @@
         private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificationClientToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem créationClientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nouveauToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ouvrirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listeClientToolStripMenuItem;
     }
 }
 

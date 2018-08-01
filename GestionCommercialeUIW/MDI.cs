@@ -12,9 +12,14 @@ namespace GestionCommercialeUIW
 {
     public partial class MDI : Form
     {
-        public MDI()
+        private frmListeClients frmListe; // déclare une instance du form liste client 
+
+           public MDI()
         {
             InitializeComponent();
+            frmListe = new frmListeClients(); // instancie le form listeClient
+            frmListe.MdiParent = this; // précise le conteneur MDI du form liste client
+            frmListe.Show();//Affiche le form liste dans son form conteneur
         }
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -29,9 +34,9 @@ namespace GestionCommercialeUIW
             frmAbout.ShowDialog();
         }
 
-        private void modificationClientToolStripMenuItem_Click(object sender, EventArgs e)
+        private void listeClientToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+           
         }
     }
 }
