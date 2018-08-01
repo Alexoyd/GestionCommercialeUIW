@@ -34,7 +34,6 @@
             this.lblCopyright = new System.Windows.Forms.Label();
             this.lblNomSociete = new System.Windows.Forms.Label();
             this.okButton = new System.Windows.Forms.Button();
-            this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -85,13 +84,6 @@
             this.okButton.UseVisualStyleBackColor = true;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
-            // textBoxDescription
-            // 
-            this.textBoxDescription.Location = new System.Drawing.Point(160, 172);
-            this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(107, 20);
-            this.textBoxDescription.TabIndex = 5;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -107,7 +99,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(287, 315);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.lblNomSociete);
             this.Controls.Add(this.lblCopyright);
@@ -128,7 +119,6 @@
         private System.Windows.Forms.Label lblCopyright;
         private System.Windows.Forms.Label lblNomSociete;
         private System.Windows.Forms.Button okButton;
-        private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
