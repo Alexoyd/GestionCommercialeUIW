@@ -8,9 +8,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionCommercialeDll", "GestionCommercialeDll\GestionCommercialeDll.csproj", "{9539CFB1-7566-4557-AD17-3E1AA3393DA4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{775F050D-33B2-4381-A48B-A8743F133677}"
-	ProjectSection(SolutionItems) = preProject
-		ConsultationClient.cs = ConsultationClient.cs
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

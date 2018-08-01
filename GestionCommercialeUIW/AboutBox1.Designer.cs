@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutBox1));
             this.lblNomProduit = new System.Windows.Forms.Label();
             this.lblversion = new System.Windows.Forms.Label();
             this.lblCopyright = new System.Windows.Forms.Label();
@@ -41,7 +42,7 @@
             // lblNomProduit
             // 
             this.lblNomProduit.AutoSize = true;
-            this.lblNomProduit.Location = new System.Drawing.Point(235, 13);
+            this.lblNomProduit.Location = new System.Drawing.Point(12, 172);
             this.lblNomProduit.Name = "lblNomProduit";
             this.lblNomProduit.Size = new System.Drawing.Size(85, 13);
             this.lblNomProduit.TabIndex = 0;
@@ -50,7 +51,7 @@
             // lblversion
             // 
             this.lblversion.AutoSize = true;
-            this.lblversion.Location = new System.Drawing.Point(235, 44);
+            this.lblversion.Location = new System.Drawing.Point(12, 200);
             this.lblversion.Name = "lblversion";
             this.lblversion.Size = new System.Drawing.Size(42, 13);
             this.lblversion.TabIndex = 1;
@@ -59,7 +60,7 @@
             // lblCopyright
             // 
             this.lblCopyright.AutoSize = true;
-            this.lblCopyright.Location = new System.Drawing.Point(235, 74);
+            this.lblCopyright.Location = new System.Drawing.Point(12, 230);
             this.lblCopyright.Name = "lblCopyright";
             this.lblCopyright.Size = new System.Drawing.Size(51, 13);
             this.lblCopyright.TabIndex = 2;
@@ -68,7 +69,7 @@
             // lblNomSociete
             // 
             this.lblNomSociete.AutoSize = true;
-            this.lblNomSociete.Location = new System.Drawing.Point(235, 109);
+            this.lblNomSociete.Location = new System.Drawing.Point(12, 258);
             this.lblNomSociete.Name = "lblNomSociete";
             this.lblNomSociete.Size = new System.Drawing.Size(92, 13);
             this.lblNomSociete.TabIndex = 3;
@@ -76,25 +77,27 @@
             // 
             // okButton
             // 
-            this.okButton.Location = new System.Drawing.Point(270, 284);
+            this.okButton.Location = new System.Drawing.Point(192, 248);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(75, 23);
             this.okButton.TabIndex = 4;
             this.okButton.Text = "OK";
             this.okButton.UseVisualStyleBackColor = true;
+            this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(238, 168);
+            this.textBoxDescription.Location = new System.Drawing.Point(160, 172);
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(107, 20);
             this.textBoxDescription.TabIndex = 5;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(13, 13);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(15, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(202, 322);
+            this.pictureBox1.Size = new System.Drawing.Size(252, 143);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
@@ -102,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 350);
+            this.ClientSize = new System.Drawing.Size(287, 315);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.okButton);

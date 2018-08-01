@@ -28,5 +28,10 @@ namespace GestionCommercialeUIW
             AboutBox1 frmAbout = new AboutBox1();
             frmAbout.ShowDialog();
         }
+
+        private void modificationClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

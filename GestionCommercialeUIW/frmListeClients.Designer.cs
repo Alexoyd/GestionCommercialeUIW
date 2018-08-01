@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.gxbZoneRecherche = new System.Windows.Forms.GroupBox();
-            this.lblRechercheRaisonSociale = new System.Windows.Forms.Label();
-            this.txtRecherche = new System.Windows.Forms.TextBox();
-            this.btnTous = new System.Windows.Forms.Button();
             this.btnRechercher = new System.Windows.Forms.Button();
+            this.btnTous = new System.Windows.Forms.Button();
+            this.txtRecherche = new System.Windows.Forms.TextBox();
+            this.lblRechercheRaisonSociale = new System.Windows.Forms.Label();
             this.btnFermer = new System.Windows.Forms.Button();
             this.btnNouveauClient = new System.Windows.Forms.Button();
             this.btnSupprimer = new System.Windows.Forms.Button();
@@ -54,31 +54,6 @@
             this.gxbZoneRecherche.TabStop = false;
             this.gxbZoneRecherche.Text = "Recherche";
             // 
-            // lblRechercheRaisonSociale
-            // 
-            this.lblRechercheRaisonSociale.AutoSize = true;
-            this.lblRechercheRaisonSociale.Location = new System.Drawing.Point(6, 25);
-            this.lblRechercheRaisonSociale.Name = "lblRechercheRaisonSociale";
-            this.lblRechercheRaisonSociale.Size = new System.Drawing.Size(87, 13);
-            this.lblRechercheRaisonSociale.TabIndex = 0;
-            this.lblRechercheRaisonSociale.Text = "Raison Sociale : ";
-            // 
-            // txtRecherche
-            // 
-            this.txtRecherche.Location = new System.Drawing.Point(99, 22);
-            this.txtRecherche.Name = "txtRecherche";
-            this.txtRecherche.Size = new System.Drawing.Size(301, 20);
-            this.txtRecherche.TabIndex = 1;
-            // 
-            // btnTous
-            // 
-            this.btnTous.Location = new System.Drawing.Point(487, 22);
-            this.btnTous.Name = "btnTous";
-            this.btnTous.Size = new System.Drawing.Size(75, 23);
-            this.btnTous.TabIndex = 2;
-            this.btnTous.Text = "Tous";
-            this.btnTous.UseVisualStyleBackColor = true;
-            // 
             // btnRechercher
             // 
             this.btnRechercher.Location = new System.Drawing.Point(406, 22);
@@ -87,6 +62,32 @@
             this.btnRechercher.TabIndex = 3;
             this.btnRechercher.Text = "Rechercher";
             this.btnRechercher.UseVisualStyleBackColor = true;
+            // 
+            // btnTous
+            // 
+            this.btnTous.Enabled = false;
+            this.btnTous.Location = new System.Drawing.Point(487, 22);
+            this.btnTous.Name = "btnTous";
+            this.btnTous.Size = new System.Drawing.Size(75, 23);
+            this.btnTous.TabIndex = 2;
+            this.btnTous.Text = "Tous";
+            this.btnTous.UseVisualStyleBackColor = true;
+            // 
+            // txtRecherche
+            // 
+            this.txtRecherche.Location = new System.Drawing.Point(99, 22);
+            this.txtRecherche.Name = "txtRecherche";
+            this.txtRecherche.Size = new System.Drawing.Size(301, 20);
+            this.txtRecherche.TabIndex = 1;
+            // 
+            // lblRechercheRaisonSociale
+            // 
+            this.lblRechercheRaisonSociale.AutoSize = true;
+            this.lblRechercheRaisonSociale.Location = new System.Drawing.Point(6, 25);
+            this.lblRechercheRaisonSociale.Name = "lblRechercheRaisonSociale";
+            this.lblRechercheRaisonSociale.Size = new System.Drawing.Size(87, 13);
+            this.lblRechercheRaisonSociale.TabIndex = 0;
+            this.lblRechercheRaisonSociale.Text = "Raison Sociale : ";
             // 
             // btnFermer
             // 
