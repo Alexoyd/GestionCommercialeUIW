@@ -1,6 +1,6 @@
 ﻿namespace GestionCommercialeUIW
 {
-    partial class frmAjouterCLient
+    partial class frmAjouterClient
     {
         /// <summary>
         /// Required designer variable.

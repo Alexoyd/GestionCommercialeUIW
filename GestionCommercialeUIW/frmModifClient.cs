@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GestionCommercialeUIW
+namespace WindowsFormsApp1
 {
-    public partial class frmAjouterClient : Form
+    public partial class frmModifClient : Form
     {
-        public frmAjouterClient()
+        public frmModifClient()
         {
             InitializeComponent();
         }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1E2498AF-CEB3-4B29-A1A6-AE8C3C7614CA}</ProjectGuid>
+    <ProjectGuid>{7A7B89C3-07C6-468D-B594-82E82BDC2E44}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>GestionCommercialeUIW</RootNamespace>
-    <AssemblyName>GestionCommercialeUIW</AssemblyName>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,40 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutBox1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AboutBox1.Designer.cs">
-      <DependentUpon>AboutBox1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmAjouterCLient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAjouterCLient.Designer.cs">
-      <DependentUpon>frmAjouterCLient.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmModifClient.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmModifClient.Designer.cs">
       <DependentUpon>frmModifClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MDI.Designer.cs">
-      <DependentUpon>MDI.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AboutBox1.resx">
-      <DependentUpon>AboutBox1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmModifClient.resx">
       <DependentUpon>frmModifClient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDI.resx">
-      <DependentUpon>MDI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -101,12 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GestionCommercialeDll\GestionCommercialeDll.csproj">
-      <Project>{9539cfb1-7566-4557-ad17-3e1aa3393da4}</Project>
-      <Name>GestionCommercialeDll</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
