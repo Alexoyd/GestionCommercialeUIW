@@ -16,5 +16,18 @@ namespace GestionCommercialeUIW
         {
             InitializeComponent();
         }
+
+        private void btnNouveauClient_Click(object sender, EventArgs e)
+        {
+            // instancie un form de saisie de stagiaire et l'affiche en modal
+            frmNouveauClient frmAjout = new frmNouveauClient();
+
+            // si on sort de la saisie par OK
+            if (frmAjout.ShowDialog() == DialogResult.OK)
+            {
+                frmAjout.Show();
+            }
+
+        }
     }
 }

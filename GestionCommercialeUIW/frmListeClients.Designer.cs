@@ -106,6 +106,7 @@
             this.btnNouveauClient.TabIndex = 5;
             this.btnNouveauClient.Text = "Nouveau Client";
             this.btnNouveauClient.UseVisualStyleBackColor = true;
+            this.btnNouveauClient.Click += new System.EventHandler(this.btnNouveauClient_Click);
             // 
             // btnSupprimer
             // 
