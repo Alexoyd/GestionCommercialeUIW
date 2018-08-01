@@ -77,5 +77,10 @@ namespace GestionCommercialeUIW
             dr = null;
 
         }
+
+        private void btnFermer_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
