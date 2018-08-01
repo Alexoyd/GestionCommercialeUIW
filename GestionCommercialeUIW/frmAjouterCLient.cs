@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestionCommercialeUIW
 {
-    public partial class frmAjouterCLient : Form
+    public partial class frmAjouterClient : Form
     {
-        public frmAjouterCLient()
+        public frmAjouterClient()
         {
             InitializeComponent();
         }
