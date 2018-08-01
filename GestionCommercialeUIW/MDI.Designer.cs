@@ -92,6 +92,7 @@
             this.modificationClientToolStripMenuItem.Name = "modificationClientToolStripMenuItem";
             this.modificationClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificationClientToolStripMenuItem.Text = "Modification client";
+            this.modificationClientToolStripMenuItem.Click += new System.EventHandler(this.modificationClientToolStripMenuItem_Click);
             // 
             // créationClientToolStripMenuItem
             // 
