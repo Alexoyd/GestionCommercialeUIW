@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionCommercialeUIW", "GestionCommercialeUIW\GestionCommercialeUIW.csproj", "{1E2498AF-CEB3-4B29-A1A6-AE8C3C7614CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionCommercialeDll", "GestionCommercialeDll\GestionCommercialeDll.csproj", "{9539CFB1-7566-4557-AD17-3E1AA3393DA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E2498AF-CEB3-4B29-A1A6-AE8C3C7614CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E2498AF-CEB3-4B29-A1A6-AE8C3C7614CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E2498AF-CEB3-4B29-A1A6-AE8C3C7614CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E2498AF-CEB3-4B29-A1A6-AE8C3C7614CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9539CFB1-7566-4557-AD17-3E1AA3393DA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9539CFB1-7566-4557-AD17-3E1AA3393DA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9539CFB1-7566-4557-AD17-3E1AA3393DA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9539CFB1-7566-4557-AD17-3E1AA3393DA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06C4CB4E-59E4-429C-8FFE-6A7EABF12A60}
+	EndGlobalSection
+EndGlobal
