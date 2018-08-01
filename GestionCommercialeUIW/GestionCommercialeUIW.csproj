@@ -51,11 +51,11 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAjouterCLient.cs">
+    <Compile Include="frmConsultClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAjouterCLient.Designer.cs">
-      <DependentUpon>frmAjouterCLient.cs</DependentUpon>
+    <Compile Include="frmConsultClient.Designer.cs">
+      <DependentUpon>frmConsultClient.cs</DependentUpon>
     </Compile>
     <Compile Include="frmListeClients.cs">
       <SubType>Form</SubType>

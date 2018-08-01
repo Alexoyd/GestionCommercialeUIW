@@ -30,11 +30,13 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fenêtreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificationClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.créationClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +61,13 @@
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.fichierToolStripMenuItem.Text = "Fichier";
             // 
+            // quitterToolStripMenuItem
+            // 
+            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.quitterToolStripMenuItem.Text = "Quitter";
+            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
+            // 
             // editionToolStripMenuItem
             // 
             this.editionToolStripMenuItem.Name = "editionToolStripMenuItem";
@@ -67,6 +76,9 @@
             // 
             // fenêtreToolStripMenuItem
             // 
+            this.fenêtreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modificationClientToolStripMenuItem,
+            this.créationClientToolStripMenuItem});
             this.fenêtreToolStripMenuItem.Name = "fenêtreToolStripMenuItem";
             this.fenêtreToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.fenêtreToolStripMenuItem.Text = "Fenêtre";
@@ -79,19 +91,24 @@
             this.aideToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.aideToolStripMenuItem.Text = "Aide";
             // 
-            // quitterToolStripMenuItem
-            // 
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.quitterToolStripMenuItem.Text = "Quitter";
-            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
-            // 
             // aProposDeToolStripMenuItem
             // 
             this.aProposDeToolStripMenuItem.Name = "aProposDeToolStripMenuItem";
-            this.aProposDeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aProposDeToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.aProposDeToolStripMenuItem.Text = "A propos de ...";
             this.aProposDeToolStripMenuItem.Click += new System.EventHandler(this.aProposDeToolStripMenuItem_Click);
+            // 
+            // modificationClientToolStripMenuItem
+            // 
+            this.modificationClientToolStripMenuItem.Name = "modificationClientToolStripMenuItem";
+            this.modificationClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificationClientToolStripMenuItem.Text = "Modification client";
+            // 
+            // créationClientToolStripMenuItem
+            // 
+            this.créationClientToolStripMenuItem.Name = "créationClientToolStripMenuItem";
+            this.créationClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.créationClientToolStripMenuItem.Text = "Création client";
             // 
             // MDI
             // 
@@ -118,6 +135,8 @@
         private System.Windows.Forms.ToolStripMenuItem aideToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificationClientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem créationClientToolStripMenuItem;
     }
 }
 
