@@ -30,6 +30,14 @@ namespace GestionCommercialeUIW
         private void btnOkContact_Click(object sender, EventArgs e)
         {
             GestionCommercialeDll.Contact nouveauContact = new GestionCommercialeDll.Contact();
+
+            nouveauContact.NomContact = txtBoxNomContact.Text;
+            nouveauContact.PrenomContact = txtBoxPrenomContact.Text;
+            nouveauContact.TelContact = Int32.Parse(txtBoxTel.Text);
+            nouveauContact.MailContact = txtBoxMail.Text;
+            nouveauContact.CmbBoxFonctionMetier = cmbBoxFonctionMetier.Text;
+
+
         }
     }
 }
