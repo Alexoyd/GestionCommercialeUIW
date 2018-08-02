@@ -8,11 +8,11 @@ namespace GestionCommercialeDll
 {
     public class Contact
     {
-            private string nomContact;
-            private string prenomContact;
-            private int telContact;
-            private string mailContact;
-            private string cmbBoxFonctionMetier;
+        private string nomContact;
+        private string prenomContact;
+        private int telContact;
+        private string mailContact;
+        private string cmbBoxFonctionMetier;
 
         public static Int32 NContact;
 
