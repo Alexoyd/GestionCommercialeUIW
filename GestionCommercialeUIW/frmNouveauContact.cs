@@ -26,5 +26,10 @@ namespace GestionCommercialeUIW
         {
 
         }
+
+        private void btnOkContact_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

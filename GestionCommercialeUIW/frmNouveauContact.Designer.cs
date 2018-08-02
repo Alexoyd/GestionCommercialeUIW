@@ -36,17 +36,17 @@
             this.txtBoxTel = new System.Windows.Forms.TextBox();
             this.txtBoxPrenomContact = new System.Windows.Forms.TextBox();
             this.txtBoxNomContact = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picBoxPhotoContact = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnOkContact = new System.Windows.Forms.Button();
+            this.btnAnnulerContact = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbBoxFonctionMetier = new System.Windows.Forms.ComboBox();
             this.groupBoxIdentification.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxPhotoContact)).BeginInit();
             this.SuspendLayout();
             // 
             // lblClient
@@ -81,7 +81,7 @@
             this.groupBoxIdentification.Controls.Add(this.txtBoxTel);
             this.groupBoxIdentification.Controls.Add(this.txtBoxPrenomContact);
             this.groupBoxIdentification.Controls.Add(this.txtBoxNomContact);
-            this.groupBoxIdentification.Controls.Add(this.pictureBox1);
+            this.groupBoxIdentification.Controls.Add(this.picBoxPhotoContact);
             this.groupBoxIdentification.Controls.Add(this.label4);
             this.groupBoxIdentification.Controls.Add(this.label3);
             this.groupBoxIdentification.Controls.Add(this.label2);
@@ -122,13 +122,13 @@
             this.txtBoxNomContact.TabIndex = 5;
             this.txtBoxNomContact.TextChanged += new System.EventHandler(this.txtBoxNomContact_TextChanged);
             // 
-            // pictureBox1
+            // picBoxPhotoContact
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(298, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(106, 94);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.picBoxPhotoContact.Location = new System.Drawing.Point(298, 41);
+            this.picBoxPhotoContact.Name = "picBoxPhotoContact";
+            this.picBoxPhotoContact.Size = new System.Drawing.Size(106, 94);
+            this.picBoxPhotoContact.TabIndex = 4;
+            this.picBoxPhotoContact.TabStop = false;
             // 
             // label4
             // 
@@ -166,24 +166,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nom :";
             // 
-            // button1
+            // btnOkContact
             // 
-            this.button1.Location = new System.Drawing.Point(243, 305);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnOkContact.Location = new System.Drawing.Point(243, 305);
+            this.btnOkContact.Name = "btnOkContact";
+            this.btnOkContact.Size = new System.Drawing.Size(75, 23);
+            this.btnOkContact.TabIndex = 4;
+            this.btnOkContact.Text = "OK";
+            this.btnOkContact.UseVisualStyleBackColor = true;
+            this.btnOkContact.Click += new System.EventHandler(this.btnOkContact_Click);
             // 
-            // button2
+            // btnAnnulerContact
             // 
-            this.button2.Location = new System.Drawing.Point(342, 305);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Annuler";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnAnnulerContact.Location = new System.Drawing.Point(342, 305);
+            this.btnAnnulerContact.Name = "btnAnnulerContact";
+            this.btnAnnulerContact.Size = new System.Drawing.Size(75, 23);
+            this.btnAnnulerContact.TabIndex = 5;
+            this.btnAnnulerContact.Text = "Annuler";
+            this.btnAnnulerContact.UseVisualStyleBackColor = true;
+            this.btnAnnulerContact.Click += new System.EventHandler(this.button2_Click);
             // 
             // label5
             // 
@@ -209,8 +210,8 @@
             this.ClientSize = new System.Drawing.Size(444, 344);
             this.Controls.Add(this.cmbBoxFonctionMetier);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAnnulerContact);
+            this.Controls.Add(this.btnOkContact);
             this.Controls.Add(this.groupBoxIdentification);
             this.Controls.Add(this.lblNomClient);
             this.Controls.Add(this.lblContactNumClient);
@@ -219,7 +220,7 @@
             this.Text = "Saisie d\'un nouveau Contact";
             this.groupBoxIdentification.ResumeLayout(false);
             this.groupBoxIdentification.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxPhotoContact)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,10 +239,10 @@
         private System.Windows.Forms.TextBox txtBoxTel;
         private System.Windows.Forms.TextBox txtBoxPrenomContact;
         private System.Windows.Forms.TextBox txtBoxNomContact;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picBoxPhotoContact;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnOkContact;
+        private System.Windows.Forms.Button btnAnnulerContact;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbBoxFonctionMetier;
     }
