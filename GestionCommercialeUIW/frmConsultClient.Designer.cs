@@ -385,7 +385,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 596);
+            this.ClientSize = new System.Drawing.Size(603, 596);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.btnNouveauContactModif);

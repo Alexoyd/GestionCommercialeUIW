@@ -17,7 +17,8 @@ namespace GestionCommercialeUIW
         // à relier au DataGridView pour personnaliser son affichage
         DataTable dt = new DataTable();
         DataRow dr; // ligne de la datatable
-       private static frmListeClients singleton= null;
+
+        private static frmListeClients singleton= null;
         
         private frmListeClients()
         {
@@ -142,7 +143,8 @@ namespace GestionCommercialeUIW
             frmConsult.ShowDialog();
 
             // en sortie du form détail, refraichir la datagridview
-            this.afficheClients();
+            if (frmConsult.ShowDialog() == DialogResult.OK)
+                this.afficheClients();
         }
 
         private void frmListeClients_FormClosing(object sender, FormClosingEventArgs e)

@@ -31,8 +31,6 @@ namespace GestionCommercialeUIW
 
             // permet de remplir par défaut la première valeur de l'index afin de ne pas mettre le programme en erreur
             this.cmbBoxActivité.SelectedIndex = 0;
-
-
         }
 
         private void InitNature()
