@@ -36,8 +36,8 @@ namespace GestionCommercialeUIW
 
             GestionCommercialeDll.Client nouveauClient = new GestionCommercialeDll.Client();
 
-            //try
-            //{
+            try
+            {
 
                 
                 // déclenchement des méthodes get/set du Client.cs
@@ -56,23 +56,22 @@ namespace GestionCommercialeUIW
 
                 GestionCommercialeDll.Client.NClient += 1;
 
-
-
                 this.DialogResult = DialogResult.OK;
 
-            //}
-            //catch(Exception ex)
-            //{
-              //  nouveauClient = null;
-                //MessageBox.Show("Erreur : \n" + ex.Message, "Raison sociale");
-                
-            //}
-
-                
-
-
+            }
+            catch(Exception ex)
+            {
+                nouveauClient = null;
+                MessageBox.Show("Erreur : \n" + ex.Message, "Raison sociale");                
+            }
 
             
+
+        }
+
+        private void chkBoxPrive_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

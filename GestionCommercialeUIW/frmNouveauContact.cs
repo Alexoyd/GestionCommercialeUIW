@@ -17,7 +17,7 @@ namespace GestionCommercialeUIW
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnAnnulerContact_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -29,7 +29,19 @@ namespace GestionCommercialeUIW
 
         private void btnOkContact_Click(object sender, EventArgs e)
         {
+            GestionCommercialeDll.Contact nouveauContact = new GestionCommercialeDll.Contact();
 
+            nouveauContact.NomContact = txtBoxNomContact.Text;
+            nouveauContact.PrenomContact = txtBoxPrenomContact.Text;
+            nouveauContact.TelContact = Int32.Parse(txtBoxTel.Text);
+            nouveauContact.MailContact = txtBoxMail.Text;
+            nouveauContact.CmbBoxFonctionMetier = cmbBoxFonctionMetier.Text;
+
+           // GestionCommercialeDll.Donnees.TabContact.Add(nouveauContact);
+
+            GestionCommercialeDll.Contact.NContact += 1;
+
+            this.DialogResult = DialogResult.OK;
         }
     }
 }
