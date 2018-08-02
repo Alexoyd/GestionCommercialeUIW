@@ -32,10 +32,10 @@
             this.lblContactNumClient = new System.Windows.Forms.Label();
             this.lblNomClient = new System.Windows.Forms.Label();
             this.groupBoxIdentification = new System.Windows.Forms.GroupBox();
-            this.textBoxMail = new System.Windows.Forms.TextBox();
-            this.textBoxTel = new System.Windows.Forms.TextBox();
-            this.textBoxPrenomContact = new System.Windows.Forms.TextBox();
-            this.textBoxNomContact = new System.Windows.Forms.TextBox();
+            this.txtBoxMail = new System.Windows.Forms.TextBox();
+            this.txtBoxTel = new System.Windows.Forms.TextBox();
+            this.txtBoxPrenomContact = new System.Windows.Forms.TextBox();
+            this.txtBoxNomContact = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBoxFonctionMetier = new System.Windows.Forms.ComboBox();
+            this.cmbBoxFonctionMetier = new System.Windows.Forms.ComboBox();
             this.groupBoxIdentification.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -77,10 +77,10 @@
             // 
             // groupBoxIdentification
             // 
-            this.groupBoxIdentification.Controls.Add(this.textBoxMail);
-            this.groupBoxIdentification.Controls.Add(this.textBoxTel);
-            this.groupBoxIdentification.Controls.Add(this.textBoxPrenomContact);
-            this.groupBoxIdentification.Controls.Add(this.textBoxNomContact);
+            this.groupBoxIdentification.Controls.Add(this.txtBoxMail);
+            this.groupBoxIdentification.Controls.Add(this.txtBoxTel);
+            this.groupBoxIdentification.Controls.Add(this.txtBoxPrenomContact);
+            this.groupBoxIdentification.Controls.Add(this.txtBoxNomContact);
             this.groupBoxIdentification.Controls.Add(this.pictureBox1);
             this.groupBoxIdentification.Controls.Add(this.label4);
             this.groupBoxIdentification.Controls.Add(this.label3);
@@ -93,34 +93,34 @@
             this.groupBoxIdentification.TabStop = false;
             this.groupBoxIdentification.Text = "Identification";
             // 
-            // textBoxMail
+            // txtBoxMail
             // 
-            this.textBoxMail.Location = new System.Drawing.Point(72, 126);
-            this.textBoxMail.Name = "textBoxMail";
-            this.textBoxMail.Size = new System.Drawing.Size(199, 20);
-            this.textBoxMail.TabIndex = 8;
+            this.txtBoxMail.Location = new System.Drawing.Point(72, 126);
+            this.txtBoxMail.Name = "txtBoxMail";
+            this.txtBoxMail.Size = new System.Drawing.Size(199, 20);
+            this.txtBoxMail.TabIndex = 8;
             // 
-            // textBoxTel
+            // txtBoxTel
             // 
-            this.textBoxTel.Location = new System.Drawing.Point(72, 97);
-            this.textBoxTel.Name = "textBoxTel";
-            this.textBoxTel.Size = new System.Drawing.Size(199, 20);
-            this.textBoxTel.TabIndex = 7;
+            this.txtBoxTel.Location = new System.Drawing.Point(72, 97);
+            this.txtBoxTel.Name = "txtBoxTel";
+            this.txtBoxTel.Size = new System.Drawing.Size(199, 20);
+            this.txtBoxTel.TabIndex = 7;
             // 
-            // textBoxPrenomContact
+            // txtBoxPrenomContact
             // 
-            this.textBoxPrenomContact.Location = new System.Drawing.Point(72, 70);
-            this.textBoxPrenomContact.Name = "textBoxPrenomContact";
-            this.textBoxPrenomContact.Size = new System.Drawing.Size(199, 20);
-            this.textBoxPrenomContact.TabIndex = 6;
+            this.txtBoxPrenomContact.Location = new System.Drawing.Point(72, 70);
+            this.txtBoxPrenomContact.Name = "txtBoxPrenomContact";
+            this.txtBoxPrenomContact.Size = new System.Drawing.Size(199, 20);
+            this.txtBoxPrenomContact.TabIndex = 6;
             // 
-            // textBoxNomContact
+            // txtBoxNomContact
             // 
-            this.textBoxNomContact.Location = new System.Drawing.Point(72, 41);
-            this.textBoxNomContact.Name = "textBoxNomContact";
-            this.textBoxNomContact.Size = new System.Drawing.Size(199, 20);
-            this.textBoxNomContact.TabIndex = 5;
-            this.textBoxNomContact.TextChanged += new System.EventHandler(this.textBoxNomContact_TextChanged);
+            this.txtBoxNomContact.Location = new System.Drawing.Point(72, 41);
+            this.txtBoxNomContact.Name = "txtBoxNomContact";
+            this.txtBoxNomContact.Size = new System.Drawing.Size(199, 20);
+            this.txtBoxNomContact.TabIndex = 5;
+            this.txtBoxNomContact.TextChanged += new System.EventHandler(this.txtBoxNomContact_TextChanged);
             // 
             // pictureBox1
             // 
@@ -194,20 +194,20 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Fonction :";
             // 
-            // comboBoxFonctionMetier
+            // cmbBoxFonctionMetier
             // 
-            this.comboBoxFonctionMetier.FormattingEnabled = true;
-            this.comboBoxFonctionMetier.Location = new System.Drawing.Point(85, 252);
-            this.comboBoxFonctionMetier.Name = "comboBoxFonctionMetier";
-            this.comboBoxFonctionMetier.Size = new System.Drawing.Size(199, 21);
-            this.comboBoxFonctionMetier.TabIndex = 7;
+            this.cmbBoxFonctionMetier.FormattingEnabled = true;
+            this.cmbBoxFonctionMetier.Location = new System.Drawing.Point(85, 252);
+            this.cmbBoxFonctionMetier.Name = "cmbBoxFonctionMetier";
+            this.cmbBoxFonctionMetier.Size = new System.Drawing.Size(199, 21);
+            this.cmbBoxFonctionMetier.TabIndex = 7;
             // 
             // frmNouveauContact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 344);
-            this.Controls.Add(this.comboBoxFonctionMetier);
+            this.Controls.Add(this.cmbBoxFonctionMetier);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -234,15 +234,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxMail;
-        private System.Windows.Forms.TextBox textBoxTel;
-        private System.Windows.Forms.TextBox textBoxPrenomContact;
-        private System.Windows.Forms.TextBox textBoxNomContact;
+        private System.Windows.Forms.TextBox txtBoxMail;
+        private System.Windows.Forms.TextBox txtBoxTel;
+        private System.Windows.Forms.TextBox txtBoxPrenomContact;
+        private System.Windows.Forms.TextBox txtBoxNomContact;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBoxFonctionMetier;
+        private System.Windows.Forms.ComboBox cmbBoxFonctionMetier;
     }
 }

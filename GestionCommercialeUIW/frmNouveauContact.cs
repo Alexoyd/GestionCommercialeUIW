@@ -22,7 +22,7 @@ namespace GestionCommercialeUIW
             this.Close();
         }
 
-        private void textBoxNomContact_TextChanged(object sender, EventArgs e)
+        private void txtBoxNomContact_TextChanged(object sender, EventArgs e)
         {
 
         }
