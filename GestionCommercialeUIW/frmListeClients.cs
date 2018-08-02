@@ -12,7 +12,12 @@ namespace GestionCommercialeUIW
 {
     public partial class frmListeClients : Form
     {
-       
+        // DataTable : pour recopier les clients
+        // (stockés en collection) ;
+        // à relier au DataGridView pour personnaliser son affichage
+        DataTable dt = new DataTable();
+        DataRow dr; // ligne de la datatable
+
         public frmListeClients()
         {
             InitializeComponent();
@@ -26,18 +31,12 @@ namespace GestionCommercialeUIW
 
             // si on sort de la saisie par OK
             if (frmAjout.ShowDialog() == DialogResult.OK)
-                frmAjout.Show();
+                afficheClients();
 
         }
         
         public void afficheClients()
         {
-            // DataTable : pour recopier les clients
-            // (stockés en collection) ;
-            // à relier au DataGridView pour personnaliser son affichage
-            DataTable dt = new DataTable();
-            DataRow dr; // ligne de la datatable
-            
             // Ajout à la datatable des colonnes
             dt.Columns.Add(new DataColumn("Raison Sociale", typeof(System.String)));
             dt.Columns.Add(new DataColumn("Ville", typeof(System.String)));
@@ -85,6 +84,36 @@ namespace GestionCommercialeUIW
             this.Close();
         }
 
+        private void btnRechercher_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string filterField = "Raison Sociale"; // Variable qui indiquera au programme la colonne dans laquelle faire la recherche
 
+                if (txtRecherche.Text != "")
+                {
+                    dt.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", filterField, txtRecherche.Text);
+                    btnTous.Enabled = true;
+                }
+
+                else
+                {
+                    MessageBox.Show("Erreur : La zone de recherche est vide !", "Rechercher", MessageBoxButtons.OK);
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void btnTous_Click(object sender, EventArgs e)
+        {
+            txtRecherche.Text = "";
+            dt.DefaultView.RowFilter = null;
+            btnTous.Enabled = false;
+        }
     }
 }
