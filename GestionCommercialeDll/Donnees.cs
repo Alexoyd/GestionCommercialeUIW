@@ -10,5 +10,6 @@ namespace GestionCommercialeDll
     public class Donnees
     {
         public static ArrayList TabClients = new ArrayList();
+        
     }
 }

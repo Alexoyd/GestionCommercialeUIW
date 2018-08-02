@@ -62,7 +62,7 @@
             this.btnOK.Location = new System.Drawing.Point(178, 384);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(56, 32);
-            this.btnOK.TabIndex = 13;
+            this.btnOK.TabIndex = 12;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
@@ -102,7 +102,7 @@
             this.cmbBoxNature.Location = new System.Drawing.Point(302, 104);
             this.cmbBoxNature.Name = "cmbBoxNature";
             this.cmbBoxNature.Size = new System.Drawing.Size(121, 21);
-            this.cmbBoxNature.TabIndex = 8;
+            this.cmbBoxNature.TabIndex = 11;
             // 
             // cmbBoxActivité
             // 
@@ -111,7 +111,7 @@
             this.cmbBoxActivité.Location = new System.Drawing.Point(82, 104);
             this.cmbBoxActivité.Name = "cmbBoxActivité";
             this.cmbBoxActivité.Size = new System.Drawing.Size(121, 21);
-            this.cmbBoxActivité.TabIndex = 7;
+            this.cmbBoxActivité.TabIndex = 10;
             this.cmbBoxActivité.SelectedIndexChanged += new System.EventHandler(this.cmbBoxActivité_SelectedIndexChanged);
             // 
             // txtBoxCA
@@ -119,14 +119,14 @@
             this.txtBoxCA.Location = new System.Drawing.Point(277, 78);
             this.txtBoxCA.Name = "txtBoxCA";
             this.txtBoxCA.Size = new System.Drawing.Size(146, 20);
-            this.txtBoxCA.TabIndex = 6;
+            this.txtBoxCA.TabIndex = 9;
             // 
             // txtBoxEffectif
             // 
             this.txtBoxEffectif.Location = new System.Drawing.Point(82, 78);
             this.txtBoxEffectif.Name = "txtBoxEffectif";
             this.txtBoxEffectif.Size = new System.Drawing.Size(140, 20);
-            this.txtBoxEffectif.TabIndex = 5;
+            this.txtBoxEffectif.TabIndex = 8;
             // 
             // lblNature
             // 
@@ -170,7 +170,7 @@
             this.chkBoxPrive.Location = new System.Drawing.Point(30, 38);
             this.chkBoxPrive.Name = "chkBoxPrive";
             this.chkBoxPrive.Size = new System.Drawing.Size(50, 17);
-            this.chkBoxPrive.TabIndex = 0;
+            this.chkBoxPrive.TabIndex = 7;
             this.chkBoxPrive.Text = "Privé";
             this.chkBoxPrive.UseVisualStyleBackColor = true;
             this.chkBoxPrive.CheckedChanged += new System.EventHandler(this.chkBoxPrive_CheckedChanged);
@@ -200,42 +200,43 @@
             this.txtBoxNumClient.Location = new System.Drawing.Point(148, 30);
             this.txtBoxNumClient.Name = "txtBoxNumClient";
             this.txtBoxNumClient.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxNumClient.TabIndex = 15;
+            this.txtBoxNumClient.TabIndex = 1;
             // 
             // txtBoxTelephone
             // 
             this.txtBoxTelephone.Location = new System.Drawing.Point(148, 169);
             this.txtBoxTelephone.Name = "txtBoxTelephone";
             this.txtBoxTelephone.Size = new System.Drawing.Size(160, 20);
-            this.txtBoxTelephone.TabIndex = 11;
+            this.txtBoxTelephone.TabIndex = 6;
             // 
             // txtBoxCP
             // 
             this.txtBoxCP.Location = new System.Drawing.Point(148, 137);
             this.txtBoxCP.Name = "txtBoxCP";
             this.txtBoxCP.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxCP.TabIndex = 10;
+            this.txtBoxCP.TabIndex = 4;
+            this.txtBoxCP.TextChanged += new System.EventHandler(this.txtBoxCP_TextChanged);
             // 
             // txtBoxAdresse
             // 
             this.txtBoxAdresse.Location = new System.Drawing.Point(148, 101);
             this.txtBoxAdresse.Name = "txtBoxAdresse";
             this.txtBoxAdresse.Size = new System.Drawing.Size(255, 20);
-            this.txtBoxAdresse.TabIndex = 9;
+            this.txtBoxAdresse.TabIndex = 3;
             // 
             // txtBoxRaisonSocial
             // 
             this.txtBoxRaisonSocial.Location = new System.Drawing.Point(148, 66);
             this.txtBoxRaisonSocial.Name = "txtBoxRaisonSocial";
             this.txtBoxRaisonSocial.Size = new System.Drawing.Size(255, 20);
-            this.txtBoxRaisonSocial.TabIndex = 8;
+            this.txtBoxRaisonSocial.TabIndex = 2;
             // 
             // txtBoxVille
             // 
             this.txtBoxVille.Location = new System.Drawing.Point(254, 137);
             this.txtBoxVille.Name = "txtBoxVille";
             this.txtBoxVille.Size = new System.Drawing.Size(149, 20);
-            this.txtBoxVille.TabIndex = 7;
+            this.txtBoxVille.TabIndex = 5;
             // 
             // lblNumClient
             // 
@@ -287,7 +288,7 @@
             this.btnContact.Location = new System.Drawing.Point(240, 384);
             this.btnContact.Name = "btnContact";
             this.btnContact.Size = new System.Drawing.Size(93, 32);
-            this.btnContact.TabIndex = 12;
+            this.btnContact.TabIndex = 13;
             this.btnContact.Text = "Contacts";
             this.btnContact.UseVisualStyleBackColor = true;
             this.btnContact.Click += new System.EventHandler(this.btnContact_Click);

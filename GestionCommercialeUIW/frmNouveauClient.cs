@@ -281,5 +281,10 @@ namespace GestionCommercialeUIW
         {
 
         }
+
+        private void txtBoxCP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
