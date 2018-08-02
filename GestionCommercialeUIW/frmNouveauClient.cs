@@ -34,7 +34,7 @@ namespace GestionCommercialeUIW
         private void btnOK_Click(object sender, EventArgs e)
         {
             GestionCommercialeDll.Client nouveauClient = new GestionCommercialeDll.Client();
-
+            // déclenchement des méthodes get/set du Client.cs
             nouveauClient.NumClient = txtBoxNumClient.Text;
             nouveauClient.RaisonSociale = txtBoxRaisonSocial.Text;
             nouveauClient.Adresse = txtBoxAdresse.Text;
@@ -50,9 +50,7 @@ namespace GestionCommercialeUIW
 
             GestionCommercialeDll.Donnees.TabClients.Add(nouveauClient);
 
-            
-
-
+            this.DialogResult = DialogResult.OK;
         }
     }
 }
