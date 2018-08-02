@@ -21,6 +21,10 @@ namespace GestionCommercialeDll
         private string activite;
         private string nature;
 
+
+        public static Int32 NClient;
+
+
         public string NumClient
         {
             get { return this.numClient; }

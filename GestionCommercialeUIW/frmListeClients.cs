@@ -21,7 +21,7 @@ namespace GestionCommercialeUIW
         public frmListeClients()
         {
             InitializeComponent();
-            this.afficheClients();
+            //this.afficheClients();
         }
 
         private void btnNouveauClient_Click(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace GestionCommercialeUIW
                 afficheClients();
 
         }
-        
+
         public void afficheClients()
         {
             // Ajout à la datatable des colonnes
@@ -106,7 +106,7 @@ namespace GestionCommercialeUIW
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         private void btnTous_Click(object sender, EventArgs e)
