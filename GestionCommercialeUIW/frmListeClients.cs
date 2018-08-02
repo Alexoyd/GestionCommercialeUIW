@@ -22,6 +22,14 @@ namespace GestionCommercialeUIW
         {
             InitializeComponent();
             //this.afficheClients();
+
+            // Ajout à la datatable des colonnes
+            dt.Columns.Add(new DataColumn("Raison Sociale", typeof(System.String)));
+            dt.Columns.Add(new DataColumn("Ville", typeof(System.String)));
+            dt.Columns.Add(new DataColumn("Code Postal", typeof(System.String)));
+            dt.Columns.Add(new DataColumn("Privé ?", typeof(System.Boolean)));
+            dt.Columns.Add(new DataColumn("Activité", typeof(System.String)));
+            dt.Columns.Add(new DataColumn("Nature", typeof(System.String)));
         }
 
         private void btnNouveauClient_Click(object sender, EventArgs e)
@@ -37,15 +45,6 @@ namespace GestionCommercialeUIW
 
         public void afficheClients()
         {
-            // Ajout à la datatable des colonnes
-            dt.Columns.Add(new DataColumn("Raison Sociale", typeof(System.String)));
-            dt.Columns.Add(new DataColumn("Ville", typeof(System.String)));
-            dt.Columns.Add(new DataColumn("Code Postal", typeof(System.String)));
-            dt.Columns.Add(new DataColumn("Privé ?", typeof(System.Boolean)));
-            dt.Columns.Add(new DataColumn("Activité", typeof(System.String)));
-            dt.Columns.Add(new DataColumn("Nature", typeof(System.String)));
-
-
             // boucle remplissage de la DataTable à partir de la collection
             for (int i = 0; i < GestionCommercialeDll.Donnees.TabClients.Count; i++)
             {
@@ -62,21 +61,19 @@ namespace GestionCommercialeUIW
                 dr[4] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).Activite;
                 dr[5] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).Nature;
 
-                // ajout de la ligne à la Datatable
-                // (la propriété Rows est elle-même une collection...)
-                dt.Rows.Add(dr);
+                
 
             } // fin de boucle
+
+            // ajout de la ligne à la Datatable
+            // (la propriété Rows est elle-même une collection...)
+            dt.Rows.Add(dr);
 
             // déterminer l'origine des données à afficher en DataGridView
             this.grdClients.DataSource = dt;
 
             // refraîchir l'affichage (même pas utile…)
-            this.grdClients.Refresh();
-
-            dt = null; // pas vraiment utile non plus…
-            dr = null;
-
+            //this.grdClients.Refresh();
         }
 
         private void btnFermer_Click(object sender, EventArgs e)
