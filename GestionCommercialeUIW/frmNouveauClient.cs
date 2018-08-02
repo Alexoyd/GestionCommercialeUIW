@@ -248,7 +248,8 @@ namespace GestionCommercialeUIW
             {// déclenchement des méthodes get/set du Client.cs
                 nouveauClient.NumClient = txtBoxNumClient.Text;
                 nouveauClient.RaisonSociale = txtBoxRaisonSocial.Text;
-                nouveauClient.Adresse = txtBoxAdresse.Text;
+                nouveauClient.Adresse1 = txtBoxAdresse1.Text;
+                nouveauClient.Adresse2 = txtBoxAdresse2.Text;
                 nouveauClient.CP = txtBoxCP.Text;
                 nouveauClient.Ville = txtBoxVille.Text;
                 nouveauClient.Telephone = txtBoxTelephone.Text;

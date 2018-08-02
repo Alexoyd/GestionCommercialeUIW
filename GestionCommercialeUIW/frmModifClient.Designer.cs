@@ -52,13 +52,14 @@
             this.lblCPVille = new System.Windows.Forms.Label();
             this.lblTelephone = new System.Windows.Forms.Label();
             this.lblNum = new System.Windows.Forms.Label();
+            this.txtBoxAdresse2 = new System.Windows.Forms.TextBox();
             this.grpBoxCaract.SuspendLayout();
             this.grpBoxIdentif.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(289, 374);
+            this.btnOK.Location = new System.Drawing.Point(289, 407);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(56, 32);
             this.btnOK.TabIndex = 18;
@@ -67,7 +68,7 @@
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.Location = new System.Drawing.Point(351, 374);
+            this.btnAnnuler.Location = new System.Drawing.Point(351, 407);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(96, 32);
             this.btnAnnuler.TabIndex = 19;
@@ -85,7 +86,7 @@
             this.grpBoxCaract.Controls.Add(this.lblActivite);
             this.grpBoxCaract.Controls.Add(this.lblEffectif);
             this.grpBoxCaract.Controls.Add(this.chkBoxPrive);
-            this.grpBoxCaract.Location = new System.Drawing.Point(12, 219);
+            this.grpBoxCaract.Location = new System.Drawing.Point(12, 252);
             this.grpBoxCaract.Name = "grpBoxCaract";
             this.grpBoxCaract.Size = new System.Drawing.Size(435, 149);
             this.grpBoxCaract.TabIndex = 15;
@@ -172,6 +173,7 @@
             // 
             // grpBoxIdentif
             // 
+            this.grpBoxIdentif.Controls.Add(this.txtBoxAdresse2);
             this.grpBoxIdentif.Controls.Add(this.lblNum);
             this.grpBoxIdentif.Controls.Add(this.txtBoxTelephone);
             this.grpBoxIdentif.Controls.Add(this.txtBoxCP);
@@ -185,21 +187,21 @@
             this.grpBoxIdentif.Controls.Add(this.lblTelephone);
             this.grpBoxIdentif.Location = new System.Drawing.Point(12, 12);
             this.grpBoxIdentif.Name = "grpBoxIdentif";
-            this.grpBoxIdentif.Size = new System.Drawing.Size(409, 201);
+            this.grpBoxIdentif.Size = new System.Drawing.Size(409, 234);
             this.grpBoxIdentif.TabIndex = 17;
             this.grpBoxIdentif.TabStop = false;
             this.grpBoxIdentif.Text = "Identification";
             // 
             // txtBoxTelephone
             // 
-            this.txtBoxTelephone.Location = new System.Drawing.Point(148, 169);
+            this.txtBoxTelephone.Location = new System.Drawing.Point(148, 191);
             this.txtBoxTelephone.Name = "txtBoxTelephone";
             this.txtBoxTelephone.Size = new System.Drawing.Size(160, 20);
             this.txtBoxTelephone.TabIndex = 11;
             // 
             // txtBoxCP
             // 
-            this.txtBoxCP.Location = new System.Drawing.Point(148, 137);
+            this.txtBoxCP.Location = new System.Drawing.Point(148, 159);
             this.txtBoxCP.Name = "txtBoxCP";
             this.txtBoxCP.Size = new System.Drawing.Size(100, 20);
             this.txtBoxCP.TabIndex = 10;
@@ -220,7 +222,7 @@
             // 
             // txtBoxVille
             // 
-            this.txtBoxVille.Location = new System.Drawing.Point(254, 137);
+            this.txtBoxVille.Location = new System.Drawing.Point(254, 159);
             this.txtBoxVille.Name = "txtBoxVille";
             this.txtBoxVille.Size = new System.Drawing.Size(149, 20);
             this.txtBoxVille.TabIndex = 7;
@@ -255,7 +257,7 @@
             // lblCPVille
             // 
             this.lblCPVille.AutoSize = true;
-            this.lblCPVille.Location = new System.Drawing.Point(6, 140);
+            this.lblCPVille.Location = new System.Drawing.Point(6, 162);
             this.lblCPVille.Name = "lblCPVille";
             this.lblCPVille.Size = new System.Drawing.Size(58, 13);
             this.lblCPVille.TabIndex = 4;
@@ -264,7 +266,7 @@
             // lblTelephone
             // 
             this.lblTelephone.AutoSize = true;
-            this.lblTelephone.Location = new System.Drawing.Point(6, 172);
+            this.lblTelephone.Location = new System.Drawing.Point(6, 194);
             this.lblTelephone.Name = "lblTelephone";
             this.lblTelephone.Size = new System.Drawing.Size(67, 13);
             this.lblTelephone.TabIndex = 5;
@@ -278,11 +280,18 @@
             this.lblNum.Size = new System.Drawing.Size(100, 23);
             this.lblNum.TabIndex = 12;
             // 
+            // txtBoxAdresse2
+            // 
+            this.txtBoxAdresse2.Location = new System.Drawing.Point(148, 127);
+            this.txtBoxAdresse2.Name = "txtBoxAdresse2";
+            this.txtBoxAdresse2.Size = new System.Drawing.Size(255, 20);
+            this.txtBoxAdresse2.TabIndex = 13;
+            // 
             // frmModifClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 419);
+            this.ClientSize = new System.Drawing.Size(465, 451);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.grpBoxCaract);
@@ -322,5 +331,6 @@
         private System.Windows.Forms.Label lblCPVille;
         private System.Windows.Forms.Label lblTelephone;
         private System.Windows.Forms.Label lblNum;
+        private System.Windows.Forms.TextBox txtBoxAdresse2;
     }
 }

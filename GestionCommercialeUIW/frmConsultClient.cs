@@ -36,8 +36,8 @@ namespace GestionCommercialeUIW
         {
             this.lblNumClient.Text = unClient.NumClient;
             this.lblRSociale.Text = unClient.RaisonSociale;
-            this.lblAdresse.Text = unClient.Adresse;
-            this.lblAdresse1.Text = unClient.Adresse;
+            this.lblAdresse.Text = unClient.Adresse1;
+            this.lblAdresse1.Text = unClient.Adresse2;
             this.lblCP.Text = unClient.CP;
             this.lblVille.Text = unClient.Ville;
             this.lblTelephone.Text = unClient.Telephone;
@@ -60,7 +60,7 @@ namespace GestionCommercialeUIW
         //boutton modification client
         private void btnModifClient_Click(object sender, EventArgs e)
         {
-            frmModifClient frmModClient = new frmModifClient();
+            frmModifClient frmModClient = new frmModifClient(lblNumClient.Text, lblRSociale.Text, lblAdresse.Text, lblAdresse1.Text, lblCP.Text, lblVille.Text, lblTelephone.Text, checkPrive.Checked, lblEffectif.Text, lblActivite.Text, lblCA.Text, lblNature.Text);
             frmModClient.ShowDialog();
         }
         
