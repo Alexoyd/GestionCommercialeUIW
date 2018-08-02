@@ -16,10 +16,12 @@ namespace GestionCommercialeUIW
 
            public MDI()
         {
-            InitializeComponent();
-            frmListe = new frmListeClients(); // instancie le form listeClient
+           InitializeComponent();
+            
+           /* frmListe = new frmListeClients(); // instancie le form listeClient
             frmListe.MdiParent = this; // précise le conteneur MDI du form liste client
             frmListe.Show();//Affiche le form liste dans son form conteneur
+            */
         }
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,10 +46,10 @@ namespace GestionCommercialeUIW
 
             if (this.frmListe == null) // le formListe n'est pas/plus affiché
             {
-                this.frmListe = new frmListeClients(); // instancie le form
-                this.frmListe.MdiParent = this;
-                this.FormClosing += new FormClosingEventHandler(this.fermeListe);
-                this.frmListe.Show(); // affiche le form
+               this.frmListe = new frmListeClients(); // instancie le form
+               this.frmListe.MdiParent = this;// implémente un événement sur le nouveau form pour libérer la ref à ce form
+               this.frmListe.FormClosing += new FormClosingEventHandler(this.fermeListe);
+               this.frmListe.Show(); // affiche le form
             }
 
             else

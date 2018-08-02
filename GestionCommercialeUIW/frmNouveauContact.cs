@@ -21,5 +21,15 @@ namespace GestionCommercialeUIW
         {
             this.Close();
         }
+
+        private void txtBoxNomContact_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOkContact_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
