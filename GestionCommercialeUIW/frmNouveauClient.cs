@@ -223,7 +223,7 @@ namespace GestionCommercialeUIW
             Char c; // caractère courant
             Boolean code = true; // code retour; OK a priori
                                  // test longueur chaîne reçue
-            if (s.,  s.Length == 10)
+            if (s.Length == 10)
             {
                 // vérifier 1 à 1 que tous les caractères sont des chiffres
                 for (i = 0; i < s.Length; i++)
