@@ -53,7 +53,6 @@
             this.lblCPVille = new System.Windows.Forms.Label();
             this.lblTelephone = new System.Windows.Forms.Label();
             this.btnContact = new System.Windows.Forms.Button();
-            this.lbl33 = new System.Windows.Forms.Label();
             this.grpBoxCaract.SuspendLayout();
             this.grpBoxIdentif.SuspendLayout();
             this.SuspendLayout();
@@ -178,7 +177,6 @@
             // 
             // grpBoxIdentif
             // 
-            this.grpBoxIdentif.Controls.Add(this.lbl33);
             this.grpBoxIdentif.Controls.Add(this.txtBoxNumClient);
             this.grpBoxIdentif.Controls.Add(this.txtBoxTelephone);
             this.grpBoxIdentif.Controls.Add(this.txtBoxCP);
@@ -294,16 +292,6 @@
             this.btnContact.UseVisualStyleBackColor = true;
             this.btnContact.Click += new System.EventHandler(this.btnContact_Click);
             // 
-            // lbl33
-            // 
-            this.lbl33.AutoSize = true;
-            this.lbl33.Location = new System.Drawing.Point(111, 172);
-            this.lbl33.Name = "lbl33";
-            this.lbl33.Size = new System.Drawing.Size(31, 13);
-            this.lbl33.TabIndex = 16;
-            this.lbl33.Text = "(+33)";
-            this.lbl33.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // frmNouveauClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -351,6 +339,5 @@
         private System.Windows.Forms.Label lblTelephone;
         private System.Windows.Forms.TextBox txtBoxNumClient;
         private System.Windows.Forms.Button btnContact;
-        private System.Windows.Forms.Label lbl33;
     }
 }
