@@ -112,5 +112,28 @@ namespace GestionCommercialeUIW
             dt.DefaultView.RowFilter = null;
             btnTous.Enabled = false;
         }
+
+        private void grdClients_DoubleClick(object sender, EventArgs e)
+        {
+            // ouvrir la feuille détail en y affichant
+            // le stagiaire correspondant à la ligne double-cliquée
+            Int32 iStag; // rang du stagiaire dans le tableau
+                         // récupérer indice du stagiaire cliqué en DataGridView
+
+            iStag = this.grdClients.CurrentRow.Index;
+
+            // instancier un objet stagiaire pointant vers
+            // le stagiaire d'origine dans la collection
+            GestionCommercialeDll.Client leClient = GestionCommercialeDll.Donnees.TabClients[iStag] as GestionCommercialeDll.Client;
+
+            // instancier un form détail pour ce stagiaire
+            frmConsultClient frmConsult = new frmConsultClient(leClient);
+
+            // afficher le form détail en modal
+            frmConsult.ShowDialog();
+
+            // en sortie du form détail, refraichir la datagridview
+            this.afficheClients();
+        }
     }
 }

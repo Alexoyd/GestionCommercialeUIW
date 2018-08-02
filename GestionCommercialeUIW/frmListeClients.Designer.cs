@@ -127,6 +127,7 @@
             this.grdClients.Name = "grdClients";
             this.grdClients.Size = new System.Drawing.Size(776, 334);
             this.grdClients.TabIndex = 7;
+            this.grdClients.DoubleClick += new System.EventHandler(this.grdClients_DoubleClick);
             // 
             // frmListeClients
             // 
