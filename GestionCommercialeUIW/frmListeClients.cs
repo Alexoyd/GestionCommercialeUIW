@@ -18,7 +18,9 @@ namespace GestionCommercialeUIW
         DataTable dt = new DataTable();
         DataRow dr; // ligne de la datatable
 
-        public frmListeClients()
+        private static frmListeClients singleton= null;
+        
+        private frmListeClients()
         {
             InitializeComponent();
             //this.afficheClients();
@@ -30,6 +32,14 @@ namespace GestionCommercialeUIW
             dt.Columns.Add(new DataColumn("Privé ?", typeof(System.Boolean)));
             dt.Columns.Add(new DataColumn("Activité", typeof(System.String)));
             dt.Columns.Add(new DataColumn("Nature", typeof(System.String)));
+        }
+        public static frmListeClients CreateFormulaire()
+        {
+            if (singleton==null)
+            {
+                singleton = new frmListeClients();
+            }
+            return singleton;
         }
 
         private void btnNouveauClient_Click(object sender, EventArgs e)
@@ -133,7 +143,13 @@ namespace GestionCommercialeUIW
             frmConsult.ShowDialog();
 
             // en sortie du form détail, refraichir la datagridview
-            this.afficheClients();
+            if (frmConsult.ShowDialog() == DialogResult.OK)
+                this.afficheClients();
+        }
+
+        private void frmListeClients_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            singleton = null;
         }
     }
 }

@@ -11,7 +11,8 @@ namespace GestionCommercialeDll
     {
         private string numClient;
         private string raisonSociale;
-        private string adresse;
+        private string adresse1;
+        private string adresse2;
         private string codePostal;
         private string ville;
         private string telephone;
@@ -37,10 +38,16 @@ namespace GestionCommercialeDll
             set { this.raisonSociale = value; }
         }
 
-        public string Adresse
+        public string Adresse1
         {
-            get { return this.adresse; }
-            set { this.adresse = value; }
+            get { return this.adresse1; }
+            set { this.adresse1 = value; }
+        }
+
+        public string Adresse2
+        {
+            get { return this.adresse2; }
+            set { this.adresse2 = value; }
         }
 
         public string CP
