@@ -62,7 +62,7 @@
             this.btnOK.Location = new System.Drawing.Point(178, 384);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(56, 32);
-            this.btnOK.TabIndex = 12;
+            this.btnOK.TabIndex = 2;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
@@ -72,7 +72,7 @@
             this.btnAnnuler.Location = new System.Drawing.Point(339, 384);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(96, 32);
-            this.btnAnnuler.TabIndex = 14;
+            this.btnAnnuler.TabIndex = 4;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
             this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
@@ -91,7 +91,7 @@
             this.grpBoxCaract.Location = new System.Drawing.Point(12, 219);
             this.grpBoxCaract.Name = "grpBoxCaract";
             this.grpBoxCaract.Size = new System.Drawing.Size(435, 149);
-            this.grpBoxCaract.TabIndex = 11;
+            this.grpBoxCaract.TabIndex = 1;
             this.grpBoxCaract.TabStop = false;
             this.grpBoxCaract.Text = "Caractéristiques";
             // 
@@ -191,7 +191,7 @@
             this.grpBoxIdentif.Location = new System.Drawing.Point(12, 12);
             this.grpBoxIdentif.Name = "grpBoxIdentif";
             this.grpBoxIdentif.Size = new System.Drawing.Size(409, 201);
-            this.grpBoxIdentif.TabIndex = 12;
+            this.grpBoxIdentif.TabIndex = 0;
             this.grpBoxIdentif.TabStop = false;
             this.grpBoxIdentif.Text = "Identification";
             // 
@@ -288,7 +288,7 @@
             this.btnContact.Location = new System.Drawing.Point(240, 384);
             this.btnContact.Name = "btnContact";
             this.btnContact.Size = new System.Drawing.Size(93, 32);
-            this.btnContact.TabIndex = 13;
+            this.btnContact.TabIndex = 3;
             this.btnContact.Text = "Contacts";
             this.btnContact.UseVisualStyleBackColor = true;
             this.btnContact.Click += new System.EventHandler(this.btnContact_Click);

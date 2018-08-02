@@ -106,7 +106,7 @@
             this.btnNouveauClient.Location = new System.Drawing.Point(528, 415);
             this.btnNouveauClient.Name = "btnNouveauClient";
             this.btnNouveauClient.Size = new System.Drawing.Size(98, 23);
-            this.btnNouveauClient.TabIndex = 5;
+            this.btnNouveauClient.TabIndex = 2;
             this.btnNouveauClient.Text = "Nouveau Client";
             this.btnNouveauClient.UseVisualStyleBackColor = true;
             this.btnNouveauClient.Click += new System.EventHandler(this.btnNouveauClient_Click);
@@ -116,7 +116,7 @@
             this.btnSupprimer.Location = new System.Drawing.Point(632, 415);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(75, 23);
-            this.btnSupprimer.TabIndex = 6;
+            this.btnSupprimer.TabIndex = 3;
             this.btnSupprimer.Text = "Supprimer";
             this.btnSupprimer.UseVisualStyleBackColor = true;
             // 
@@ -126,7 +126,7 @@
             this.grdClients.Location = new System.Drawing.Point(12, 75);
             this.grdClients.Name = "grdClients";
             this.grdClients.Size = new System.Drawing.Size(776, 334);
-            this.grdClients.TabIndex = 7;
+            this.grdClients.TabIndex = 1;
             this.grdClients.DoubleClick += new System.EventHandler(this.grdClients_DoubleClick);
             // 
             // frmListeClients

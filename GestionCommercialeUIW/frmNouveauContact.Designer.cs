@@ -171,7 +171,7 @@
             this.btnOkContact.Location = new System.Drawing.Point(243, 305);
             this.btnOkContact.Name = "btnOkContact";
             this.btnOkContact.Size = new System.Drawing.Size(75, 23);
-            this.btnOkContact.TabIndex = 4;
+            this.btnOkContact.TabIndex = 5;
             this.btnOkContact.Text = "OK";
             this.btnOkContact.UseVisualStyleBackColor = true;
             this.btnOkContact.Click += new System.EventHandler(this.btnOkContact_Click);
@@ -181,7 +181,7 @@
             this.btnAnnulerContact.Location = new System.Drawing.Point(342, 305);
             this.btnAnnulerContact.Name = "btnAnnulerContact";
             this.btnAnnulerContact.Size = new System.Drawing.Size(75, 23);
-            this.btnAnnulerContact.TabIndex = 5;
+            this.btnAnnulerContact.TabIndex = 6;
             this.btnAnnulerContact.Text = "Annuler";
             this.btnAnnulerContact.UseVisualStyleBackColor = true;
             this.btnAnnulerContact.Click += new System.EventHandler(this.btnAnnulerContact_Click);
@@ -192,7 +192,7 @@
             this.label5.Location = new System.Drawing.Point(16, 260);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 13);
-            this.label5.TabIndex = 6;
+            this.label5.TabIndex = 4;
             this.label5.Text = "Fonction :";
             // 
             // cmbBoxFonctionMetier
@@ -201,7 +201,7 @@
             this.cmbBoxFonctionMetier.Location = new System.Drawing.Point(85, 252);
             this.cmbBoxFonctionMetier.Name = "cmbBoxFonctionMetier";
             this.cmbBoxFonctionMetier.Size = new System.Drawing.Size(199, 21);
-            this.cmbBoxFonctionMetier.TabIndex = 7;
+            this.cmbBoxFonctionMetier.TabIndex = 4;
             // 
             // frmNouveauContact
             // 
