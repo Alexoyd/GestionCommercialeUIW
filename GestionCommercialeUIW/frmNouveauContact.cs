@@ -43,5 +43,12 @@ namespace GestionCommercialeUIW
 
             this.DialogResult = DialogResult.OK;
         }
+
+        private void frmAfficheNumclient (object sender, EventArgs e)
+        {
+            
+        }
+
+
     }
 }
