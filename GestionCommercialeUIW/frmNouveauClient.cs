@@ -22,7 +22,8 @@ namespace GestionCommercialeUIW
             frmNouveauContact frmContact = new frmNouveauContact();
 
             if (frmContact.ShowDialog() == DialogResult.OK)
-                frmContact.Show();
+            { }
+                
 
         }
 
