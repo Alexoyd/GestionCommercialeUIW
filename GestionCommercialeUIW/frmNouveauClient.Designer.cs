@@ -278,9 +278,9 @@
             this.lblTelephone.AutoSize = true;
             this.lblTelephone.Location = new System.Drawing.Point(6, 172);
             this.lblTelephone.Name = "lblTelephone";
-            this.lblTelephone.Size = new System.Drawing.Size(64, 13);
+            this.lblTelephone.Size = new System.Drawing.Size(67, 13);
             this.lblTelephone.TabIndex = 5;
-            this.lblTelephone.Text = "Téléphone :";
+            this.lblTelephone.Text = "Téléphone  :";
             // 
             // btnContact
             // 
