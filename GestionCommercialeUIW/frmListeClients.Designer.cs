@@ -141,6 +141,7 @@
             this.Controls.Add(this.btnFermer);
             this.Name = "frmListeClients";
             this.Text = "Liste des clients";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmListeClients_FormClosing);
             this.gxbZoneRecherche.ResumeLayout(false);
             this.gxbZoneRecherche.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdClients)).EndInit();
