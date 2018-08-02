@@ -55,8 +55,7 @@ namespace GestionCommercialeUIW
         {
             frmNouveauContact frmContact = new frmNouveauContact(txtBoxNumClient.Text.ToString(), txtBoxRaisonSocial.Text);
 
-            if (frmContact.ShowDialog() == DialogResult.OK)
-            { }
+            frmContact.ShowDialog();
 
 
         }
