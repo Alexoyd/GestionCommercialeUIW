@@ -12,9 +12,11 @@ namespace GestionCommercialeUIW
 {
     public partial class frmListeClients : Form
     {
+       
         public frmListeClients()
         {
             InitializeComponent();
+            this.afficheClients();
         }
 
         private void btnNouveauClient_Click(object sender, EventArgs e)
@@ -82,5 +84,7 @@ namespace GestionCommercialeUIW
         {
             this.Close();
         }
+
+
     }
 }
