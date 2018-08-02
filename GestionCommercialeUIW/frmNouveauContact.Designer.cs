@@ -32,15 +32,15 @@
             this.lblContactNumClient = new System.Windows.Forms.Label();
             this.lblNomClient = new System.Windows.Forms.Label();
             this.groupBoxIdentification = new System.Windows.Forms.GroupBox();
+            this.textBoxMail = new System.Windows.Forms.TextBox();
+            this.textBoxTel = new System.Windows.Forms.TextBox();
+            this.textBoxPrenomContact = new System.Windows.Forms.TextBox();
+            this.textBoxNomContact = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBoxNomContact = new System.Windows.Forms.TextBox();
-            this.textBoxPrenomContact = new System.Windows.Forms.TextBox();
-            this.textBoxTel = new System.Windows.Forms.TextBox();
-            this.textBoxMail = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -93,6 +93,52 @@
             this.groupBoxIdentification.TabStop = false;
             this.groupBoxIdentification.Text = "Identification";
             // 
+            // textBoxMail
+            // 
+            this.textBoxMail.Location = new System.Drawing.Point(72, 126);
+            this.textBoxMail.Name = "textBoxMail";
+            this.textBoxMail.Size = new System.Drawing.Size(199, 20);
+            this.textBoxMail.TabIndex = 8;
+            // 
+            // textBoxTel
+            // 
+            this.textBoxTel.Location = new System.Drawing.Point(72, 97);
+            this.textBoxTel.Name = "textBoxTel";
+            this.textBoxTel.Size = new System.Drawing.Size(199, 20);
+            this.textBoxTel.TabIndex = 7;
+            // 
+            // textBoxPrenomContact
+            // 
+            this.textBoxPrenomContact.Location = new System.Drawing.Point(72, 70);
+            this.textBoxPrenomContact.Name = "textBoxPrenomContact";
+            this.textBoxPrenomContact.Size = new System.Drawing.Size(199, 20);
+            this.textBoxPrenomContact.TabIndex = 6;
+            // 
+            // textBoxNomContact
+            // 
+            this.textBoxNomContact.Location = new System.Drawing.Point(72, 41);
+            this.textBoxNomContact.Name = "textBoxNomContact";
+            this.textBoxNomContact.Size = new System.Drawing.Size(199, 20);
+            this.textBoxNomContact.TabIndex = 5;
+            this.textBoxNomContact.TextChanged += new System.EventHandler(this.textBoxNomContact_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(298, 41);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(106, 94);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 129);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Email :";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -119,51 +165,6 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nom :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 129);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Email :";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(298, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(106, 94);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // textBoxNomContact
-            // 
-            this.textBoxNomContact.Location = new System.Drawing.Point(72, 41);
-            this.textBoxNomContact.Name = "textBoxNomContact";
-            this.textBoxNomContact.Size = new System.Drawing.Size(199, 20);
-            this.textBoxNomContact.TabIndex = 5;
-            // 
-            // textBoxPrenomContact
-            // 
-            this.textBoxPrenomContact.Location = new System.Drawing.Point(72, 70);
-            this.textBoxPrenomContact.Name = "textBoxPrenomContact";
-            this.textBoxPrenomContact.Size = new System.Drawing.Size(199, 20);
-            this.textBoxPrenomContact.TabIndex = 6;
-            // 
-            // textBoxTel
-            // 
-            this.textBoxTel.Location = new System.Drawing.Point(72, 97);
-            this.textBoxTel.Name = "textBoxTel";
-            this.textBoxTel.Size = new System.Drawing.Size(199, 20);
-            this.textBoxTel.TabIndex = 7;
-            // 
-            // textBoxMail
-            // 
-            this.textBoxMail.Location = new System.Drawing.Point(72, 126);
-            this.textBoxMail.Name = "textBoxMail";
-            this.textBoxMail.Size = new System.Drawing.Size(199, 20);
-            this.textBoxMail.TabIndex = 8;
             // 
             // button1
             // 
