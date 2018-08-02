@@ -97,6 +97,7 @@
             // 
             // cmbBoxNature
             // 
+            this.cmbBoxNature.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBoxNature.FormattingEnabled = true;
             this.cmbBoxNature.Location = new System.Drawing.Point(302, 104);
             this.cmbBoxNature.Name = "cmbBoxNature";
@@ -105,11 +106,13 @@
             // 
             // cmbBoxActivité
             // 
+            this.cmbBoxActivité.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBoxActivité.FormattingEnabled = true;
             this.cmbBoxActivité.Location = new System.Drawing.Point(82, 104);
             this.cmbBoxActivité.Name = "cmbBoxActivité";
             this.cmbBoxActivité.Size = new System.Drawing.Size(121, 21);
             this.cmbBoxActivité.TabIndex = 7;
+            this.cmbBoxActivité.SelectedIndexChanged += new System.EventHandler(this.cmbBoxActivité_SelectedIndexChanged);
             // 
             // txtBoxCA
             // 

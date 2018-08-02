@@ -15,6 +15,40 @@ namespace GestionCommercialeUIW
         public frmNouveauClient()
         {
             InitializeComponent();
+            this.InitActivité();
+            this.InitNature();
+        }
+
+
+        private void InitActivité()
+        {
+            // vide la combobox
+            this.cmbBoxActivité.Items.Clear();
+
+            // ajoute une collection d'items
+            this.cmbBoxActivité.Items.AddRange(new String[]
+            { "Céréales", "Boissons", "Administration", "Bovins","Laiterie" });
+
+            // permet de remplir par défaut la première valeur de l'index afin de ne pas mettre le programme en erreur
+            this.cmbBoxActivité.SelectedIndex = 0;
+
+           
+        }
+
+        private void InitNature()
+        {
+            // vide la combobox
+            this.cmbBoxNature.Items.Clear();
+
+            // ajoute une collection d'items
+            this.cmbBoxNature.Items.AddRange(new String[]
+            { "Principale", "Secondaire", "Ancienne" });
+
+            // permet de remplir par défaut la première valeur de l'index afin de ne pas mettre le programme en erreur
+            this.cmbBoxNature.SelectedIndex = 0;
+
+            
+            
         }
 
         private void btnContact_Click(object sender, EventArgs e) // Permet d'ouvrir la fenêtre Nouveau contact par le biais du bouton "Contacts" de la fenêtre Nouveau client
@@ -23,7 +57,7 @@ namespace GestionCommercialeUIW
 
             if (frmContact.ShowDialog() == DialogResult.OK)
             { }
-                
+
 
         }
 
@@ -40,7 +74,7 @@ namespace GestionCommercialeUIW
             try
             {
 
-                
+
                 // déclenchement des méthodes get/set du Client.cs
                 nouveauClient.NumClient = txtBoxNumClient.Text;
                 nouveauClient.RaisonSociale = txtBoxRaisonSocial.Text;
@@ -52,6 +86,7 @@ namespace GestionCommercialeUIW
                 nouveauClient.CA = Int32.Parse(txtBoxCA.Text);
                 nouveauClient.Activite = cmbBoxActivité.Text;
                 nouveauClient.Nature = cmbBoxNature.Text;
+                nouveauClient.Prive = chkBoxPrive.Checked;
 
                 GestionCommercialeDll.Donnees.TabClients.Add(nouveauClient);
 
@@ -60,17 +95,21 @@ namespace GestionCommercialeUIW
                 this.DialogResult = DialogResult.OK;
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 nouveauClient = null;
-                MessageBox.Show("Erreur : \n" + ex.Message, "Raison sociale");                
+                MessageBox.Show("Erreur : \n" + ex.Message, "Raison sociale");
             }
 
-            
 
         }
 
         private void chkBoxPrive_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbBoxActivité_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
