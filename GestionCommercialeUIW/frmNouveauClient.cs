@@ -46,7 +46,7 @@ namespace GestionCommercialeUIW
             nouveauClient.Activite = cmbBoxActivité.Text;
             nouveauClient.Nature = cmbBoxNature.Text;
 
-
+            
 
             GestionCommercialeDll.Donnees.TabClients.Add(nouveauClient);
 
