@@ -103,7 +103,7 @@
             this.cmbBoxNature.Location = new System.Drawing.Point(302, 104);
             this.cmbBoxNature.Name = "cmbBoxNature";
             this.cmbBoxNature.Size = new System.Drawing.Size(121, 21);
-            this.cmbBoxNature.TabIndex = 3;
+            this.cmbBoxNature.TabIndex = 4;
             // 
             // cmbBoxActivité
             // 
@@ -112,7 +112,7 @@
             this.cmbBoxActivité.Location = new System.Drawing.Point(82, 104);
             this.cmbBoxActivité.Name = "cmbBoxActivité";
             this.cmbBoxActivité.Size = new System.Drawing.Size(121, 21);
-            this.cmbBoxActivité.TabIndex = 2;
+            this.cmbBoxActivité.TabIndex = 3;
             this.cmbBoxActivité.SelectedIndexChanged += new System.EventHandler(this.cmbBoxActivité_SelectedIndexChanged);
             // 
             // txtBoxCA
@@ -120,14 +120,14 @@
             this.txtBoxCA.Location = new System.Drawing.Point(277, 78);
             this.txtBoxCA.Name = "txtBoxCA";
             this.txtBoxCA.Size = new System.Drawing.Size(146, 20);
-            this.txtBoxCA.TabIndex = 1;
+            this.txtBoxCA.TabIndex = 2;
             // 
             // txtBoxEffectif
             // 
             this.txtBoxEffectif.Location = new System.Drawing.Point(82, 78);
             this.txtBoxEffectif.Name = "txtBoxEffectif";
             this.txtBoxEffectif.Size = new System.Drawing.Size(140, 20);
-            this.txtBoxEffectif.TabIndex = 0;
+            this.txtBoxEffectif.TabIndex = 1;
             // 
             // lblNature
             // 
