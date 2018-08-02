@@ -53,7 +53,7 @@ namespace GestionCommercialeUIW
 
         private void btnContact_Click(object sender, EventArgs e) // Permet d'ouvrir la fenêtre Nouveau contact par le biais du bouton "Contacts" de la fenêtre Nouveau client
         {
-            frmNouveauContact frmContact = new frmNouveauContact();
+            frmNouveauContact frmContact = new frmNouveauContact(txtBoxNumClient.Text.ToString(), txtBoxRaisonSocial.Text);
 
             if (frmContact.ShowDialog() == DialogResult.OK)
             { }

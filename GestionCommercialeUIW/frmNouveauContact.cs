@@ -12,9 +12,11 @@ namespace GestionCommercialeUIW
 {
     public partial class frmNouveauContact : Form
     {
-        public frmNouveauContact()
+        public frmNouveauContact(string unNumClient, string uneRaisonSociale)
         {
             InitializeComponent();
+            this.lblContactNumClient.Text = unNumClient;
+            this.lblNomClient.Text = uneRaisonSociale;
         }
 
         private void btnAnnulerContact_Click(object sender, EventArgs e)
@@ -43,5 +45,12 @@ namespace GestionCommercialeUIW
 
             this.DialogResult = DialogResult.OK;
         }
+
+        private void frmAfficheNumclient (object sender, EventArgs e)
+        {
+            
+        }
+
+
     }
 }
