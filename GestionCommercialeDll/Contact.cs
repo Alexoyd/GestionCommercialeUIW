@@ -14,6 +14,8 @@ namespace GestionCommercialeDll
             private string mailContact;
             private string cmbBoxFonctionMetier;
 
+        public static Int32 NContact;
+
         public string NomContact { get => nomContact; set => nomContact = value; }
         public string PrenomContact { get => prenomContact; set => prenomContact = value; }
         public int TelContact { get => telContact; set => telContact = value; }
