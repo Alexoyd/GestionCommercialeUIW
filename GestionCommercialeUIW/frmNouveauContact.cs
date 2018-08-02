@@ -37,7 +37,7 @@ namespace GestionCommercialeUIW
             nouveauContact.MailContact = txtBoxMail.Text;
             nouveauContact.CmbBoxFonctionMetier = cmbBoxFonctionMetier.Text;
 
-            GestionCommercialeDll.Donnees.TabContact.Add(nouveauContact);
+           // GestionCommercialeDll.Donnees.TabContact.Add(nouveauContact);
 
             GestionCommercialeDll.Contact.NContact += 1;
 
