@@ -170,6 +170,7 @@
             this.chkBoxPrive.TabIndex = 0;
             this.chkBoxPrive.Text = "Privé";
             this.chkBoxPrive.UseVisualStyleBackColor = true;
+            this.chkBoxPrive.CheckedChanged += new System.EventHandler(this.chkBoxPrive_CheckedChanged);
             // 
             // grpBoxIdentif
             // 
