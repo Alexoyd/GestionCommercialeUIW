@@ -15,6 +15,9 @@ namespace GestionCommercialeUIW
         public frmModifClient(string unNumClient, string RaisonSociale, string AdresseUne, string AdresseDeux, string CP, string Ville, string Telephone, bool prive, string Effectif, string CA, string Activite, string Nature)
         {
             InitializeComponent();
+            this.InitActivité();
+            this.InitNature();
+
             this.lblNum.Text = unNumClient;
             this.txtBoxRaisonSocial.Text = RaisonSociale;
             this.txtBoxAdresse.Text = AdresseUne;
@@ -27,6 +30,35 @@ namespace GestionCommercialeUIW
             this.txtBoxCA.Text = CA;
             this.cmbBoxActivité.Text = Activite;
             this.cmbBoxNature.Text = Nature;
+        }
+
+        private void InitActivité()
+        {
+            // vide la combobox
+            this.cmbBoxActivité.Items.Clear();
+
+            // ajoute une collection d'items
+            this.cmbBoxActivité.Items.AddRange(new String[]
+            { "Céréales", "Boissons", "Administration", "Bovins","Laiterie" });
+
+            // permet de remplir par défaut la première valeur de l'index afin de ne pas mettre le programme en erreur
+            this.cmbBoxActivité.SelectedIndex = 0;
+        }
+
+        private void InitNature()
+        {
+            // vide la combobox
+            this.cmbBoxNature.Items.Clear();
+
+            // ajoute une collection d'items
+            this.cmbBoxNature.Items.AddRange(new String[]
+            { "Principale", "Secondaire", "Ancienne" });
+
+            // permet de remplir par défaut la première valeur de l'index afin de ne pas mettre le programme en erreur
+            this.cmbBoxNature.SelectedIndex = 0;
+
+
+
         }
 
 
