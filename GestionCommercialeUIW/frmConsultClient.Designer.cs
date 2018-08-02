@@ -29,32 +29,21 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtVille = new System.Windows.Forms.TextBox();
-            this.txtTel = new System.Windows.Forms.TextBox();
-            this.txtCP = new System.Windows.Forms.TextBox();
-            this.textAdresse1 = new System.Windows.Forms.TextBox();
-            this.rue = new System.Windows.Forms.TextBox();
-            this.txtRSocial = new System.Windows.Forms.TextBox();
-            this.txtNumClient = new System.Windows.Forms.TextBox();
+            this.lblVille = new System.Windows.Forms.Label();
+            this.lblTelephone = new System.Windows.Forms.Label();
+            this.lblCP = new System.Windows.Forms.Label();
+            this.lblAdresse1 = new System.Windows.Forms.Label();
+            this.lblAdresse = new System.Windows.Forms.Label();
+            this.lblRSociale = new System.Windows.Forms.Label();
+            this.lblNumClient = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtNature = new System.Windows.Forms.TextBox();
-            this.txtActivite = new System.Windows.Forms.TextBox();
-            this.txtCA = new System.Windows.Forms.TextBox();
-            this.txtEffectif = new System.Windows.Forms.TextBox();
-            this.Nature = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.CA = new System.Windows.Forms.Label();
-            this.Effectif = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkPrive = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnModifClient = new System.Windows.Forms.Button();
+            this.btnNouveauContactModif = new System.Windows.Forms.Button();
+            this.btnFermer = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.Fonction = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,81 +51,99 @@
             this.Prénom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.checkPrive = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Effectif = new System.Windows.Forms.Label();
+            this.CA = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Nature = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblNature = new System.Windows.Forms.Label();
+            this.lblActivite = new System.Windows.Forms.Label();
+            this.lblCA = new System.Windows.Forms.Label();
+            this.lblEffectif = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtVille);
-            this.groupBox1.Controls.Add(this.txtTel);
-            this.groupBox1.Controls.Add(this.txtCP);
-            this.groupBox1.Controls.Add(this.textAdresse1);
-            this.groupBox1.Controls.Add(this.rue);
-            this.groupBox1.Controls.Add(this.txtRSocial);
-            this.groupBox1.Controls.Add(this.txtNumClient);
+            this.groupBox1.Controls.Add(this.lblVille);
+            this.groupBox1.Controls.Add(this.lblTelephone);
+            this.groupBox1.Controls.Add(this.lblCP);
+            this.groupBox1.Controls.Add(this.lblAdresse1);
+            this.groupBox1.Controls.Add(this.lblAdresse);
+            this.groupBox1.Controls.Add(this.lblRSociale);
+            this.groupBox1.Controls.Add(this.lblNumClient);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 26);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(575, 224);
+            this.groupBox1.Size = new System.Drawing.Size(575, 238);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Identification";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // txtVille
+            // lblVille
             // 
-            this.txtVille.Location = new System.Drawing.Point(274, 144);
-            this.txtVille.Name = "txtVille";
-            this.txtVille.Size = new System.Drawing.Size(100, 20);
-            this.txtVille.TabIndex = 11;
+            this.lblVille.AutoSize = true;
+            this.lblVille.Location = new System.Drawing.Point(206, 147);
+            this.lblVille.Name = "lblVille";
+            this.lblVille.Size = new System.Drawing.Size(0, 13);
+            this.lblVille.TabIndex = 10;
             // 
-            // txtTel
+            // lblTelephone
             // 
-            this.txtTel.Location = new System.Drawing.Point(168, 173);
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(100, 20);
-            this.txtTel.TabIndex = 10;
+            this.lblTelephone.AutoSize = true;
+            this.lblTelephone.Location = new System.Drawing.Point(147, 173);
+            this.lblTelephone.Name = "lblTelephone";
+            this.lblTelephone.Size = new System.Drawing.Size(0, 13);
+            this.lblTelephone.TabIndex = 9;
             // 
-            // txtCP
+            // lblCP
             // 
-            this.txtCP.Location = new System.Drawing.Point(168, 144);
-            this.txtCP.Name = "txtCP";
-            this.txtCP.Size = new System.Drawing.Size(100, 20);
-            this.txtCP.TabIndex = 9;
+            this.lblCP.AutoSize = true;
+            this.lblCP.Location = new System.Drawing.Point(147, 147);
+            this.lblCP.Name = "lblCP";
+            this.lblCP.Size = new System.Drawing.Size(0, 13);
+            this.lblCP.TabIndex = 8;
             // 
-            // textAdresse1
+            // lblAdresse1
             // 
-            this.textAdresse1.Location = new System.Drawing.Point(168, 118);
-            this.textAdresse1.Name = "textAdresse1";
-            this.textAdresse1.Size = new System.Drawing.Size(375, 20);
-            this.textAdresse1.TabIndex = 7;
+            this.lblAdresse1.AutoSize = true;
+            this.lblAdresse1.Location = new System.Drawing.Point(147, 116);
+            this.lblAdresse1.Name = "lblAdresse1";
+            this.lblAdresse1.Size = new System.Drawing.Size(0, 13);
+            this.lblAdresse1.TabIndex = 7;
             // 
-            // rue
+            // lblAdresse
             // 
-            this.rue.Location = new System.Drawing.Point(168, 86);
-            this.rue.Name = "rue";
-            this.rue.Size = new System.Drawing.Size(375, 20);
-            this.rue.TabIndex = 6;
+            this.lblAdresse.AutoSize = true;
+            this.lblAdresse.Location = new System.Drawing.Point(147, 93);
+            this.lblAdresse.Name = "lblAdresse";
+            this.lblAdresse.Size = new System.Drawing.Size(0, 13);
+            this.lblAdresse.TabIndex = 6;
             // 
-            // txtRSocial
+            // lblRSociale
             // 
-            this.txtRSocial.Location = new System.Drawing.Point(168, 60);
-            this.txtRSocial.Name = "txtRSocial";
-            this.txtRSocial.Size = new System.Drawing.Size(100, 20);
-            this.txtRSocial.TabIndex = 5;
+            this.lblRSociale.AutoSize = true;
+            this.lblRSociale.Location = new System.Drawing.Point(147, 63);
+            this.lblRSociale.Name = "lblRSociale";
+            this.lblRSociale.Size = new System.Drawing.Size(0, 13);
+            this.lblRSociale.TabIndex = 5;
             // 
-            // txtNumClient
+            // lblNumClient
             // 
-            this.txtNumClient.Location = new System.Drawing.Point(168, 34);
-            this.txtNumClient.Name = "txtNumClient";
-            this.txtNumClient.Size = new System.Drawing.Size(100, 20);
-            this.txtNumClient.TabIndex = 4;
-            this.txtNumClient.TextChanged += new System.EventHandler(this.txtNumClient_TextChanged);
+            this.lblNumClient.AutoSize = true;
+            this.lblNumClient.Location = new System.Drawing.Point(147, 34);
+            this.lblNumClient.Name = "lblNumClient";
+            this.lblNumClient.Size = new System.Drawing.Size(0, 13);
+            this.lblNumClient.TabIndex = 4;
             // 
             // label4
             // 
@@ -183,133 +190,35 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Numéro client :";
             // 
-            // groupBox2
+            // btnModifClient
             // 
-            this.groupBox2.Controls.Add(this.txtNature);
-            this.groupBox2.Controls.Add(this.txtActivite);
-            this.groupBox2.Controls.Add(this.txtCA);
-            this.groupBox2.Controls.Add(this.txtEffectif);
-            this.groupBox2.Controls.Add(this.Nature);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.CA);
-            this.groupBox2.Controls.Add(this.Effectif);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.checkPrive);
-            this.groupBox2.Location = new System.Drawing.Point(12, 270);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(575, 139);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Caractéristiques";
+            this.btnModifClient.Location = new System.Drawing.Point(283, 561);
+            this.btnModifClient.Name = "btnModifClient";
+            this.btnModifClient.Size = new System.Drawing.Size(96, 23);
+            this.btnModifClient.TabIndex = 3;
+            this.btnModifClient.Text = "Modifier Client";
+            this.btnModifClient.UseVisualStyleBackColor = true;
+            this.btnModifClient.Click += new System.EventHandler(this.btnModifClient_Click);
             // 
-            // txtNature
+            // btnNouveauContactModif
             // 
-            this.txtNature.Location = new System.Drawing.Point(310, 98);
-            this.txtNature.Name = "txtNature";
-            this.txtNature.Size = new System.Drawing.Size(100, 20);
-            this.txtNature.TabIndex = 9;
+            this.btnNouveauContactModif.Location = new System.Drawing.Point(385, 561);
+            this.btnNouveauContactModif.Name = "btnNouveauContactModif";
+            this.btnNouveauContactModif.Size = new System.Drawing.Size(100, 23);
+            this.btnNouveauContactModif.TabIndex = 4;
+            this.btnNouveauContactModif.Text = "Nouveau contact";
+            this.btnNouveauContactModif.UseVisualStyleBackColor = true;
+            this.btnNouveauContactModif.Click += new System.EventHandler(this.btnNouveauContactModif_Click);
             // 
-            // txtActivite
+            // btnFermer
             // 
-            this.txtActivite.Location = new System.Drawing.Point(79, 101);
-            this.txtActivite.Name = "txtActivite";
-            this.txtActivite.Size = new System.Drawing.Size(100, 20);
-            this.txtActivite.TabIndex = 8;
-            // 
-            // txtCA
-            // 
-            this.txtCA.Location = new System.Drawing.Point(292, 60);
-            this.txtCA.Name = "txtCA";
-            this.txtCA.Size = new System.Drawing.Size(100, 20);
-            this.txtCA.TabIndex = 7;
-            // 
-            // txtEffectif
-            // 
-            this.txtEffectif.Location = new System.Drawing.Point(79, 60);
-            this.txtEffectif.Name = "txtEffectif";
-            this.txtEffectif.Size = new System.Drawing.Size(100, 20);
-            this.txtEffectif.TabIndex = 6;
-            // 
-            // Nature
-            // 
-            this.Nature.AutoSize = true;
-            this.Nature.Location = new System.Drawing.Point(256, 101);
-            this.Nature.Name = "Nature";
-            this.Nature.Size = new System.Drawing.Size(48, 13);
-            this.Nature.TabIndex = 5;
-            this.Nature.Text = "Nature : ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(24, 101);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Activité : ";
-            // 
-            // CA
-            // 
-            this.CA.AutoSize = true;
-            this.CA.Location = new System.Drawing.Point(256, 63);
-            this.CA.Name = "CA";
-            this.CA.Size = new System.Drawing.Size(30, 13);
-            this.CA.TabIndex = 3;
-            this.CA.Text = "CA : ";
-            // 
-            // Effectif
-            // 
-            this.Effectif.AutoSize = true;
-            this.Effectif.Location = new System.Drawing.Point(24, 63);
-            this.Effectif.Name = "Effectif";
-            this.Effectif.Size = new System.Drawing.Size(49, 13);
-            this.Effectif.TabIndex = 2;
-            this.Effectif.Text = "Effectif : ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(48, 33);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Privé";
-            // 
-            // checkPrive
-            // 
-            this.checkPrive.AutoSize = true;
-            this.checkPrive.Location = new System.Drawing.Point(27, 32);
-            this.checkPrive.Name = "checkPrive";
-            this.checkPrive.Size = new System.Drawing.Size(15, 14);
-            this.checkPrive.TabIndex = 0;
-            this.checkPrive.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(329, 561);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Modifier Client";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(410, 561);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Nouveau client";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(491, 561);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Fermer";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnFermer.Location = new System.Drawing.Point(491, 561);
+            this.btnFermer.Name = "btnFermer";
+            this.btnFermer.Size = new System.Drawing.Size(75, 23);
+            this.btnFermer.TabIndex = 5;
+            this.btnFermer.Text = "Fermer";
+            this.btnFermer.UseVisualStyleBackColor = true;
+            this.btnFermer.Click += new System.EventHandler(this.btnFermer_Click);
             // 
             // label11
             // 
@@ -364,15 +273,123 @@
             this.dataGridView1.Size = new System.Drawing.Size(543, 93);
             this.dataGridView1.TabIndex = 2;
             // 
+            // checkPrive
+            // 
+            this.checkPrive.AutoSize = true;
+            this.checkPrive.Location = new System.Drawing.Point(27, 32);
+            this.checkPrive.Name = "checkPrive";
+            this.checkPrive.Size = new System.Drawing.Size(15, 14);
+            this.checkPrive.TabIndex = 0;
+            this.checkPrive.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(48, 33);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Privé";
+            // 
+            // Effectif
+            // 
+            this.Effectif.AutoSize = true;
+            this.Effectif.Location = new System.Drawing.Point(24, 63);
+            this.Effectif.Name = "Effectif";
+            this.Effectif.Size = new System.Drawing.Size(49, 13);
+            this.Effectif.TabIndex = 2;
+            this.Effectif.Text = "Effectif : ";
+            // 
+            // CA
+            // 
+            this.CA.AutoSize = true;
+            this.CA.Location = new System.Drawing.Point(256, 63);
+            this.CA.Name = "CA";
+            this.CA.Size = new System.Drawing.Size(30, 13);
+            this.CA.TabIndex = 3;
+            this.CA.Text = "CA : ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(24, 101);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 13);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Activité : ";
+            // 
+            // Nature
+            // 
+            this.Nature.AutoSize = true;
+            this.Nature.Location = new System.Drawing.Point(256, 101);
+            this.Nature.Name = "Nature";
+            this.Nature.Size = new System.Drawing.Size(48, 13);
+            this.Nature.TabIndex = 5;
+            this.Nature.Text = "Nature : ";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.lblNature);
+            this.groupBox2.Controls.Add(this.lblActivite);
+            this.groupBox2.Controls.Add(this.lblCA);
+            this.groupBox2.Controls.Add(this.lblEffectif);
+            this.groupBox2.Controls.Add(this.Nature);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.CA);
+            this.groupBox2.Controls.Add(this.Effectif);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.checkPrive);
+            this.groupBox2.Location = new System.Drawing.Point(12, 270);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(575, 139);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Caractéristiques";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // lblNature
+            // 
+            this.lblNature.AutoSize = true;
+            this.lblNature.Location = new System.Drawing.Point(311, 101);
+            this.lblNature.Name = "lblNature";
+            this.lblNature.Size = new System.Drawing.Size(0, 13);
+            this.lblNature.TabIndex = 9;
+            // 
+            // lblActivite
+            // 
+            this.lblActivite.AutoSize = true;
+            this.lblActivite.Location = new System.Drawing.Point(74, 101);
+            this.lblActivite.Name = "lblActivite";
+            this.lblActivite.Size = new System.Drawing.Size(0, 13);
+            this.lblActivite.TabIndex = 8;
+            this.lblActivite.Click += new System.EventHandler(this.lblActivite_Click);
+            // 
+            // lblCA
+            // 
+            this.lblCA.AutoSize = true;
+            this.lblCA.Location = new System.Drawing.Point(293, 62);
+            this.lblCA.Name = "lblCA";
+            this.lblCA.Size = new System.Drawing.Size(0, 13);
+            this.lblCA.TabIndex = 7;
+            // 
+            // lblEffectif
+            // 
+            this.lblEffectif.AutoSize = true;
+            this.lblEffectif.Location = new System.Drawing.Point(71, 63);
+            this.lblEffectif.Name = "lblEffectif";
+            this.lblEffectif.Size = new System.Drawing.Size(0, 13);
+            this.lblEffectif.TabIndex = 6;
+            this.lblEffectif.Click += new System.EventHandler(this.lblEffectif_Click);
+            // 
             // frmConsultClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 596);
+            this.ClientSize = new System.Drawing.Size(599, 596);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnFermer);
+            this.Controls.Add(this.btnNouveauContactModif);
+            this.Controls.Add(this.btnModifClient);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -381,9 +398,9 @@
             this.Load += new System.EventHandler(this.frmConsultClient_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,32 +409,14 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtVille;
-        private System.Windows.Forms.TextBox txtTel;
-        private System.Windows.Forms.TextBox txtCP;
-        private System.Windows.Forms.TextBox textAdresse1;
-        private System.Windows.Forms.TextBox rue;
-        private System.Windows.Forms.TextBox txtRSocial;
-        private System.Windows.Forms.TextBox txtNumClient;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtNature;
-        private System.Windows.Forms.TextBox txtActivite;
-        private System.Windows.Forms.TextBox txtCA;
-        private System.Windows.Forms.TextBox txtEffectif;
-        private System.Windows.Forms.Label Nature;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label CA;
-        private System.Windows.Forms.Label Effectif;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checkPrive;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnModifClient;
+        private System.Windows.Forms.Button btnNouveauContactModif;
+        private System.Windows.Forms.Button btnFermer;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fonction;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
@@ -425,7 +424,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Prénom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
         private System.Windows.Forms.DataGridView dataGridView1;
-
-      
+        private System.Windows.Forms.Label lblVille;
+        private System.Windows.Forms.Label lblTelephone;
+        private System.Windows.Forms.Label lblCP;
+        private System.Windows.Forms.Label lblAdresse1;
+        private System.Windows.Forms.Label lblAdresse;
+        private System.Windows.Forms.Label lblRSociale;
+        private System.Windows.Forms.Label lblNumClient;
+        private System.Windows.Forms.CheckBox checkPrive;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Effectif;
+        private System.Windows.Forms.Label CA;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label Nature;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lblNature;
+        private System.Windows.Forms.Label lblActivite;
+        private System.Windows.Forms.Label lblCA;
+        private System.Windows.Forms.Label lblEffectif;
     }
 }
