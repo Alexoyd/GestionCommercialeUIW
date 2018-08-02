@@ -21,8 +21,8 @@ namespace GestionCommercialeUIW
         {
             frmNouveauContact frmContact = new frmNouveauContact();
 
-            if(frmContact.ShowDialog() == DialogResult.OK)
-            frmContact.Show();
+            if (frmContact.ShowDialog() == DialogResult.OK)
+                frmContact.Show();
 
         }
 
@@ -33,24 +33,42 @@ namespace GestionCommercialeUIW
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+
             GestionCommercialeDll.Client nouveauClient = new GestionCommercialeDll.Client();
-            // déclenchement des méthodes get/set du Client.cs
-            nouveauClient.NumClient = txtBoxNumClient.Text;
-            nouveauClient.RaisonSociale = txtBoxRaisonSocial.Text;
-            nouveauClient.Adresse = txtBoxAdresse.Text;
-            nouveauClient.CP = txtBoxCP.Text;
-            nouveauClient.Ville = txtBoxVille.Text;
-            nouveauClient.Telephone = txtBoxTelephone.Text;
-            nouveauClient.Effectif = Int32.Parse(txtBoxEffectif.Text);
-            nouveauClient.CA = Int32.Parse(txtBoxCA.Text);
-            nouveauClient.Activite = cmbBoxActivité.Text;
-            nouveauClient.Nature = cmbBoxNature.Text;
+
+            try
+            {
+
+                
+                // déclenchement des méthodes get/set du Client.cs
+                nouveauClient.NumClient = txtBoxNumClient.Text;
+                nouveauClient.RaisonSociale = txtBoxRaisonSocial.Text;
+                nouveauClient.Adresse = txtBoxAdresse.Text;
+                nouveauClient.CP = txtBoxCP.Text;
+                nouveauClient.Ville = txtBoxVille.Text;
+                nouveauClient.Telephone = txtBoxTelephone.Text;
+                nouveauClient.Effectif = Int32.Parse(txtBoxEffectif.Text);
+                nouveauClient.CA = Int32.Parse(txtBoxCA.Text);
+                nouveauClient.Activite = cmbBoxActivité.Text;
+                nouveauClient.Nature = cmbBoxNature.Text;
+
+                GestionCommercialeDll.Donnees.TabClients.Add(nouveauClient);
+
+                this.DialogResult = DialogResult.OK;
+
+            }
+            catch(Exception ex)
+            {
+                nouveauClient = null;
+                MessageBox.Show("Erreur : \n" + ex.Message, "Raison sociale");
+                
+            }
+
+                
+
+
 
             
-
-            GestionCommercialeDll.Donnees.TabClients.Add(nouveauClient);
-
-            this.DialogResult = DialogResult.OK;
         }
     }
 }
