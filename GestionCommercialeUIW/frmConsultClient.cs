@@ -17,6 +17,7 @@ namespace GestionCommercialeUIW
         public frmConsultClient(GestionCommercialeDll.Client unClient)
         {
             this.leClient = unClient;
+
             InitializeComponent();
         }
 
@@ -33,20 +34,56 @@ namespace GestionCommercialeUIW
         }
         private void afficheClient(GestionCommercialeDll.Client unClient)
         {
-            this.txtNumClient.Text = unClient.NumClient;
-            this.txtRSocial.Text = unClient.RaisonSociale;
-            this.rue.Text = unClient.Adresse;
-            this.textAdresse1.Text = unClient.Adresse;
-            this.txtCP.Text = unClient.CP;
-            this.txtVille.Text = unClient.Ville;
-            this.txtTel.Text = unClient.Telephone;
-            this.txtEffectif.Text = unClient.Effectif.ToString();
-            this.txtActivite.Text = unClient.Activite;
-            this.txtCA.Text = unClient.CA.ToString();
-            this.txtNature.Text = unClient.Nature;
+            this.lblNumClient.Text = unClient.NumClient;
+            this.lblRSociale.Text = unClient.RaisonSociale;
+            this.lblAdresse.Text = unClient.Adresse;
+            this.lblAdresse1.Text = unClient.Adresse;
+            this.lblCP.Text = unClient.CP;
+            this.lblVille.Text = unClient.Ville;
+            this.lblTelephone.Text = unClient.Telephone;
+            this.lblEffectif.Text = unClient.Effectif.ToString();
+            this.lblActivite.Text = unClient.Activite;
+            this.lblCA.Text = unClient.CA.ToString();
+            this.lblNature.Text = unClient.Nature;
 
         }
 
+        private void lblEffectif_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblActivite_Click(object sender, EventArgs e)
+        {
+
+        }
+        //boutton modification client
+        private void btnModifClient_Click(object sender, EventArgs e)
+        {
+            frmModifClient frmModClient = new frmModifClient();
+            frmModClient.ShowDialog();
+        }
+        
+        private void btnNouveauContactModif_Click(object sender, EventArgs e)
+        {
+            frmNouveauContact frmNewContact = new frmNouveauContact(lblNumClient.Text.ToString(), lblRSociale.Text);
+            frmNewContact.ShowDialog();
+        }
+        //Boutton quitter
+        private void btnFermer_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
         
