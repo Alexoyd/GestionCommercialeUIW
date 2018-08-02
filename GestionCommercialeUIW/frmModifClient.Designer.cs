@@ -41,6 +41,8 @@
             this.lblEffectif = new System.Windows.Forms.Label();
             this.chkBoxPrive = new System.Windows.Forms.CheckBox();
             this.grpBoxIdentif = new System.Windows.Forms.GroupBox();
+            this.txtBoxAdresse2 = new System.Windows.Forms.TextBox();
+            this.lblNum = new System.Windows.Forms.Label();
             this.txtBoxTelephone = new System.Windows.Forms.TextBox();
             this.txtBoxCP = new System.Windows.Forms.TextBox();
             this.txtBoxAdresse = new System.Windows.Forms.TextBox();
@@ -51,8 +53,6 @@
             this.lblAdresse = new System.Windows.Forms.Label();
             this.lblCPVille = new System.Windows.Forms.Label();
             this.lblTelephone = new System.Windows.Forms.Label();
-            this.lblNum = new System.Windows.Forms.Label();
-            this.txtBoxAdresse2 = new System.Windows.Forms.TextBox();
             this.grpBoxCaract.SuspendLayout();
             this.grpBoxIdentif.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +62,7 @@
             this.btnOK.Location = new System.Drawing.Point(289, 407);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(56, 32);
-            this.btnOK.TabIndex = 18;
+            this.btnOK.TabIndex = 2;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             // 
@@ -71,7 +71,7 @@
             this.btnAnnuler.Location = new System.Drawing.Point(351, 407);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(96, 32);
-            this.btnAnnuler.TabIndex = 19;
+            this.btnAnnuler.TabIndex = 3;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
             // 
@@ -89,7 +89,7 @@
             this.grpBoxCaract.Location = new System.Drawing.Point(12, 252);
             this.grpBoxCaract.Name = "grpBoxCaract";
             this.grpBoxCaract.Size = new System.Drawing.Size(435, 149);
-            this.grpBoxCaract.TabIndex = 15;
+            this.grpBoxCaract.TabIndex = 1;
             this.grpBoxCaract.TabStop = false;
             this.grpBoxCaract.Text = "Caractéristiques";
             // 
@@ -100,7 +100,7 @@
             this.cmbBoxNature.Location = new System.Drawing.Point(302, 104);
             this.cmbBoxNature.Name = "cmbBoxNature";
             this.cmbBoxNature.Size = new System.Drawing.Size(121, 21);
-            this.cmbBoxNature.TabIndex = 8;
+            this.cmbBoxNature.TabIndex = 4;
             // 
             // cmbBoxActivité
             // 
@@ -109,21 +109,21 @@
             this.cmbBoxActivité.Location = new System.Drawing.Point(82, 104);
             this.cmbBoxActivité.Name = "cmbBoxActivité";
             this.cmbBoxActivité.Size = new System.Drawing.Size(121, 21);
-            this.cmbBoxActivité.TabIndex = 7;
+            this.cmbBoxActivité.TabIndex = 3;
             // 
             // txtBoxCA
             // 
             this.txtBoxCA.Location = new System.Drawing.Point(277, 78);
             this.txtBoxCA.Name = "txtBoxCA";
             this.txtBoxCA.Size = new System.Drawing.Size(146, 20);
-            this.txtBoxCA.TabIndex = 6;
+            this.txtBoxCA.TabIndex = 2;
             // 
             // txtBoxEffectif
             // 
             this.txtBoxEffectif.Location = new System.Drawing.Point(82, 78);
             this.txtBoxEffectif.Name = "txtBoxEffectif";
             this.txtBoxEffectif.Size = new System.Drawing.Size(140, 20);
-            this.txtBoxEffectif.TabIndex = 5;
+            this.txtBoxEffectif.TabIndex = 1;
             // 
             // lblNature
             // 
@@ -188,44 +188,59 @@
             this.grpBoxIdentif.Location = new System.Drawing.Point(12, 12);
             this.grpBoxIdentif.Name = "grpBoxIdentif";
             this.grpBoxIdentif.Size = new System.Drawing.Size(409, 234);
-            this.grpBoxIdentif.TabIndex = 17;
+            this.grpBoxIdentif.TabIndex = 0;
             this.grpBoxIdentif.TabStop = false;
             this.grpBoxIdentif.Text = "Identification";
+            // 
+            // txtBoxAdresse2
+            // 
+            this.txtBoxAdresse2.Location = new System.Drawing.Point(148, 127);
+            this.txtBoxAdresse2.Name = "txtBoxAdresse2";
+            this.txtBoxAdresse2.Size = new System.Drawing.Size(255, 20);
+            this.txtBoxAdresse2.TabIndex = 4;
+            // 
+            // lblNum
+            // 
+            this.lblNum.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNum.Location = new System.Drawing.Point(145, 30);
+            this.lblNum.Name = "lblNum";
+            this.lblNum.Size = new System.Drawing.Size(100, 23);
+            this.lblNum.TabIndex = 1;
             // 
             // txtBoxTelephone
             // 
             this.txtBoxTelephone.Location = new System.Drawing.Point(148, 191);
             this.txtBoxTelephone.Name = "txtBoxTelephone";
             this.txtBoxTelephone.Size = new System.Drawing.Size(160, 20);
-            this.txtBoxTelephone.TabIndex = 11;
+            this.txtBoxTelephone.TabIndex = 7;
             // 
             // txtBoxCP
             // 
             this.txtBoxCP.Location = new System.Drawing.Point(148, 159);
             this.txtBoxCP.Name = "txtBoxCP";
             this.txtBoxCP.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxCP.TabIndex = 10;
+            this.txtBoxCP.TabIndex = 5;
             // 
             // txtBoxAdresse
             // 
             this.txtBoxAdresse.Location = new System.Drawing.Point(148, 101);
             this.txtBoxAdresse.Name = "txtBoxAdresse";
             this.txtBoxAdresse.Size = new System.Drawing.Size(255, 20);
-            this.txtBoxAdresse.TabIndex = 9;
+            this.txtBoxAdresse.TabIndex = 3;
             // 
             // txtBoxRaisonSocial
             // 
             this.txtBoxRaisonSocial.Location = new System.Drawing.Point(148, 66);
             this.txtBoxRaisonSocial.Name = "txtBoxRaisonSocial";
             this.txtBoxRaisonSocial.Size = new System.Drawing.Size(255, 20);
-            this.txtBoxRaisonSocial.TabIndex = 8;
+            this.txtBoxRaisonSocial.TabIndex = 2;
             // 
             // txtBoxVille
             // 
             this.txtBoxVille.Location = new System.Drawing.Point(254, 159);
             this.txtBoxVille.Name = "txtBoxVille";
             this.txtBoxVille.Size = new System.Drawing.Size(149, 20);
-            this.txtBoxVille.TabIndex = 7;
+            this.txtBoxVille.TabIndex = 6;
             // 
             // lblNumClient
             // 
@@ -271,21 +286,6 @@
             this.lblTelephone.Size = new System.Drawing.Size(67, 13);
             this.lblTelephone.TabIndex = 5;
             this.lblTelephone.Text = "Téléphone  :";
-            // 
-            // lblNum
-            // 
-            this.lblNum.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblNum.Location = new System.Drawing.Point(145, 30);
-            this.lblNum.Name = "lblNum";
-            this.lblNum.Size = new System.Drawing.Size(100, 23);
-            this.lblNum.TabIndex = 12;
-            // 
-            // txtBoxAdresse2
-            // 
-            this.txtBoxAdresse2.Location = new System.Drawing.Point(148, 127);
-            this.txtBoxAdresse2.Name = "txtBoxAdresse2";
-            this.txtBoxAdresse2.Size = new System.Drawing.Size(255, 20);
-            this.txtBoxAdresse2.TabIndex = 13;
             // 
             // frmModifClient
             // 
