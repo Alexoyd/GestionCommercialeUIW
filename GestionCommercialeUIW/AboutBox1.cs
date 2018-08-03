@@ -120,7 +120,7 @@ namespace GestionCommercialeUIW
 
         private void textBoxDescription_TextChanged(object sender, EventArgs e)
         {
-            textBoxDescription.Text = "Ce programme à été développé par une équipe de dev très compétente.";
+            textBoxDescription.Text = "Ce programme à été développé par une équipe de dev très compétente dans le respect de la personne humaine.";
         }
     }
 }
