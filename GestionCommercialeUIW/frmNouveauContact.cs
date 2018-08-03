@@ -42,11 +42,13 @@ namespace GestionCommercialeUIW
                 GestionCommercialeDll.Contact.NContact += 1;
 
                 this.DialogResult = DialogResult.OK;
-
+               // return true;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                nouveauContact = null;
+                MessageBox.Show("Erreur : \n" + ex.Message, "Ajout de contact");
+                // return false;
             }
 
 

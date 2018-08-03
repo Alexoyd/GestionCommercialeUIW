@@ -118,6 +118,9 @@ namespace GestionCommercialeUIW
             this.Close();
         }
 
-
+        private void textBoxDescription_TextChanged(object sender, EventArgs e)
+        {
+            textBoxDescription.Text = "Ce programme à été développé par une équipe de dev très compétente.";
+        }
     }
 }
