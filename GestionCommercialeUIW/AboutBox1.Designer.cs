@@ -65,9 +65,10 @@
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.ReadOnly = true;
             this.textBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxDescription.Size = new System.Drawing.Size(245, 159);
+            this.textBoxDescription.Size = new System.Drawing.Size(252, 159);
             this.textBoxDescription.TabIndex = 7;
             this.textBoxDescription.Text = "Description";
+            this.textBoxDescription.TextChanged += new System.EventHandler(this.textBoxDescription_TextChanged);
             // 
             // lblNomSociete
             // 
