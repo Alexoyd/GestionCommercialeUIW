@@ -37,6 +37,7 @@
             this.btnNouveauClient = new System.Windows.Forms.Button();
             this.btnSupprimer = new System.Windows.Forms.Button();
             this.grdClients = new System.Windows.Forms.DataGridView();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.gxbZoneRecherche.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdClients)).BeginInit();
             this.SuspendLayout();
@@ -129,11 +130,22 @@
             this.grdClients.TabIndex = 1;
             this.grdClients.DoubleClick += new System.EventHandler(this.grdClients_DoubleClick);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(209, 415);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 5;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // frmListeClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.grdClients);
             this.Controls.Add(this.btnNouveauClient);
             this.Controls.Add(this.btnSupprimer);
@@ -160,5 +172,6 @@
         private System.Windows.Forms.Button btnNouveauClient;
         private System.Windows.Forms.Button btnSupprimer;
         private System.Windows.Forms.DataGridView grdClients;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

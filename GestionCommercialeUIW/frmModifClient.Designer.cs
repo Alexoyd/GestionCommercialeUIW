@@ -65,6 +65,7 @@
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnAnnuler
             // 
@@ -74,6 +75,7 @@
             this.btnAnnuler.TabIndex = 3;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // grpBoxCaract
             // 
@@ -298,6 +300,7 @@
             this.Controls.Add(this.grpBoxIdentif);
             this.Name = "frmModifClient";
             this.Text = "frmModifClient";
+            this.Load += new System.EventHandler(this.frmModifClient_Load);
             this.grpBoxCaract.ResumeLayout(false);
             this.grpBoxCaract.PerformLayout();
             this.grpBoxIdentif.ResumeLayout(false);

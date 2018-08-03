@@ -12,24 +12,14 @@ namespace GestionCommercialeUIW
 {
     public partial class frmModifClient : Form
     {
-        public frmModifClient(string unNumClient, string RaisonSociale, string AdresseUne, string AdresseDeux, string CP, string Ville, string Telephone, bool prive, string Effectif, string CA, string Activite, string Nature)
+        private GestionCommercialeDll.Client leClient;
+
+        public frmModifClient(GestionCommercialeDll.Client unClient)
         {
+            this.leClient = unClient;
             InitializeComponent();
             this.InitActivité();
             this.InitNature();
-
-            this.lblNum.Text = unNumClient;
-            this.txtBoxRaisonSocial.Text = RaisonSociale;
-            this.txtBoxAdresse.Text = AdresseUne;
-            this.txtBoxAdresse2.Text = AdresseDeux;
-            this.txtBoxCP.Text = CP;
-            this.txtBoxVille.Text = Ville;
-            this.txtBoxTelephone.Text = Telephone;
-            this.chkBoxPrive.Checked = prive;
-            this.txtBoxEffectif.Text = Effectif;
-            this.txtBoxCA.Text = CA;
-            this.cmbBoxActivité.Text = Activite;
-            this.cmbBoxNature.Text = Nature;
         }
 
         private void InitActivité()
@@ -56,12 +46,43 @@ namespace GestionCommercialeUIW
 
             // permet de remplir par défaut la première valeur de l'index afin de ne pas mettre le programme en erreur
             this.cmbBoxNature.SelectedIndex = 0;
-
-
-
         }
 
+        private void afficheClient(GestionCommercialeDll.Client unClient)
+        {
+            this.lblNum.Text = unClient.NumClient;
+            this.txtBoxRaisonSocial.Text = unClient.RaisonSociale;
+            this.txtBoxAdresse.Text = unClient.Adresse1;
+            this.txtBoxAdresse2.Text = unClient.Adresse2;
+            this.txtBoxCP.Text = unClient.CP;
+            this.txtBoxVille.Text = unClient.Ville;
+            this.txtBoxTelephone.Text = unClient.Telephone;
+            this.txtBoxEffectif.Text = unClient.Effectif.ToString();
+            this.cmbBoxActivité.Text = unClient.Activite;
+            this.txtBoxCA.Text = unClient.CA.ToString();
+            this.cmbBoxNature.Text = unClient.Nature;
+            this.chkBoxPrive.Checked = unClient.Prive;
+        }
 
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            frmConsultClient frmConsult = new frmConsultClient(leClient);
+
+            leClient.RaisonSociale = txtBoxRaisonSocial.Text;
+
+            frmConsult.lblRSociale.Text = leClient.RaisonSociale;
+            this.Close();
+        }
+
+        private void frmModifClient_Load(object sender, EventArgs e)
+        {
+            this.afficheClient(this.leClient);
+        }
     }
 
 

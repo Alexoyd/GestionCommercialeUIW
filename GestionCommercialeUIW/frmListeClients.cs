@@ -144,12 +144,30 @@ namespace GestionCommercialeUIW
 
             // en sortie du form détail, refraichir la datagridview
             if (frmConsult.ShowDialog() == DialogResult.OK)
-                this.afficheClients();
+            {
+                
+            }
         }
 
         private void frmListeClients_FormClosing(object sender, FormClosingEventArgs e)
         {
             singleton = null;
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < GestionCommercialeDll.Donnees.TabClients.Count; i++)
+            {
+                // affectation des colonnes
+                // la collection voit les éléments comme des ‘Object’
+                // ==>'caster' en Client pour en voir les attributs
+                dr[0] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).RaisonSociale;
+                dr[1] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).Ville;
+                dr[2] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).CP;
+                dr[3] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).Prive;
+                dr[4] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).Activite;
+                dr[5] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).Nature;
+            } // fin de boucle
         }
     }
 }

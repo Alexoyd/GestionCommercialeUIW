@@ -30,7 +30,7 @@ namespace GestionCommercialeUIW
         private void frmConsultClient_Load(object sender, EventArgs e)
         {
             this.afficheClient(this.leClient);
-                
+
         }
         private void afficheClient(GestionCommercialeDll.Client unClient)
         {
@@ -45,6 +45,7 @@ namespace GestionCommercialeUIW
             this.lblActivite.Text = unClient.Activite;
             this.lblCA.Text = unClient.CA.ToString();
             this.lblNature.Text = unClient.Nature;
+            this.checkPrive.Checked = unClient.Prive;
 
         }
 
@@ -60,10 +61,11 @@ namespace GestionCommercialeUIW
         //boutton modification client
         private void btnModifClient_Click(object sender, EventArgs e)
         {
-            frmModifClient frmModClient = new frmModifClient(lblNumClient.Text, lblRSociale.Text, lblAdresse.Text, lblAdresse1.Text, lblCP.Text, lblVille.Text, lblTelephone.Text, checkPrive.Checked, lblEffectif.Text, lblActivite.Text, lblCA.Text, lblNature.Text);
-            frmModClient.ShowDialog();
+            frmModifClient frmModClient = new frmModifClient(leClient);
+            if (frmModClient.ShowDialog() == DialogResult.OK)
+                this.afficheClient(this.leClient);
         }
-        
+
         private void btnNouveauContactModif_Click(object sender, EventArgs e)
         {
             frmNouveauContact frmNewContact = new frmNouveauContact(lblNumClient.Text.ToString(), lblRSociale.Text);
@@ -86,10 +88,10 @@ namespace GestionCommercialeUIW
         }
     }
 }
-        
-      
 
-       
 
-        
+
+
+
+
 

@@ -65,40 +65,6 @@ namespace GestionCommercialeUIW
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-
-            
-
-            /* try
-             {
-
-
-                 // déclenchement des méthodes get/set du Client.cs
-                 nouveauClient.NumClient = txtBoxNumClient.Text;
-                 nouveauClient.RaisonSociale = txtBoxRaisonSocial.Text;
-                 nouveauClient.Adresse = txtBoxAdresse.Text;
-                 nouveauClient.CP = txtBoxCP.Text;
-                 nouveauClient.Ville = txtBoxVille.Text;
-                 nouveauClient.Telephone = txtBoxTelephone.Text;
-                 nouveauClient.Effectif = Int32.Parse(txtBoxEffectif.Text);
-                 nouveauClient.CA = Int32.Parse(txtBoxCA.Text);
-                 nouveauClient.Activite = cmbBoxActivité.Text;
-                 nouveauClient.Nature = cmbBoxNature.Text;
-                 nouveauClient.Prive = chkBoxPrive.Checked;
-
-                 GestionCommercialeDll.Donnees.TabClients.Add(nouveauClient);
-
-                 GestionCommercialeDll.Client.NClient += 1;
-
-                 this.DialogResult = DialogResult.OK;
-
-             }
-             catch (Exception ex)
-             {
-                 nouveauClient = null;
-                 MessageBox.Show("Erreur : \n" + ex.Message, "Raison sociale");
-             }*/
-
-
             if (this.controle())
             {
                 if (this.instancie())

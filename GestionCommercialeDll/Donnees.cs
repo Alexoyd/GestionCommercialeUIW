@@ -9,7 +9,7 @@ namespace GestionCommercialeDll
 {
     public class Donnees
     {
-        public static ArrayList TabClients = new ArrayList();
+        public static List<object> TabClients = new List<object>();
         
     }
 }

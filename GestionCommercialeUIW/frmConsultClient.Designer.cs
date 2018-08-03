@@ -429,7 +429,6 @@
         private System.Windows.Forms.Label lblCP;
         private System.Windows.Forms.Label lblAdresse1;
         private System.Windows.Forms.Label lblAdresse;
-        private System.Windows.Forms.Label lblRSociale;
         private System.Windows.Forms.Label lblNumClient;
         private System.Windows.Forms.CheckBox checkPrive;
         private System.Windows.Forms.Label label6;
@@ -442,5 +441,6 @@
         private System.Windows.Forms.Label lblActivite;
         private System.Windows.Forms.Label lblCA;
         private System.Windows.Forms.Label lblEffectif;
+        public System.Windows.Forms.Label lblRSociale;
     }
 }
