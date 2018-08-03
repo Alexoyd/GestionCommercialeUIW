@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace GestionCommercialeUIW
 {
     public partial class frmConsultClient : Form
@@ -45,6 +47,10 @@ namespace GestionCommercialeUIW
             this.lblActivite.Text = unClient.Activite;
             this.lblCA.Text = unClient.CA.ToString();
             this.lblNature.Text = unClient.Nature;
+            this.checkPrive.Checked = unClient.Prive;
+            this.dGContacts.DataSource = Donnees.ArrayCont;
+            this.dGContacts.Refresh();
+           
 
         }
 
@@ -84,8 +90,51 @@ namespace GestionCommercialeUIW
         {
 
         }
+
+        
+        //DataTable : permet de recopier les contacts
+        //stockés en collection 
+        //relier au DataGridview pour personnaliser son affichage
+            private void dGConatcts()
+            {  DataTable dt = new DataTable();
+            DataRow dr; //ligne de la datatable
+            Int32 i;
+
+            dt.Columns.Add(new DataColumn("Nom", typeof(System.String)));
+            dt.Columns.Add(new DataColumn("Prénom", typeof(System.String)));
+            dt.Columns.Add(new DataColumn("Téléphone", typeof(System.Int32)));
+            dt.Columns.Add(new DataColumn("email", typeof(System.String)));
+            dt.Columns.Add(new DataColumn("Fonction", typeof(System.String)));
+
+            //boucle remplissage d ela DataTable à partir de la collection
+            for (i = 0; i < frmNouveauContact.ArrayCont.Count; i++)
+            {
+
+                //instanciation Datrow (=ligne de la DataTable)
+                dr = dt.NewRow();
+                object donnees = null;
+                //affectation des 5 colonnes
+                dr[0] = ((frmNouveauContact)(donnees.ArrayCont[i])).Nom;
+                dr[1] = ((frmNouveauContact)(donnees.ArrayCont[i])).Prenom;
+                dr[2] = ((frmNouveauContact)(donnees.ArrayCont[i])).Telephone;
+                dr[3] = ((frmNouveauContact)(donnees.ArrayCont[i])).Email;
+                dr[4] = ((frmNouveauContact)(donnees.ArrayCont[i])).Fonction;
+
+                dt.Rows.Add(dr);
+            }
+            //determine l'origine des données à afficher en DataGridView
+            this.dGContacts.DataSource = dt;
+            this.dGContacts.Refresh();
+            dt = null;
+            dr = null;
+            }
+        }
+           
+        
+        //private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e
     }
-}
+    
+
         
       
 

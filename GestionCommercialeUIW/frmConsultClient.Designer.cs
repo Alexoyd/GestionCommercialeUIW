@@ -50,7 +50,7 @@
             this.Téléphone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prénom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dGContacts = new System.Windows.Forms.DataGridView();
             this.checkPrive = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Effectif = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@
             this.lblCA = new System.Windows.Forms.Label();
             this.lblEffectif = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGContacts)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -259,19 +259,20 @@
             this.Nom.HeaderText = "Nom";
             this.Nom.Name = "Nom";
             // 
-            // dataGridView1
+            // dGContacts
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dGContacts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGContacts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nom,
             this.Prénom,
             this.Téléphone,
             this.Email,
             this.Fonction});
-            this.dataGridView1.Location = new System.Drawing.Point(23, 446);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(543, 93);
-            this.dataGridView1.TabIndex = 2;
+            this.dGContacts.Location = new System.Drawing.Point(23, 446);
+            this.dGContacts.Name = "dGContacts";
+            this.dGContacts.Size = new System.Drawing.Size(543, 93);
+            this.dGContacts.TabIndex = 2;
+            this.dGContacts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // checkPrive
             // 
@@ -390,7 +391,7 @@
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.btnNouveauContactModif);
             this.Controls.Add(this.btnModifClient);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dGContacts);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmConsultClient";
@@ -398,7 +399,7 @@
             this.Load += new System.EventHandler(this.frmConsultClient_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGContacts)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -423,7 +424,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Téléphone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prénom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dGContacts;
         private System.Windows.Forms.Label lblVille;
         private System.Windows.Forms.Label lblTelephone;
         private System.Windows.Forms.Label lblCP;
