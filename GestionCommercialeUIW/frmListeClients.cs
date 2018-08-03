@@ -44,7 +44,7 @@ namespace GestionCommercialeUIW
 
         private void btnNouveauClient_Click(object sender, EventArgs e)
         {
-            // instancie un form de saisie de stagiaire et l'affiche en modal
+            // instancie un form de saisie de client et l'affiche en modal
             frmNouveauClient frmAjout = new frmNouveauClient();
 
             // si on sort de la saisie par OK
@@ -126,17 +126,17 @@ namespace GestionCommercialeUIW
         private void grdClients_DoubleClick(object sender, EventArgs e)
         {
             // ouvrir la feuille détail en y affichant
-            // le stagiaire correspondant à la ligne double-cliquée
-            Int32 iStag; // rang du stagiaire dans le tableau
-                         // récupérer indice du stagiaire cliqué en DataGridView
+            // le client correspondant à la ligne double-cliquée
+            Int32 iClient; // rang du client dans le tableau
+                           // récupérer indice du client cliqué en DataGridView
 
-            iStag = this.grdClients.CurrentRow.Index;
+            iClient = this.grdClients.CurrentRow.Index;
 
-            // instancier un objet stagiaire pointant vers
-            // le stagiaire d'origine dans la collection
-            GestionCommercialeDll.Client leClient = GestionCommercialeDll.Donnees.TabClients[iStag] as GestionCommercialeDll.Client;
+            // instancier un objet client pointant vers
+            // le client d'origine dans la collection
+            GestionCommercialeDll.Client leClient = GestionCommercialeDll.Donnees.TabClients[iClient] as GestionCommercialeDll.Client;
 
-            // instancier un form détail pour ce stagiaire
+            // instancier un form détail pour ce client
             frmConsultClient frmConsult = new frmConsultClient(leClient);
 
             // afficher le form détail en modal
@@ -150,6 +150,11 @@ namespace GestionCommercialeUIW
         private void frmListeClients_FormClosing(object sender, FormClosingEventArgs e)
         {
             singleton = null;
+        }
+
+        private void btnSupprimer_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

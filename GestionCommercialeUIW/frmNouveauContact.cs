@@ -32,18 +32,30 @@ namespace GestionCommercialeUIW
         private void btnOkContact_Click(object sender, EventArgs e)
         {
             GestionCommercialeDll.Contact nouveauContact = new GestionCommercialeDll.Contact();
+            try
+            {
+                nouveauContact.NomContact = txtBoxNomContact.Text;
+                nouveauContact.PrenomContact = txtBoxPrenomContact.Text;
+                nouveauContact.TelContact = Int32.Parse(txtBoxTel.Text);
+                nouveauContact.MailContact = txtBoxMail.Text;
+                nouveauContact.CmbBoxFonctionMetier = cmbBoxFonctionMetier.Text;
+                GestionCommercialeDll.Contact.NContact += 1;
 
-            nouveauContact.NomContact = txtBoxNomContact.Text;
-            nouveauContact.PrenomContact = txtBoxPrenomContact.Text;
-            nouveauContact.TelContact = Int32.Parse(txtBoxTel.Text);
-            nouveauContact.MailContact = txtBoxMail.Text;
-            nouveauContact.CmbBoxFonctionMetier = cmbBoxFonctionMetier.Text;
+                this.DialogResult = DialogResult.OK;
+               // return true;
+            }
+            catch (Exception ex)
+            {
+                nouveauContact = null;
+                MessageBox.Show("Erreur : \n" + ex.Message, "Ajout de contact");
+                // return false;
+            }
+
+
 
             // GestionCommercialeDll.Donnees.TabContact.Add(nouveauContact);  //=> En attente de papi pour supprimer le commentaire devant cette ligne.
 
-            GestionCommercialeDll.Contact.NContact += 1;
 
-            this.DialogResult = DialogResult.OK;
         }
 
         private void frmAfficheNumclient(object sender, EventArgs e)
