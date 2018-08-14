@@ -25,7 +25,6 @@ namespace GestionCommercialeDll
 
         public static Int32 NClient;
 
-
         public string NumClient
         {
             get { return this.numClient; }
@@ -50,16 +49,16 @@ namespace GestionCommercialeDll
             set { this.adresse2 = value; }
         }
 
-        public string CP
-        {
-            get { return this.codePostal; }
-            set { this.codePostal = value; }
-        }
-
         public string Ville
         {
             get { return this.ville; }
             set { this.ville = value; }
+        }
+
+        public string CP
+        {
+            get { return this.codePostal; }
+            set { this.codePostal = value; }
         }
 
         public string Telephone

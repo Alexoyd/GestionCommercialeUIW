@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,6 @@ namespace GestionCommercialeDll
 {
     public class Donnees
     {
-        public static List<object> TabClients = new List<object>();
-        
+        public static BindingList<Client> TabClients = new BindingList<Client>();
     }
 }
