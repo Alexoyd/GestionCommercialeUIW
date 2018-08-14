@@ -145,6 +145,7 @@ namespace GestionCommercialeUIW
             singleton = null;
         }
 
+
         private void btnSupprimer_Click(object sender, EventArgs e)
         {
             try

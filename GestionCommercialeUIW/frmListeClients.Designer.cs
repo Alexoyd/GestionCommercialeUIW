@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.gxbZoneRecherche = new System.Windows.Forms.GroupBox();
             this.btnRechercher = new System.Windows.Forms.Button();
             this.btnTous = new System.Windows.Forms.Button();
@@ -38,10 +37,8 @@
             this.btnNouveauClient = new System.Windows.Forms.Button();
             this.btnSupprimer = new System.Windows.Forms.Button();
             this.grdClients = new System.Windows.Forms.DataGridView();
-            this.bsClients = new System.Windows.Forms.BindingSource(this.components);
             this.gxbZoneRecherche.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdClients)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsClients)).BeginInit();
             this.SuspendLayout();
             // 
             // gxbZoneRecherche
@@ -133,10 +130,6 @@
             this.grdClients.TabIndex = 1;
             this.grdClients.DoubleClick += new System.EventHandler(this.grdClients_DoubleClick);
             // 
-            // bsClients
-            // 
-            this.bsClients.DataSource = typeof(GestionCommercialeDll.Client);
-            // 
             // frmListeClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,7 +146,6 @@
             this.gxbZoneRecherche.ResumeLayout(false);
             this.gxbZoneRecherche.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdClients)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsClients)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -169,6 +161,5 @@
         private System.Windows.Forms.Button btnNouveauClient;
         private System.Windows.Forms.Button btnSupprimer;
         private System.Windows.Forms.DataGridView grdClients;
-        private System.Windows.Forms.BindingSource bsClients;
     }
 }
