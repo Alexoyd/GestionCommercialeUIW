@@ -196,9 +196,9 @@
             // 
             // txtBoxAdresse2
             // 
-            this.txtBoxAdresse2.Location = new System.Drawing.Point(148, 127);
+            this.txtBoxAdresse2.Location = new System.Drawing.Point(145, 127);
             this.txtBoxAdresse2.Name = "txtBoxAdresse2";
-            this.txtBoxAdresse2.Size = new System.Drawing.Size(255, 20);
+            this.txtBoxAdresse2.Size = new System.Drawing.Size(258, 20);
             this.txtBoxAdresse2.TabIndex = 4;
             // 
             // lblNum
@@ -211,30 +211,30 @@
             // 
             // txtBoxTelephone
             // 
-            this.txtBoxTelephone.Location = new System.Drawing.Point(148, 191);
+            this.txtBoxTelephone.Location = new System.Drawing.Point(145, 191);
             this.txtBoxTelephone.Name = "txtBoxTelephone";
-            this.txtBoxTelephone.Size = new System.Drawing.Size(160, 20);
+            this.txtBoxTelephone.Size = new System.Drawing.Size(163, 20);
             this.txtBoxTelephone.TabIndex = 7;
             // 
             // txtBoxCP
             // 
-            this.txtBoxCP.Location = new System.Drawing.Point(148, 159);
+            this.txtBoxCP.Location = new System.Drawing.Point(145, 159);
             this.txtBoxCP.Name = "txtBoxCP";
-            this.txtBoxCP.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxCP.Size = new System.Drawing.Size(103, 20);
             this.txtBoxCP.TabIndex = 5;
             // 
             // txtBoxAdresse
             // 
-            this.txtBoxAdresse.Location = new System.Drawing.Point(148, 101);
+            this.txtBoxAdresse.Location = new System.Drawing.Point(145, 101);
             this.txtBoxAdresse.Name = "txtBoxAdresse";
-            this.txtBoxAdresse.Size = new System.Drawing.Size(255, 20);
+            this.txtBoxAdresse.Size = new System.Drawing.Size(258, 20);
             this.txtBoxAdresse.TabIndex = 3;
             // 
             // txtBoxRaisonSocial
             // 
-            this.txtBoxRaisonSocial.Location = new System.Drawing.Point(148, 66);
+            this.txtBoxRaisonSocial.Location = new System.Drawing.Point(145, 66);
             this.txtBoxRaisonSocial.Name = "txtBoxRaisonSocial";
-            this.txtBoxRaisonSocial.Size = new System.Drawing.Size(255, 20);
+            this.txtBoxRaisonSocial.Size = new System.Drawing.Size(258, 20);
             this.txtBoxRaisonSocial.TabIndex = 2;
             // 
             // txtBoxVille
