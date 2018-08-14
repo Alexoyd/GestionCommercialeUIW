@@ -12,30 +12,17 @@ namespace GestionCommercialeUIW
 {
     public partial class frmListeClients : Form
     {
-        // DataTable : pour recopier les clients
-        // (stockés en collection) ;
-        // à relier au DataGridView pour personnaliser son affichage
-        DataTable dt = new DataTable();
-        DataRow dr; // ligne de la datatable
+        BindingSource bs = new BindingSource();
 
-        private static frmListeClients singleton= null;
-        
+        private static frmListeClients singleton = null;
+
         private frmListeClients()
         {
             InitializeComponent();
-            //this.afficheClients();
-
-            // Ajout à la datatable des colonnes
-            dt.Columns.Add(new DataColumn("Raison Sociale", typeof(System.String)));
-            dt.Columns.Add(new DataColumn("Ville", typeof(System.String)));
-            dt.Columns.Add(new DataColumn("Code Postal", typeof(System.String)));
-            dt.Columns.Add(new DataColumn("Privé ?", typeof(System.Boolean)));
-            dt.Columns.Add(new DataColumn("Activité", typeof(System.String)));
-            dt.Columns.Add(new DataColumn("Nature", typeof(System.String)));
         }
         public static frmListeClients CreateFormulaire()
         {
-            if (singleton==null)
+            if (singleton == null)
             {
                 singleton = new frmListeClients();
             }
@@ -44,46 +31,35 @@ namespace GestionCommercialeUIW
 
         private void btnNouveauClient_Click(object sender, EventArgs e)
         {
-            // instancie un form de saisie de stagiaire et l'affiche en modal
+            // instancie un form de saisie de client et l'affiche en modal
             frmNouveauClient frmAjout = new frmNouveauClient();
 
             // si on sort de la saisie par OK
             if (frmAjout.ShowDialog() == DialogResult.OK)
+            {
+                grdClients.DataSource = null;
                 afficheClients();
+            }
 
         }
 
         public void afficheClients()
         {
-            // boucle remplissage de la DataTable à partir de la collection
-            for (int i = 0; i < GestionCommercialeDll.Donnees.TabClients.Count; i++)
-            {
-                // instanciation DataRow (=ligne de DataTable)
-                dr = dt.NewRow();
+            bs.DataSource = GestionCommercialeDll.Donnees.TabClients;
+            grdClients.DataSource = GestionCommercialeDll.Donnees.TabClients;
 
-                // affectation des colonnes
-                // la collection voit les éléments comme des ‘Object’
-                // ==>'caster' en Client pour en voir les attributs
-                dr[0] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).RaisonSociale;
-                dr[1] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).Ville;
-                dr[2] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).CP;
-                dr[3] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).Prive;
-                dr[4] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).Activite;
-                dr[5] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).Nature;
-
-                
-
-            } // fin de boucle
-
-            // ajout de la ligne à la Datatable
-            // (la propriété Rows est elle-même une collection...)
-            dt.Rows.Add(dr);
-
-            // déterminer l'origine des données à afficher en DataGridView
-            this.grdClients.DataSource = dt;
-
-            // refraîchir l'affichage (même pas utile…)
-            //this.grdClients.Refresh();
+            grdClients.Columns[0].Visible = false;
+            grdClients.Columns[1].HeaderText = "Raison Sociale";
+            grdClients.Columns[2].Visible = false;
+            grdClients.Columns[3].Visible = false;
+            grdClients.Columns[4].HeaderText = "Ville";
+            grdClients.Columns[5].HeaderText = "Code Postal";
+            grdClients.Columns[6].Visible = false;
+            grdClients.Columns[7].HeaderText = "Privé ?";
+            grdClients.Columns[8].Visible = false;
+            grdClients.Columns[9].Visible = false;
+            grdClients.Columns[10].HeaderText = "Activité";
+            grdClients.Columns[11].HeaderText = "Nature";
         }
 
         private void btnFermer_Click(object sender, EventArgs e)
@@ -95,57 +71,72 @@ namespace GestionCommercialeUIW
         {
             try
             {
-                string filterField = "Raison Sociale"; // Variable qui indiquera au programme la colonne dans laquelle faire la recherche
-
                 if (txtRecherche.Text != "")
                 {
-                    dt.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", filterField, txtRecherche.Text);
+                    BindingList<GestionCommercialeDll.Client> filtered = new BindingList<GestionCommercialeDll.Client>(GestionCommercialeDll.Donnees.TabClients.Where(obj => obj.RaisonSociale.Contains(txtRecherche.Text)).ToList());
+
+                    grdClients.DataSource = filtered;
+                    grdClients.Update();
                     btnTous.Enabled = true;
                 }
 
                 else
-                {
-                    MessageBox.Show("Erreur : La zone de recherche est vide !", "Rechercher", MessageBoxButtons.OK);
-                }
+                    MessageBox.Show("La recherche est vide", "Erreur", MessageBoxButtons.OK);
             }
 
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         private void btnTous_Click(object sender, EventArgs e)
         {
             txtRecherche.Text = "";
-            dt.DefaultView.RowFilter = null;
             btnTous.Enabled = false;
+
+            grdClients.DataSource = null;
+
+            grdClients.DataSource = GestionCommercialeDll.Donnees.TabClients;
+
+            grdClients.Columns[0].Visible = false;
+            grdClients.Columns[1].HeaderText = "Raison Sociale";
+            grdClients.Columns[2].Visible = false;
+            grdClients.Columns[3].Visible = false;
+            grdClients.Columns[4].HeaderText = "Ville";
+            grdClients.Columns[5].HeaderText = "Code Postal";
+            grdClients.Columns[6].Visible = false;
+            grdClients.Columns[7].HeaderText = "Privé ?";
+            grdClients.Columns[8].Visible = false;
+            grdClients.Columns[9].Visible = false;
+            grdClients.Columns[10].HeaderText = "Activité";
+            grdClients.Columns[11].HeaderText = "Nature";
         }
 
         private void grdClients_DoubleClick(object sender, EventArgs e)
         {
-            // ouvrir la feuille détail en y affichant
-            // le stagiaire correspondant à la ligne double-cliquée
-            Int32 iStag; // rang du stagiaire dans le tableau
-                         // récupérer indice du stagiaire cliqué en DataGridView
-
-            iStag = this.grdClients.CurrentRow.Index;
-
-            // instancier un objet stagiaire pointant vers
-            // le stagiaire d'origine dans la collection
-            GestionCommercialeDll.Client leClient = GestionCommercialeDll.Donnees.TabClients[iStag] as GestionCommercialeDll.Client;
-
-            // instancier un form détail pour ce stagiaire
-            frmConsultClient frmConsult = new frmConsultClient(leClient);
-
-            // afficher le form détail en modal
-            frmConsult.ShowDialog();
-
-            // en sortie du form détail, refraichir la datagridview
-            if (frmConsult.ShowDialog() == DialogResult.OK)
+            try
             {
-                
+                // ouvrir la feuille détail en y affichant
+                // le client correspondant à la ligne double-cliquée
+                Int32 iClient; // rang du client dans le tableau
+                               // récupérer indice du client cliqué en DataGridView
+
+                iClient = this.grdClients.CurrentRow.Index;
+
+                // instancier un objet client pointant vers
+                // le client d'origine dans la collection
+                GestionCommercialeDll.Client leClient = GestionCommercialeDll.Donnees.TabClients[iClient] as GestionCommercialeDll.Client;
+
+                // instancier un form détail pour ce client
+                frmConsultClient frmConsult = new frmConsultClient(leClient);
+
+                // afficher le form détail en modal
+                frmConsult.ShowDialog();
+            }
+            catch
+            {
+                MessageBox.Show("Vous n'avez sélectionné aucun client");
             }
         }
 
@@ -154,20 +145,31 @@ namespace GestionCommercialeUIW
             singleton = null;
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+        private void btnSupprimer_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < GestionCommercialeDll.Donnees.TabClients.Count; i++)
+            try
             {
-                // affectation des colonnes
-                // la collection voit les éléments comme des ‘Object’
-                // ==>'caster' en Client pour en voir les attributs
-                dr[0] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).RaisonSociale;
-                dr[1] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).Ville;
-                dr[2] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).CP;
-                dr[3] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).Prive;
-                dr[4] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).Activite;
-                dr[5] = ((GestionCommercialeDll.Client)(GestionCommercialeDll.Donnees.TabClients[i])).Nature;
-            } // fin de boucle
+                Int32 iClient; // rang du client dans le tableau
+                               // récupérer indice du client cliqué en DataGridView
+
+                iClient = this.grdClients.CurrentRow.Index;
+
+                // instancier un objet client pointant vers
+                // le client d'origine dans la collection
+                GestionCommercialeDll.Client leClient = GestionCommercialeDll.Donnees.TabClients[iClient] as GestionCommercialeDll.Client;
+
+                GestionCommercialeDll.Donnees.TabClients.Remove(leClient);
+
+                // en sortie du form détail, refraichir la datagridview
+                //if (frmConsult.ShowDialog() == DialogResult.OK)
+                //{
+
+                //}
+            }
+            catch
+            {
+                MessageBox.Show("Vous n'avez sélectionné aucun client");
+            }
         }
     }
 }

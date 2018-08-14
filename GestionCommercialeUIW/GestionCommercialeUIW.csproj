@@ -123,7 +123,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="Properties\DataSources\GestionCommercialeDll.Client.datasource" />
-    <None Include="Properties\DataSources\GestionCommercialeDll.Contact.datasource" />
     <None Include="Properties\DataSources\GestionCommercialeDll.Donnees.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
