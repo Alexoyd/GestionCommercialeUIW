@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.grpBoxCaract = new System.Windows.Forms.GroupBox();
@@ -53,8 +54,10 @@
             this.lblAdresse = new System.Windows.Forms.Label();
             this.lblCPVille = new System.Windows.Forms.Label();
             this.lblTelephone = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.grpBoxCaract.SuspendLayout();
             this.grpBoxIdentif.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOK
@@ -305,6 +308,7 @@
             this.grpBoxCaract.PerformLayout();
             this.grpBoxIdentif.ResumeLayout(false);
             this.grpBoxIdentif.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -335,5 +339,6 @@
         private System.Windows.Forms.Label lblTelephone;
         private System.Windows.Forms.Label lblNum;
         private System.Windows.Forms.TextBox txtBoxAdresse2;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }
