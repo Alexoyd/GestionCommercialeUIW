@@ -299,7 +299,7 @@
             this.Controls.Add(this.grpBoxCaract);
             this.Controls.Add(this.grpBoxIdentif);
             this.Name = "frmModifClient";
-            this.Text = "frmModifClient";
+            this.Text = "Modification client";
             this.Load += new System.EventHandler(this.frmModifClient_Load);
             this.grpBoxCaract.ResumeLayout(false);
             this.grpBoxCaract.PerformLayout();
