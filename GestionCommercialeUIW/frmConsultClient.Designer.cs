@@ -424,11 +424,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Prénom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label lblVille;
-        private System.Windows.Forms.Label lblTelephone;
-        private System.Windows.Forms.Label lblCP;
-        private System.Windows.Forms.Label lblAdresse1;
-        private System.Windows.Forms.Label lblAdresse;
         private System.Windows.Forms.Label lblNumClient;
         private System.Windows.Forms.CheckBox checkPrive;
         private System.Windows.Forms.Label label6;
@@ -437,10 +432,15 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label Nature;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label lblNature;
-        private System.Windows.Forms.Label lblActivite;
-        private System.Windows.Forms.Label lblCA;
-        private System.Windows.Forms.Label lblEffectif;
         public System.Windows.Forms.Label lblRSociale;
+        internal System.Windows.Forms.Label lblVille;
+        internal System.Windows.Forms.Label lblTelephone;
+        internal System.Windows.Forms.Label lblCP;
+        internal System.Windows.Forms.Label lblAdresse1;
+        internal System.Windows.Forms.Label lblAdresse;
+        internal System.Windows.Forms.Label lblNature;
+        internal System.Windows.Forms.Label lblActivite;
+        internal System.Windows.Forms.Label lblCA;
+        internal System.Windows.Forms.Label lblEffectif;
     }
 }

@@ -73,9 +73,30 @@ namespace GestionCommercialeUIW
         {
             frmConsultClient frmConsult = new frmConsultClient(leClient);
 
-            leClient.RaisonSociale = txtBoxRaisonSocial.Text;
+            //Permet la modification des champs et d'afficher les information dans le form Consult client
 
-            frmConsult.lblRSociale.Text = leClient.RaisonSociale;
+            leClient.RaisonSociale = txtBoxRaisonSocial.Text;
+            frmConsult.lblRSociale.Text = leClient.RaisonSociale;    
+            
+            leClient.Adresse1 = txtBoxAdresse.Text;
+            frmConsult.lblAdresse.Text = leClient.Adresse1;
+            leClient.Adresse2 = txtBoxAdresse2.Text;
+            frmConsult.lblAdresse1.Text = leClient.Adresse2;
+            leClient.CP = txtBoxCP.Text;
+            frmConsult.lblCP.Text = leClient.CP;
+            leClient.Ville = txtBoxVille.Text;
+            frmConsult.lblVille.Text = leClient.Ville;
+            leClient.Telephone = txtBoxTelephone.Text;
+            frmConsult.lblTelephone.Text = leClient.Telephone;
+            leClient.Effectif = Convert.ToInt32(txtBoxEffectif.Text);
+            frmConsult.lblEffectif.Text = leClient.Effectif.ToString();
+            leClient.CA = Convert.ToInt32 (txtBoxCA.Text);
+            frmConsult.lblCA.Text = leClient.CA.ToString();
+            leClient.Activite = cmbBoxActivité.Text;
+            frmConsult.lblActivite.Text = leClient.Activite;
+            leClient.Nature = cmbBoxNature.Text;
+            frmConsult.lblNature.Text = leClient.Nature;
+
             this.Close();
         }
 
@@ -83,6 +104,9 @@ namespace GestionCommercialeUIW
         {
             this.afficheClient(this.leClient);
         }
+
+
+
     }
 
 
