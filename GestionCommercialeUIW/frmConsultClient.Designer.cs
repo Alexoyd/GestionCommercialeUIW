@@ -95,7 +95,7 @@
             this.lblVille.Location = new System.Drawing.Point(206, 147);
             this.lblVille.Name = "lblVille";
             this.lblVille.Size = new System.Drawing.Size(0, 13);
-            this.lblVille.TabIndex = 7;
+            this.lblVille.TabIndex = 9;
             // 
             // lblTelephone
             // 
@@ -103,7 +103,7 @@
             this.lblTelephone.Location = new System.Drawing.Point(147, 173);
             this.lblTelephone.Name = "lblTelephone";
             this.lblTelephone.Size = new System.Drawing.Size(0, 13);
-            this.lblTelephone.TabIndex = 6;
+            this.lblTelephone.TabIndex = 11;
             // 
             // lblCP
             // 
@@ -111,7 +111,7 @@
             this.lblCP.Location = new System.Drawing.Point(147, 147);
             this.lblCP.Name = "lblCP";
             this.lblCP.Size = new System.Drawing.Size(0, 13);
-            this.lblCP.TabIndex = 5;
+            this.lblCP.TabIndex = 8;
             // 
             // lblAdresse1
             // 
@@ -119,7 +119,7 @@
             this.lblAdresse1.Location = new System.Drawing.Point(147, 116);
             this.lblAdresse1.Name = "lblAdresse1";
             this.lblAdresse1.Size = new System.Drawing.Size(0, 13);
-            this.lblAdresse1.TabIndex = 4;
+            this.lblAdresse1.TabIndex = 6;
             // 
             // lblAdresse
             // 
@@ -127,7 +127,7 @@
             this.lblAdresse.Location = new System.Drawing.Point(147, 93);
             this.lblAdresse.Name = "lblAdresse";
             this.lblAdresse.Size = new System.Drawing.Size(0, 13);
-            this.lblAdresse.TabIndex = 3;
+            this.lblAdresse.TabIndex = 5;
             // 
             // lblRSociale
             // 
@@ -135,7 +135,7 @@
             this.lblRSociale.Location = new System.Drawing.Point(147, 63);
             this.lblRSociale.Name = "lblRSociale";
             this.lblRSociale.Size = new System.Drawing.Size(0, 13);
-            this.lblRSociale.TabIndex = 2;
+            this.lblRSociale.TabIndex = 3;
             // 
             // lblNumClient
             // 
@@ -151,7 +151,7 @@
             this.label4.Location = new System.Drawing.Point(36, 147);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 13);
-            this.label4.TabIndex = 1;
+            this.label4.TabIndex = 7;
             this.label4.Text = "CP et Ville :";
             // 
             // label5
@@ -160,7 +160,7 @@
             this.label5.Location = new System.Drawing.Point(36, 173);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 13);
-            this.label5.TabIndex = 3;
+            this.label5.TabIndex = 10;
             this.label5.Text = "Téléphone : ";
             // 
             // label3
@@ -169,7 +169,7 @@
             this.label3.Location = new System.Drawing.Point(36, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 4;
             this.label3.Text = "Adresse : ";
             // 
             // label2
@@ -178,7 +178,7 @@
             this.label2.Location = new System.Drawing.Point(36, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 13);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Raison social :";
             // 
             // label1
@@ -288,7 +288,7 @@
             this.label6.Location = new System.Drawing.Point(48, 33);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 13);
-            this.label6.TabIndex = 0;
+            this.label6.TabIndex = 1;
             this.label6.Text = "Privé";
             // 
             // Effectif
@@ -306,7 +306,7 @@
             this.CA.Location = new System.Drawing.Point(256, 63);
             this.CA.Name = "CA";
             this.CA.Size = new System.Drawing.Size(30, 13);
-            this.CA.TabIndex = 3;
+            this.CA.TabIndex = 4;
             this.CA.Text = "CA : ";
             // 
             // label9
@@ -315,7 +315,7 @@
             this.label9.Location = new System.Drawing.Point(24, 101);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 13);
-            this.label9.TabIndex = 4;
+            this.label9.TabIndex = 6;
             this.label9.Text = "Activité : ";
             // 
             // Nature
@@ -324,7 +324,7 @@
             this.Nature.Location = new System.Drawing.Point(256, 101);
             this.Nature.Name = "Nature";
             this.Nature.Size = new System.Drawing.Size(48, 13);
-            this.Nature.TabIndex = 5;
+            this.Nature.TabIndex = 8;
             this.Nature.Text = "Nature : ";
             // 
             // groupBox2
@@ -353,7 +353,7 @@
             this.lblNature.Location = new System.Drawing.Point(311, 101);
             this.lblNature.Name = "lblNature";
             this.lblNature.Size = new System.Drawing.Size(0, 13);
-            this.lblNature.TabIndex = 4;
+            this.lblNature.TabIndex = 9;
             // 
             // lblActivite
             // 
@@ -361,7 +361,7 @@
             this.lblActivite.Location = new System.Drawing.Point(74, 101);
             this.lblActivite.Name = "lblActivite";
             this.lblActivite.Size = new System.Drawing.Size(0, 13);
-            this.lblActivite.TabIndex = 3;
+            this.lblActivite.TabIndex = 7;
             this.lblActivite.Click += new System.EventHandler(this.lblActivite_Click);
             // 
             // lblCA
@@ -370,7 +370,7 @@
             this.lblCA.Location = new System.Drawing.Point(293, 62);
             this.lblCA.Name = "lblCA";
             this.lblCA.Size = new System.Drawing.Size(0, 13);
-            this.lblCA.TabIndex = 2;
+            this.lblCA.TabIndex = 5;
             // 
             // lblEffectif
             // 
@@ -378,7 +378,7 @@
             this.lblEffectif.Location = new System.Drawing.Point(71, 63);
             this.lblEffectif.Name = "lblEffectif";
             this.lblEffectif.Size = new System.Drawing.Size(0, 13);
-            this.lblEffectif.TabIndex = 1;
+            this.lblEffectif.TabIndex = 3;
             this.lblEffectif.Click += new System.EventHandler(this.lblEffectif_Click);
             // 
             // frmConsultClient
