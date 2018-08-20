@@ -12,6 +12,8 @@ namespace GestionCommercialeDll
     {
         public static BindingList<Client> TabClients = new BindingList<Client>();
 
+
         public static BindingList<Contact> TabContacts = new BindingList<Contact>();
+
     }
 }

@@ -73,8 +73,6 @@ namespace GestionCommercialeUIW
                     // si l'instanciation stagiaire et
                     // son ajout à la collection est OK :
                     // - incrémentation compteurs de stagiaires
-
-
                     // - fermeture de la boite de dialogue par validation
                     this.DialogResult = DialogResult.OK;
                 }
