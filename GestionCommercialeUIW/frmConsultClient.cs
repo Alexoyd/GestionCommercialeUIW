@@ -70,6 +70,7 @@ namespace GestionCommercialeUIW
         {
 
         }
+
         //boutton modification client
         private void btnModifClient_Click(object sender, EventArgs e)
         {
