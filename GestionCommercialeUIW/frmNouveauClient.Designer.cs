@@ -210,6 +210,7 @@
             this.txtBoxNumClient.Name = "txtBoxNumClient";
             this.txtBoxNumClient.Size = new System.Drawing.Size(100, 20);
             this.txtBoxNumClient.TabIndex = 1;
+            this.txtBoxNumClient.TextChanged += new System.EventHandler(this.txtBoxNumClient_TextChanged);
             // 
             // txtBoxTelephone
             // 
@@ -293,6 +294,7 @@
             // 
             // btnContact
             // 
+            this.btnContact.Enabled = false;
             this.btnContact.Location = new System.Drawing.Point(240, 404);
             this.btnContact.Name = "btnContact";
             this.btnContact.Size = new System.Drawing.Size(93, 32);
