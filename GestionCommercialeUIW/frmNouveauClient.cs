@@ -17,6 +17,8 @@ namespace GestionCommercialeUIW
             InitializeComponent();
             this.InitActivité();
             this.InitNature();
+
+
         }
 
 
@@ -51,11 +53,9 @@ namespace GestionCommercialeUIW
 
         private void btnContact_Click(object sender, EventArgs e) // Permet d'ouvrir la fenêtre Nouveau contact par le biais du bouton "Contacts" de la fenêtre Nouveau client
         {
+
             frmNouveauContact frmContact = new frmNouveauContact(txtBoxNumClient.Text.ToString(), txtBoxRaisonSocial.Text);
-
             frmContact.ShowDialog();
-
-
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace GestionCommercialeUIW
                     // si l'instanciation stagiaire et
                     // son ajout à la collection est OK :
                     // - incrémentation compteurs de stagiaires
-                    
+
 
                     // - fermeture de la boite de dialogue par validation
                     this.DialogResult = DialogResult.OK;
@@ -154,7 +154,7 @@ namespace GestionCommercialeUIW
 
         private Boolean estEntierCP(String s)
         {
-            
+
             Int32 i; // indice de parcours de chaîne
             Char c; // caractère courant
             Boolean code = true; // code retour; OK a priori
@@ -181,7 +181,7 @@ namespace GestionCommercialeUIW
 
         private Boolean estEntierTelephone(String s)
         {
-            
+
             Int32 i; // indice de parcours de chaîne
             Char c; // caractère courant
             Boolean code = true; // code retour; OK a priori
@@ -250,6 +250,14 @@ namespace GestionCommercialeUIW
         private void txtBoxCP_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtBoxNumClient_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBoxNumClient.Text != "")
+                btnContact.Enabled = true;
+            else
+                btnContact.Enabled = false;
         }
     }
 }

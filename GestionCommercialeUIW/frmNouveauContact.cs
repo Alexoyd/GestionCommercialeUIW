@@ -33,13 +33,14 @@ namespace GestionCommercialeUIW
         {
             GestionCommercialeDll.Contact nouveauContact = new GestionCommercialeDll.Contact();
 
+            nouveauContact.NumContact = Convert.ToInt32(lblContactNumClient.Text);
             nouveauContact.NomContact = txtBoxNomContact.Text;
             nouveauContact.PrenomContact = txtBoxPrenomContact.Text;
             nouveauContact.TelContact = Int32.Parse(txtBoxTel.Text);
             nouveauContact.MailContact = txtBoxMail.Text;
             nouveauContact.CmbBoxFonctionMetier = cmbBoxFonctionMetier.Text;
 
-            // GestionCommercialeDll.Donnees.TabContact.Add(nouveauContact);  //=> En attente de papi pour supprimer le commentaire devant cette ligne.
+            GestionCommercialeDll.Donnees.TabContacts.Add(nouveauContact);  //=> En attente de papi pour supprimer le commentaire devant cette ligne.
 
             GestionCommercialeDll.Contact.NContact += 1;
 

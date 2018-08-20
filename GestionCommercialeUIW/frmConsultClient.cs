@@ -12,6 +12,8 @@ namespace GestionCommercialeUIW
 {
     public partial class frmConsultClient : Form
     {
+        DataTable dt = new DataTable();
+
         private GestionCommercialeDll.Client leClient;
 
         public frmConsultClient(GestionCommercialeDll.Client unClient)
@@ -30,6 +32,17 @@ namespace GestionCommercialeUIW
         private void frmConsultClient_Load(object sender, EventArgs e)
         {
             this.afficheClient(this.leClient);
+
+            dt.Columns.Add("Nom",
+                System.Type.GetType("System.String"));
+            dt.Columns.Add("Prénom",
+                System.Type.GetType("System.String"));
+            dt.Columns.Add("Téléphone",
+                System.Type.GetType("System.Int32"));
+            dt.Columns.Add("E-Mail",
+                System.Type.GetType("System.String"));
+
+            afficheContacts();
 
         }
         private void afficheClient(GestionCommercialeDll.Client unClient)
@@ -85,6 +98,17 @@ namespace GestionCommercialeUIW
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+        public void afficheContacts()
+        {
+            foreach (var Contact in GestionCommercialeDll.Donnees.TabContacts)
+            {
+                if (Contact.NumContact == Convert.ToInt32(leClient.NumClient))
+                {
+                    dt.Rows.Add(Contact.NomContact, Contact.PrenomContact, Contact.TelContact, Contact.MailContact);
+                }
+            }
+            dataGridView1.DataSource = dt;
         }
     }
 }
