@@ -69,7 +69,7 @@
             // lblNomClient
             // 
             this.lblNomClient.AutoSize = true;
-            this.lblNomClient.Location = new System.Drawing.Point(115, 13);
+            this.lblNomClient.Location = new System.Drawing.Point(136, 13);
             this.lblNomClient.Name = "lblNomClient";
             this.lblNomClient.Size = new System.Drawing.Size(35, 13);
             this.lblNomClient.TabIndex = 2;
@@ -202,6 +202,7 @@
             this.cmbBoxFonctionMetier.Name = "cmbBoxFonctionMetier";
             this.cmbBoxFonctionMetier.Size = new System.Drawing.Size(199, 21);
             this.cmbBoxFonctionMetier.TabIndex = 4;
+            this.cmbBoxFonctionMetier.SelectedIndexChanged += new System.EventHandler(this.cmbBoxFonctionMetier_SelectedIndexChanged);
             // 
             // frmNouveauContact
             // 
