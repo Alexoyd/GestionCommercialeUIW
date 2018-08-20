@@ -44,9 +44,6 @@ namespace GestionCommercialeUIW
 
             // permet de remplir par défaut la première valeur de l'index afin de ne pas mettre le programme en erreur
             this.cmbBoxNature.SelectedIndex = 0;
-
-
-
         }
 
         private void btnContact_Click(object sender, EventArgs e) // Permet d'ouvrir la fenêtre Nouveau contact par le biais du bouton "Contacts" de la fenêtre Nouveau client
@@ -54,8 +51,6 @@ namespace GestionCommercialeUIW
             frmNouveauContact frmContact = new frmNouveauContact(txtBoxNumClient.Text.ToString(), txtBoxRaisonSocial.Text);
 
             frmContact.ShowDialog();
-
-
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)
@@ -69,12 +64,7 @@ namespace GestionCommercialeUIW
             {
                 if (this.instancie())
                 {
-                    // cas général :
-                    // si l'instanciation stagiaire et
-                    // son ajout à la collection est OK :
-                    // - incrémentation compteurs de stagiaires
-                    
-                    // - fermeture de la boite de dialogue par validation
+                   
                     this.DialogResult = DialogResult.OK;
                 }
             }
@@ -176,8 +166,7 @@ namespace GestionCommercialeUIW
             }
             return code;
         }
-
-
+        
         private Boolean estEntierTelephone(String s)
         {
             
@@ -207,7 +196,7 @@ namespace GestionCommercialeUIW
 
         private Boolean instancie()
         {
-            // créer une référence d'objet MStagiaire
+            // créer une référence d'objet nouveauClient
             GestionCommercialeDll.Client nouveauClient = new GestionCommercialeDll.Client();
             try
             {// déclenchement des méthodes get/set du Client.cs
@@ -233,9 +222,9 @@ namespace GestionCommercialeUIW
                 MessageBox.Show("Erreur : \n" + ex.Message, "Ajout de Client");
                 return false;
             }
-
+            
         }
-
+        
         private void chkBoxPrive_CheckedChanged(object sender, EventArgs e)
         {
 
