@@ -73,7 +73,7 @@ namespace GestionCommercialeUIW
                     // si l'instanciation stagiaire et
                     // son ajout à la collection est OK :
                     // - incrémentation compteurs de stagiaires
-                    
+
 
                     // - fermeture de la boite de dialogue par validation
                     this.DialogResult = DialogResult.OK;
@@ -154,7 +154,7 @@ namespace GestionCommercialeUIW
 
         private Boolean estEntierCP(String s)
         {
-            
+
             Int32 i; // indice de parcours de chaîne
             Char c; // caractère courant
             Boolean code = true; // code retour; OK a priori
@@ -181,7 +181,7 @@ namespace GestionCommercialeUIW
 
         private Boolean estEntierTelephone(String s)
         {
-            
+
             Int32 i; // indice de parcours de chaîne
             Char c; // caractère courant
             Boolean code = true; // code retour; OK a priori
