@@ -41,75 +41,47 @@
             // 
             // okButton
             // 
-            this.okButton.Location = new System.Drawing.Point(287, 297);
+            resources.ApplyResources(this.okButton, "okButton");
             this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(75, 23);
-            this.okButton.TabIndex = 4;
-            this.okButton.Text = "OK";
             this.okButton.UseVisualStyleBackColor = true;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(252, 143);
-            this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(12, 161);
-            this.textBoxDescription.Multiline = true;
+            resources.ApplyResources(this.textBoxDescription, "textBoxDescription");
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.ReadOnly = true;
-            this.textBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxDescription.Size = new System.Drawing.Size(245, 159);
-            this.textBoxDescription.TabIndex = 7;
-            this.textBoxDescription.Text = "Description";
             // 
             // lblNomSociete
             // 
-            this.lblNomSociete.AutoSize = true;
-            this.lblNomSociete.Location = new System.Drawing.Point(270, 137);
+            resources.ApplyResources(this.lblNomSociete, "lblNomSociete");
             this.lblNomSociete.Name = "lblNomSociete";
-            this.lblNomSociete.Size = new System.Drawing.Size(92, 13);
-            this.lblNomSociete.TabIndex = 11;
-            this.lblNomSociete.Text = "Nom de la société";
             // 
             // lblCopyright
             // 
-            this.lblCopyright.AutoSize = true;
-            this.lblCopyright.Location = new System.Drawing.Point(270, 109);
+            resources.ApplyResources(this.lblCopyright, "lblCopyright");
             this.lblCopyright.Name = "lblCopyright";
-            this.lblCopyright.Size = new System.Drawing.Size(51, 13);
-            this.lblCopyright.TabIndex = 10;
-            this.lblCopyright.Text = "Copyright";
             // 
             // lblversion
             // 
-            this.lblversion.AutoSize = true;
-            this.lblversion.Location = new System.Drawing.Point(270, 79);
+            resources.ApplyResources(this.lblversion, "lblversion");
             this.lblversion.Name = "lblversion";
-            this.lblversion.Size = new System.Drawing.Size(42, 13);
-            this.lblversion.TabIndex = 9;
-            this.lblversion.Text = "Version";
             // 
             // lblNomProduit
             // 
-            this.lblNomProduit.AutoSize = true;
-            this.lblNomProduit.Location = new System.Drawing.Point(270, 51);
+            resources.ApplyResources(this.lblNomProduit, "lblNomProduit");
             this.lblNomProduit.Name = "lblNomProduit";
-            this.lblNomProduit.Size = new System.Drawing.Size(85, 13);
-            this.lblNomProduit.TabIndex = 8;
-            this.lblNomProduit.Text = "Nom du produit :";
             // 
             // AboutBox1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 359);
             this.Controls.Add(this.lblNomSociete);
             this.Controls.Add(this.lblCopyright);
             this.Controls.Add(this.lblversion);
@@ -118,7 +90,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.okButton);
             this.Name = "AboutBox1";
-            this.Text = "AboutBox1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
