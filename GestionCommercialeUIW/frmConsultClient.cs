@@ -87,6 +87,7 @@ namespace GestionCommercialeUIW
         //Boutton quitter
         private void btnFermer_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 

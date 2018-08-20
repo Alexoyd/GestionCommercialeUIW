@@ -96,6 +96,10 @@ namespace GestionCommercialeUIW
             frmConsult.lblActivite.Text = leClient.Activite;
             leClient.Nature = cmbBoxNature.Text;
             frmConsult.lblNature.Text = leClient.Nature;
+            leClient.Prive = chkBoxPrive.Checked;
+            frmConsult.checkPrive.Checked = leClient.Prive;
+
+            this.DialogResult = DialogResult.OK;
 
             this.Close();
         }
