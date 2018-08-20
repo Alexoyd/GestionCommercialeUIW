@@ -45,12 +45,6 @@
             this.btnNouveauContactModif = new System.Windows.Forms.Button();
             this.btnFermer = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.Fonction = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Téléphone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Prénom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.checkPrive = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Effectif = new System.Windows.Forms.Label();
@@ -62,9 +56,10 @@
             this.lblActivite = new System.Windows.Forms.Label();
             this.lblCA = new System.Windows.Forms.Label();
             this.lblEffectif = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -229,50 +224,6 @@
             this.label11.TabIndex = 2;
             this.label11.Text = "Contacts";
             // 
-            // Fonction
-            // 
-            this.Fonction.Frozen = true;
-            this.Fonction.HeaderText = "Fonction";
-            this.Fonction.Name = "Fonction";
-            // 
-            // Email
-            // 
-            this.Email.Frozen = true;
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            // 
-            // Téléphone
-            // 
-            this.Téléphone.Frozen = true;
-            this.Téléphone.HeaderText = "Téléphone";
-            this.Téléphone.Name = "Téléphone";
-            // 
-            // Prénom
-            // 
-            this.Prénom.Frozen = true;
-            this.Prénom.HeaderText = "Prénom";
-            this.Prénom.Name = "Prénom";
-            // 
-            // Nom
-            // 
-            this.Nom.Frozen = true;
-            this.Nom.HeaderText = "Nom";
-            this.Nom.Name = "Nom";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nom,
-            this.Prénom,
-            this.Téléphone,
-            this.Email,
-            this.Fonction});
-            this.dataGridView1.Location = new System.Drawing.Point(23, 446);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(543, 93);
-            this.dataGridView1.TabIndex = 3;
-            // 
             // checkPrive
             // 
             this.checkPrive.AutoSize = true;
@@ -381,16 +332,24 @@
             this.lblEffectif.TabIndex = 3;
             this.lblEffectif.Click += new System.EventHandler(this.lblEffectif_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 446);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(575, 109);
+            this.dataGridView1.TabIndex = 7;
+            // 
             // frmConsultClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 596);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.btnNouveauContactModif);
             this.Controls.Add(this.btnModifClient);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmConsultClient";
@@ -398,9 +357,9 @@
             this.Load += new System.EventHandler(this.frmConsultClient_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -418,12 +377,6 @@
         private System.Windows.Forms.Button btnNouveauContactModif;
         private System.Windows.Forms.Button btnFermer;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fonction;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Téléphone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Prénom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblNumClient;
         private System.Windows.Forms.CheckBox checkPrive;
         private System.Windows.Forms.Label label6;
@@ -442,5 +395,6 @@
         internal System.Windows.Forms.Label lblActivite;
         internal System.Windows.Forms.Label lblCA;
         internal System.Windows.Forms.Label lblEffectif;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
