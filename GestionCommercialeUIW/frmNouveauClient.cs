@@ -64,7 +64,7 @@ namespace GestionCommercialeUIW
             {
                 if (this.instancie())
                 {
-                   
+
                     this.DialogResult = DialogResult.OK;
                 }
             }
@@ -143,7 +143,7 @@ namespace GestionCommercialeUIW
 
         private Boolean estEntierCP(String s)
         {
-            
+
             Int32 i; // indice de parcours de chaîne
             Char c; // caractère courant
             Boolean code = true; // code retour; OK a priori
@@ -166,10 +166,10 @@ namespace GestionCommercialeUIW
             }
             return code;
         }
-        
+
         private Boolean estEntierTelephone(String s)
         {
-            
+
             Int32 i; // indice de parcours de chaîne
             Char c; // caractère courant
             Boolean code = true; // code retour; OK a priori
@@ -222,9 +222,9 @@ namespace GestionCommercialeUIW
                 MessageBox.Show("Erreur : \n" + ex.Message, "Ajout de Client");
                 return false;
             }
-            
+
         }
-        
+
         private void chkBoxPrive_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -237,6 +237,18 @@ namespace GestionCommercialeUIW
 
         private void txtBoxCP_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+
+
+        private void txtBoxNumClient_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBoxNumClient.Text != "")
+                btnContact.Enabled = true;
+            else
+                btnContact.Enabled = false;
+
 
         }
     }
