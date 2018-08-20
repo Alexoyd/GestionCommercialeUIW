@@ -73,11 +73,16 @@ namespace GestionCommercialeUIW
             {
                 if (txtRecherche.Text != "")
                 {
-                    BindingList<GestionCommercialeDll.Client> filtered = new BindingList<GestionCommercialeDll.Client>(GestionCommercialeDll.Donnees.TabClients.Where(obj => obj.RaisonSociale.Contains(txtRecherche.Text)).ToList());
+                    if (grdClients.DataSource != null)
+                    {
+                        BindingList<GestionCommercialeDll.Client> filtered = new BindingList<GestionCommercialeDll.Client>(GestionCommercialeDll.Donnees.TabClients.Where(obj => obj.RaisonSociale.Contains(txtRecherche.Text)).ToList());
 
-                    grdClients.DataSource = filtered;
-                    grdClients.Update();
-                    btnTous.Enabled = true;
+                        grdClients.DataSource = filtered;
+                        grdClients.Update();
+                        btnTous.Enabled = true;
+                    }
+                    else
+                        MessageBox.Show("Le tableau est vide", "Erreur", MessageBoxButtons.OK);
                 }
 
                 else
