@@ -60,16 +60,17 @@
             // 
             // lblContactNumClient
             // 
+            this.lblContactNumClient.AutoSize = true;
             this.lblContactNumClient.Location = new System.Drawing.Point(58, 13);
             this.lblContactNumClient.Name = "lblContactNumClient";
-            this.lblContactNumClient.Size = new System.Drawing.Size(34, 13);
+            this.lblContactNumClient.Size = new System.Drawing.Size(35, 13);
             this.lblContactNumClient.TabIndex = 1;
             this.lblContactNumClient.Text = "label1";
             // 
             // lblNomClient
             // 
             this.lblNomClient.AutoSize = true;
-            this.lblNomClient.Location = new System.Drawing.Point(136, 13);
+            this.lblNomClient.Location = new System.Drawing.Point(132, 13);
             this.lblNomClient.Name = "lblNomClient";
             this.lblNomClient.Size = new System.Drawing.Size(35, 13);
             this.lblNomClient.TabIndex = 2;
@@ -197,6 +198,7 @@
             // 
             // cmbBoxFonctionMetier
             // 
+            this.cmbBoxFonctionMetier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBoxFonctionMetier.FormattingEnabled = true;
             this.cmbBoxFonctionMetier.Location = new System.Drawing.Point(85, 252);
             this.cmbBoxFonctionMetier.Name = "cmbBoxFonctionMetier";

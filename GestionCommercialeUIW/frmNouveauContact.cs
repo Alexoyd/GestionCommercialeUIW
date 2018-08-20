@@ -17,6 +17,7 @@ namespace GestionCommercialeUIW
             InitializeComponent();
             this.lblContactNumClient.Text = unNumClient;
             this.lblNomClient.Text = uneRaisonSociale;
+            this.JeanBurgerStuveux();
         }
 
         private void btnAnnulerContact_Click(object sender, EventArgs e)
@@ -153,6 +154,18 @@ namespace GestionCommercialeUIW
                 return false;
             }
 
+        }
+
+        private void JeanBurgerStuveux()
+        {
+            // vide la combobox
+            this.cmbBoxFonctionMetier.Items.Clear();
+
+            this.cmbBoxFonctionMetier.Items.AddRange(new String[]
+            {
+                "Directeur", "RH", "Comptable", "Employé Lambda", "Stagiaire"
+            });
+            this.cmbBoxFonctionMetier.SelectedIndex = 0;
         }
 
         private void cmbBoxFonctionMetier_SelectedIndexChanged(object sender, EventArgs e)
