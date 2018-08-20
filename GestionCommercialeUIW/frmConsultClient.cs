@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,11 +22,7 @@ namespace GestionCommercialeUIW
             InitializeComponent();
         }
 
-        private void txtNumClient_TextChanged(object sender, EventArgs e)
-        {
-
-
-        }
+        
 
         private void frmConsultClient_Load(object sender, EventArgs e)
         {
@@ -77,6 +74,8 @@ namespace GestionCommercialeUIW
             this.Close();
         }
 
+        #region Truc de merde
+
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -86,6 +85,18 @@ namespace GestionCommercialeUIW
         {
 
         }
+
+        private void txtNumClient_TextChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        #endregion
+
+
+
+
     }
 }
 
