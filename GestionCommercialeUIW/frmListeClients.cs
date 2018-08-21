@@ -19,6 +19,11 @@ namespace GestionCommercialeUIW
         private frmListeClients()
         {
             InitializeComponent();
+
+            foreach (DataGridViewColumn col in grdClients.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.Programmatic;
+            }
         }
         public static frmListeClients CreateFormulaire()
         {
@@ -199,6 +204,114 @@ namespace GestionCommercialeUIW
             else
             {
                 btnSupprimer.Enabled = false;
+            }
+        }
+
+        private void grdClients_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                DataGridView grid = (DataGridView)sender;
+                SortOrder so = SortOrder.None;
+                if (grid.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection == SortOrder.None ||
+                    grid.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection == SortOrder.Ascending)
+                {
+                    so = SortOrder.Descending;
+                }
+                else
+                {
+                    so = SortOrder.Ascending;
+                }
+                //set SortGlyphDirection after databinding otherwise will always be none 
+                Sort(grid.Columns[e.ColumnIndex].Name, so);
+                grid.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection = so;
+            }
+            catch
+            {
+                MessageBox.Show("Une erreur est survenue !", "Nom de nom ! Une erreur !", MessageBoxButtons.OK);
+            }
+            }
+
+        private void Sort(string column, SortOrder sortOrder)
+        {
+            switch (column)
+            {
+                case "RaisonSociale":
+                    {
+                        if (sortOrder == SortOrder.Ascending)
+                        {
+                            grdClients.DataSource = GestionCommercialeDll.Donnees.TabClients.OrderBy(x => x.RaisonSociale).ToList();
+                        }
+                        else
+                        {
+                            grdClients.DataSource = GestionCommercialeDll.Donnees.TabClients.OrderByDescending(x => x.RaisonSociale).ToList();
+                        }
+                        break;
+                    }
+                case "Ville":
+                    {
+                        if (sortOrder == SortOrder.Ascending)
+                        {
+                            grdClients.DataSource = GestionCommercialeDll.Donnees.TabClients.OrderBy(x => x.Ville).ToList();
+                        }
+                        else
+                        {
+                            grdClients.DataSource = GestionCommercialeDll.Donnees.TabClients.OrderByDescending(x => x.Ville).ToList();
+                        }
+                        break;
+                    }
+                case "CP":
+                    {
+                        if (sortOrder == SortOrder.Ascending)
+                        {
+                            grdClients.DataSource = GestionCommercialeDll.Donnees.TabClients.OrderBy(x => x.CP).ToList();
+                        }
+                        else
+                        {
+                            grdClients.DataSource = GestionCommercialeDll.Donnees.TabClients.OrderByDescending(x => x.CP).ToList();
+                        }
+                        break;
+
+                    }
+                case "Prive":
+                    {
+                        if (sortOrder == SortOrder.Ascending)
+                        {
+                            grdClients.DataSource = GestionCommercialeDll.Donnees.TabClients.OrderBy(x => x.Prive).ToList();
+                        }
+                        else
+                        {
+                            grdClients.DataSource = GestionCommercialeDll.Donnees.TabClients.OrderByDescending(x => x.Prive).ToList();
+                        }
+                        break;
+
+                    }
+                case "Activite":
+                    {
+                        if (sortOrder == SortOrder.Ascending)
+                        {
+                            grdClients.DataSource = GestionCommercialeDll.Donnees.TabClients.OrderBy(x => x.Activite).ToList();
+                        }
+                        else
+                        {
+                            grdClients.DataSource = GestionCommercialeDll.Donnees.TabClients.OrderByDescending(x => x.Activite).ToList();
+                        }
+                        break;
+
+                    }
+                case "Nature":
+                    {
+                        if (sortOrder == SortOrder.Ascending)
+                        {
+                            grdClients.DataSource = GestionCommercialeDll.Donnees.TabClients.OrderBy(x => x.Nature).ToList();
+                        }
+                        else
+                        {
+                            grdClients.DataSource = GestionCommercialeDll.Donnees.TabClients.OrderByDescending(x => x.Nature).ToList();
+                        }
+                        break;
+
+                    }
             }
         }
     }
