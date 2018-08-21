@@ -214,7 +214,7 @@ namespace GestionCommercialeUIW
         private void btnImage_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Title = "Titre de la fenetre";
+            ofd.Title = "Explorateur de fichiers";
             // Filter représente le type de fichier qu'il est possible d'ouvrir, ce qu'il y a en bas de la fenetre
             // Tu commence par le texte qui s'affiche, ensuite |, ensuite les extensions correspondante
             ofd.Filter = "Images(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|Tous les fichiers (*.*)|*.* ";
