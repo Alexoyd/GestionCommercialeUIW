@@ -142,30 +142,6 @@ namespace GestionCommercialeUIW
         }
 
 
-
-        //private Boolean estArobase(String s)
-        //{
-        //    Boolean code = true; // code retour; OK a priori
-        //                         // test longueur chaîne reçue
-        //    string arobase = "@";
-
-        //    if (txtBoxMail.Text.Contains(arobase))
-
-        //    {
-        //        // vérifier 1 à 1 que tous les caractères sont des chiffres
-
-        //    }
-        //    else // erreur de longueur de chaine
-        //    {
-        //        code = false;
-        //        MessageBox.Show("Il n'y à pas d'AROBASE !"); ; // erreur détectée
-        //    }
-        //    return code;
-        //}
-
-
-
-
         private Boolean estEntierTelephone(String s)
         {
 
