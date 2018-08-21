@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblVille = new System.Windows.Forms.Label();
             this.lblTelephone = new System.Windows.Forms.Label();
             this.lblCP = new System.Windows.Forms.Label();
             this.lblAdresse1 = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.lblCA = new System.Windows.Forms.Label();
             this.lblEffectif = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblVille = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -84,6 +84,17 @@
             this.groupBox1.Text = "Identification";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // lblVille
+            // 
+            this.lblVille.AutoSize = true;
+            this.lblVille.BackColor = System.Drawing.Color.White;
+            this.lblVille.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblVille.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVille.Location = new System.Drawing.Point(311, 160);
+            this.lblVille.Name = "lblVille";
+            this.lblVille.Size = new System.Drawing.Size(2, 17);
+            this.lblVille.TabIndex = 9;
+            // 
             // lblTelephone
             // 
             this.lblTelephone.AutoSize = true;
@@ -99,9 +110,10 @@
             this.lblCP.AutoSize = true;
             this.lblCP.BackColor = System.Drawing.Color.White;
             this.lblCP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCP.Location = new System.Drawing.Point(147, 147);
             this.lblCP.Name = "lblCP";
-            this.lblCP.Size = new System.Drawing.Size(2, 15);
+            this.lblCP.Size = new System.Drawing.Size(2, 17);
             this.lblCP.TabIndex = 8;
             // 
             // lblAdresse1
@@ -117,9 +129,10 @@
             this.lblAdresse.AutoSize = true;
             this.lblAdresse.BackColor = System.Drawing.Color.White;
             this.lblAdresse.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblAdresse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdresse.Location = new System.Drawing.Point(147, 93);
             this.lblAdresse.Name = "lblAdresse";
-            this.lblAdresse.Size = new System.Drawing.Size(2, 15);
+            this.lblAdresse.Size = new System.Drawing.Size(2, 17);
             this.lblAdresse.TabIndex = 5;
             // 
             // lblRSociale
@@ -128,10 +141,11 @@
             this.lblRSociale.BackColor = System.Drawing.Color.White;
             this.lblRSociale.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblRSociale.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblRSociale.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRSociale.ForeColor = System.Drawing.SystemColors.InfoText;
             this.lblRSociale.Location = new System.Drawing.Point(147, 63);
             this.lblRSociale.Name = "lblRSociale";
-            this.lblRSociale.Size = new System.Drawing.Size(2, 15);
+            this.lblRSociale.Size = new System.Drawing.Size(2, 17);
             this.lblRSociale.TabIndex = 3;
             // 
             // lblNumClient
@@ -139,6 +153,7 @@
             this.lblNumClient.AutoSize = true;
             this.lblNumClient.BackColor = System.Drawing.Color.White;
             this.lblNumClient.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNumClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumClient.Location = new System.Drawing.Point(147, 34);
             this.lblNumClient.Name = "lblNumClient";
             this.lblNumClient.Size = new System.Drawing.Size(2, 15);
@@ -272,6 +287,7 @@
             this.label9.Size = new System.Drawing.Size(51, 13);
             this.label9.TabIndex = 6;
             this.label9.Text = "Activité : ";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // Nature
             // 
@@ -307,10 +323,11 @@
             this.lblNature.AutoSize = true;
             this.lblNature.BackColor = System.Drawing.Color.White;
             this.lblNature.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNature.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNature.ForeColor = System.Drawing.Color.Black;
             this.lblNature.Location = new System.Drawing.Point(311, 101);
             this.lblNature.Name = "lblNature";
-            this.lblNature.Size = new System.Drawing.Size(2, 15);
+            this.lblNature.Size = new System.Drawing.Size(2, 17);
             this.lblNature.TabIndex = 9;
             // 
             // lblActivite
@@ -318,9 +335,10 @@
             this.lblActivite.AutoSize = true;
             this.lblActivite.BackColor = System.Drawing.Color.White;
             this.lblActivite.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblActivite.Location = new System.Drawing.Point(74, 101);
+            this.lblActivite.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActivite.Location = new System.Drawing.Point(147, 103);
             this.lblActivite.Name = "lblActivite";
-            this.lblActivite.Size = new System.Drawing.Size(2, 15);
+            this.lblActivite.Size = new System.Drawing.Size(2, 17);
             this.lblActivite.TabIndex = 7;
             this.lblActivite.Click += new System.EventHandler(this.lblActivite_Click);
             // 
@@ -329,9 +347,10 @@
             this.lblCA.AutoSize = true;
             this.lblCA.BackColor = System.Drawing.Color.White;
             this.lblCA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCA.Location = new System.Drawing.Point(293, 62);
+            this.lblCA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCA.Location = new System.Drawing.Point(311, 59);
             this.lblCA.Name = "lblCA";
-            this.lblCA.Size = new System.Drawing.Size(2, 15);
+            this.lblCA.Size = new System.Drawing.Size(2, 17);
             this.lblCA.TabIndex = 5;
             // 
             // lblEffectif
@@ -339,9 +358,10 @@
             this.lblEffectif.AutoSize = true;
             this.lblEffectif.BackColor = System.Drawing.Color.White;
             this.lblEffectif.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblEffectif.Location = new System.Drawing.Point(71, 63);
+            this.lblEffectif.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEffectif.Location = new System.Drawing.Point(147, 59);
             this.lblEffectif.Name = "lblEffectif";
-            this.lblEffectif.Size = new System.Drawing.Size(2, 15);
+            this.lblEffectif.Size = new System.Drawing.Size(2, 17);
             this.lblEffectif.TabIndex = 3;
             this.lblEffectif.Click += new System.EventHandler(this.lblEffectif_Click);
             // 
@@ -356,21 +376,11 @@
             this.dataGridView1.Size = new System.Drawing.Size(575, 109);
             this.dataGridView1.TabIndex = 7;
             // 
-            // lblVille
-            // 
-            this.lblVille.AutoSize = true;
-            this.lblVille.BackColor = System.Drawing.Color.White;
-            this.lblVille.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblVille.Location = new System.Drawing.Point(206, 147);
-            this.lblVille.Name = "lblVille";
-            this.lblVille.Size = new System.Drawing.Size(2, 15);
-            this.lblVille.TabIndex = 9;
-            // 
             // frmConsultClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 596);
+            this.ClientSize = new System.Drawing.Size(626, 612);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnFermer);
