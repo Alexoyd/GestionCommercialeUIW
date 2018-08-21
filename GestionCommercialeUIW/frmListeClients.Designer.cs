@@ -134,6 +134,7 @@
             this.grdClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdClients.Size = new System.Drawing.Size(776, 334);
             this.grdClients.TabIndex = 1;
+            this.grdClients.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grdClients_ColumnHeaderMouseClick);
             this.grdClients.SelectionChanged += new System.EventHandler(this.grdClients_SelectionChanged);
             this.grdClients.DoubleClick += new System.EventHandler(this.grdClients_DoubleClick);
             // 
