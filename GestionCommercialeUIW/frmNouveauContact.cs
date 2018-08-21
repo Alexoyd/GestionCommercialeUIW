@@ -38,9 +38,7 @@ namespace GestionCommercialeUIW
             if (this.controle())
             {
                 if (this.instancie())
-                {
-                    // cas général :
-                    // si l'instanciation stagiaire et
+                {                                        
                     // son ajout à la collection est OK :
                     // - incrémentation compteurs de stagiaires
                     // - fermeture de la boite de dialogue par validation
@@ -75,7 +73,7 @@ namespace GestionCommercialeUIW
             if (invalid)
                 return false;
 
-            // Return true if strIn is in valid email format.
+            // Renvoie true si strIn est dans un format de mail correct.
             try
             {
                 return Regex.IsMatch(strIn,
@@ -171,7 +169,7 @@ namespace GestionCommercialeUIW
 
         private Boolean instancie()
         {
-            // créer une référence d'objet MStagiaire
+            // créer une référence d'objet GestionCommercialeDll
             GestionCommercialeDll.Contact nouveauContact = new GestionCommercialeDll.Contact();
             try
             {// déclenchement des méthodes get/set du Client.cs
