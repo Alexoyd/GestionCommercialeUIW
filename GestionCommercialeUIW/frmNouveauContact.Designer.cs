@@ -45,6 +45,7 @@
             this.btnAnnulerContact = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbBoxFonctionMetier = new System.Windows.Forms.ComboBox();
+            this.btnImage = new System.Windows.Forms.Button();
             this.groupBoxIdentification.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPhotoContact)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +79,7 @@
             // 
             // groupBoxIdentification
             // 
+            this.groupBoxIdentification.Controls.Add(this.btnImage);
             this.groupBoxIdentification.Controls.Add(this.txtBoxMail);
             this.groupBoxIdentification.Controls.Add(this.txtBoxTel);
             this.groupBoxIdentification.Controls.Add(this.txtBoxPrenomContact);
@@ -125,9 +127,11 @@
             // 
             // picBoxPhotoContact
             // 
-            this.picBoxPhotoContact.Location = new System.Drawing.Point(298, 41);
+            this.picBoxPhotoContact.Image = global::GestionCommercialeUIW.Properties.Resources.c160d49f7a842f408051bbada040b7d154bbcaf5_full;
+            this.picBoxPhotoContact.Location = new System.Drawing.Point(298, 23);
             this.picBoxPhotoContact.Name = "picBoxPhotoContact";
             this.picBoxPhotoContact.Size = new System.Drawing.Size(106, 94);
+            this.picBoxPhotoContact.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxPhotoContact.TabIndex = 4;
             this.picBoxPhotoContact.TabStop = false;
             // 
@@ -206,6 +210,16 @@
             this.cmbBoxFonctionMetier.TabIndex = 4;
             this.cmbBoxFonctionMetier.SelectedIndexChanged += new System.EventHandler(this.cmbBoxFonctionMetier_SelectedIndexChanged);
             // 
+            // btnImage
+            // 
+            this.btnImage.Location = new System.Drawing.Point(298, 129);
+            this.btnImage.Name = "btnImage";
+            this.btnImage.Size = new System.Drawing.Size(106, 23);
+            this.btnImage.TabIndex = 7;
+            this.btnImage.Text = "Choisir une image..";
+            this.btnImage.UseVisualStyleBackColor = true;
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
+            // 
             // frmNouveauContact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,5 +262,6 @@
         private System.Windows.Forms.Button btnAnnulerContact;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbBoxFonctionMetier;
+        private System.Windows.Forms.Button btnImage;
     }
 }
