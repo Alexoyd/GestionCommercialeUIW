@@ -188,5 +188,18 @@ namespace GestionCommercialeUIW
                 MessageBox.Show("Vous n'avez sélectionné aucun client");
             }
         }
+
+        private void grdClients_SelectionChanged(object sender, EventArgs e)
+        {
+            if (this.grdClients.SelectedRows.Count > 0)
+            {
+                btnSupprimer.Enabled = true;
+                DataGridViewRow selectedRow = this.grdClients.SelectedRows[0];
+            }
+            else
+            {
+                btnSupprimer.Enabled = false;
+            }
+        }
     }
 }

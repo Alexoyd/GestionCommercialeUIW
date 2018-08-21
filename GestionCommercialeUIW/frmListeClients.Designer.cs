@@ -113,6 +113,7 @@
             // 
             // btnSupprimer
             // 
+            this.btnSupprimer.Enabled = false;
             this.btnSupprimer.Location = new System.Drawing.Point(632, 415);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(75, 23);
@@ -124,6 +125,7 @@
             // grdClients
             // 
             this.grdClients.AllowUserToAddRows = false;
+            this.grdClients.AllowUserToOrderColumns = true;
             this.grdClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grdClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdClients.Location = new System.Drawing.Point(12, 75);
@@ -132,6 +134,7 @@
             this.grdClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdClients.Size = new System.Drawing.Size(776, 334);
             this.grdClients.TabIndex = 1;
+            this.grdClients.SelectionChanged += new System.EventHandler(this.grdClients_SelectionChanged);
             this.grdClients.DoubleClick += new System.EventHandler(this.grdClients_DoubleClick);
             // 
             // frmListeClients
