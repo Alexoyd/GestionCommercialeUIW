@@ -133,6 +133,36 @@ namespace GestionCommercialeUIW
         {
 
         }
+
+        private void lblRSociale_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblAdresse_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblAdresse1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTelephone_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNumClient_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
