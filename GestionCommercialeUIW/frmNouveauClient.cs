@@ -47,16 +47,31 @@ namespace GestionCommercialeUIW
             // permet de remplir par défaut la première valeur de l'index afin de ne pas mettre le programme en erreur
             this.cmbBoxNature.SelectedIndex = 0;
 
-
-
         }
 
         private void btnContact_Click(object sender, EventArgs e) // Permet d'ouvrir la fenêtre Nouveau contact par le biais du bouton "Contacts" de la fenêtre Nouveau client
         {
-
-            frmNouveauContact frmContact = new frmNouveauContact(txtBoxNumClient.Text.ToString(), txtBoxRaisonSocial.Text);
-            frmContact.ShowDialog();
+            if (this.controleClient())
+            {
+                frmNouveauContact frmContact = new frmNouveauContact(txtBoxNumClient.Text.ToString(), txtBoxRaisonSocial.Text);
+                frmContact.ShowDialog();
+            }
         }
+
+        private Boolean controleClient()
+        {
+            Boolean codeClient = true; // le code de retour ; OK a priori
+                                       // appel fonction générique de contrôle
+            if (!(estEntier(this.txtBoxNumClient.Text)))
+            {
+                // la chaîne reçue n'est pas convertible
+                codeClient = false;
+                MessageBox.Show("le Numéro client saisi n'est pas un entier valide", "ERREUR", MessageBoxButtons.OK);
+            }
+            return codeClient;
+        }
+
+
 
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
@@ -79,6 +94,7 @@ namespace GestionCommercialeUIW
             }
 
         }
+
 
         private Boolean controle()
         {
