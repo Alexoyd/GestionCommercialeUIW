@@ -99,7 +99,8 @@ namespace GestionCommercialeUIW
 
         private Boolean controle()
         {
-
+            
+            
             // contrôler la vraissemblance de tous les champs
             Boolean code = true; // le code de retour ; OK a priori
                                  // appel fonction générique de contrôle
@@ -107,32 +108,30 @@ namespace GestionCommercialeUIW
             {
                 // la chaîne reçue n'est pas convertible
                 code = false;
-                MessageBox.Show("le Numéro client saisi n'est pas un entier valide", "ERREUR", MessageBoxButtons.OK);
+                MessageBox.Show("Le Numéro client saisi n'est pas un entier valide !", "Erreur !", MessageBoxButtons.OK);
             }
             if (!(estEntierCP(this.txtBoxCP.Text)))
             {
                 code = false;
-                MessageBox.Show("le code postal saisi n'est pas correct",
-               "ERREUR", MessageBoxButtons.OK);
+                MessageBox.Show("Le code postal saisi n'est pas correct !","Erreur !", MessageBoxButtons.OK);
             }
             if (!(estEntierTelephone(this.txtBoxTelephone.Text)))
             {
                 // la chaîne reçue n'est pas convertible
                 code = false;
-                MessageBox.Show("le numéro de téléphone saisi n'est pas un entier valide", "ERREUR", MessageBoxButtons.OK);
+                MessageBox.Show("Le numéro de téléphone saisi n'est pas un entier valide !", "Erreur !", MessageBoxButtons.OK);
             }
 
             if (!(estEntier(this.txtBoxEffectif.Text)))
             {
                 // la chaîne reçue n'est pas convertible
                 code = false;
-                MessageBox.Show("l'effectif saisi n'est pas un entier valide", "ERREUR", MessageBoxButtons.OK);
+                MessageBox.Show("L'effectif saisi n'est pas un entier valide !", "Erreur !", MessageBoxButtons.OK);
             }
             if (!(estEntier(this.txtBoxCA.Text)))
             {
                 code = false;
-                MessageBox.Show("le chiffre d'affaire saisi n'est pas correct",
-               "ERREUR", MessageBoxButtons.OK);
+                MessageBox.Show("Le chiffre d'affaire saisi n'est pas correct !","Erreur !", MessageBoxButtons.OK);
             }
             return code;
         }

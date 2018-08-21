@@ -202,7 +202,7 @@ namespace GestionCommercialeUIW
                 nouveauContact.NumContact = Convert.ToInt32(lblContactNumClient.Text);
                 nouveauContact.NomContact = txtBoxNomContact.Text;
                 nouveauContact.PrenomContact = txtBoxPrenomContact.Text;
-                nouveauContact.TelContact = Int32.Parse(txtBoxTel.Text);
+                nouveauContact.TelContact = txtBoxTel.Text;
                 nouveauContact.MailContact = txtBoxMail.Text;
                 nouveauContact.CmbBoxFonctionMetier = cmbBoxFonctionMetier.Text;
 
