@@ -124,6 +124,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\GestionCommercialeDll.Client.datasource" />
     <None Include="Properties\DataSources\GestionCommercialeDll.Donnees.datasource" />
@@ -145,6 +146,9 @@
       <Project>{9539cfb1-7566-4557-ad17-3e1aa3393da4}</Project>
       <Name>GestionCommercialeDll</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c160d49f7a842f408051bbada040b7d154bbcaf5_full.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
