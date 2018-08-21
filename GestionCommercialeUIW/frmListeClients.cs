@@ -138,6 +138,17 @@ namespace GestionCommercialeUIW
 
                 // afficher le form détail en modal
                 frmConsult.ShowDialog();
+
+                if (frmConsult.DialogResult == DialogResult.OK)
+                {
+                    for (int i = 0; i < grdClients.ColumnCount; i++)
+                    {
+                        for (int j = 0; j < grdClients.RowCount; j++)
+                        {
+                            grdClients.UpdateCellValue(i, j);
+                        }
+                    }
+                }
             }
             catch
             {
