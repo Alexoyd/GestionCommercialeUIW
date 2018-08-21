@@ -35,7 +35,7 @@ namespace GestionCommercialeUIW
             dt.Columns.Add("Prénom",
                 System.Type.GetType("System.String"));
             dt.Columns.Add("Téléphone",
-                System.Type.GetType("System.Int32"));
+                System.Type.GetType("System.String"));
             dt.Columns.Add("E-Mail",
                 System.Type.GetType("System.String"));
             dt.Columns.Add("Fonction",
