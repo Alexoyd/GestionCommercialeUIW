@@ -38,6 +38,8 @@ namespace GestionCommercialeUIW
                 System.Type.GetType("System.Int32"));
             dt.Columns.Add("E-Mail",
                 System.Type.GetType("System.String"));
+            dt.Columns.Add("Fonction",
+               System.Type.GetType("System.String"));
 
             afficheContacts();
 
@@ -68,6 +70,7 @@ namespace GestionCommercialeUIW
         {
 
         }
+
         //boutton modification client
         private void btnModifClient_Click(object sender, EventArgs e)
         {
@@ -84,6 +87,7 @@ namespace GestionCommercialeUIW
         //Boutton quitter
         private void btnFermer_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
@@ -105,7 +109,7 @@ namespace GestionCommercialeUIW
             {
                 if (Contact.NumContact == Convert.ToInt32(leClient.NumClient))
                 {
-                    dt.Rows.Add(Contact.NomContact, Contact.PrenomContact, Contact.TelContact, Contact.MailContact);
+                    dt.Rows.Add(Contact.NomContact, Contact.PrenomContact, Contact.TelContact, Contact.MailContact, Contact.CmbBoxFonctionMetier);
                 }
             }
             dataGridView1.DataSource = dt;
