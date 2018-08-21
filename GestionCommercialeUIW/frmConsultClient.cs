@@ -83,6 +83,12 @@ namespace GestionCommercialeUIW
         {
             frmNouveauContact frmNewContact = new frmNouveauContact(lblNumClient.Text.ToString(), lblRSociale.Text);
             frmNewContact.ShowDialog();
+
+            if(frmNewContact.DialogResult == DialogResult.OK)
+            {
+                dt.Clear();
+                afficheContacts();
+            }
         }
         //Boutton quitter
         private void btnFermer_Click(object sender, EventArgs e)
