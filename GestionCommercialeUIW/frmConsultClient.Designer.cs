@@ -378,7 +378,6 @@
         private System.Windows.Forms.Button btnFermer;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblNumClient;
-        private System.Windows.Forms.CheckBox checkPrive;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label Effectif;
         private System.Windows.Forms.Label CA;
@@ -396,5 +395,6 @@
         internal System.Windows.Forms.Label lblCA;
         internal System.Windows.Forms.Label lblEffectif;
         private System.Windows.Forms.DataGridView dataGridView1;
+        internal System.Windows.Forms.CheckBox checkPrive;
     }
 }
