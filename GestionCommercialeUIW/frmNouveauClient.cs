@@ -66,7 +66,7 @@ namespace GestionCommercialeUIW
             {
                 // la chaîne reçue n'est pas convertible
                 codeClient = false;
-                MessageBox.Show("le Numéro client saisi n'est pas un entier valide", "ERREUR", MessageBoxButtons.OK);
+                MessageBox.Show("Le numéro client saisi n'est pas correct", "Attention !!!", MessageBoxButtons.OK);
             }
             return codeClient;
         }
