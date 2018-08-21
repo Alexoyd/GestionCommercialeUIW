@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace GestionCommercialeUIW
 {
     public partial class frmNouveauClient : Form
@@ -17,6 +18,8 @@ namespace GestionCommercialeUIW
             InitializeComponent();
             this.InitActivité();
             this.InitNature();
+
+
         }
 
 
@@ -44,14 +47,32 @@ namespace GestionCommercialeUIW
 
             // permet de remplir par défaut la première valeur de l'index afin de ne pas mettre le programme en erreur
             this.cmbBoxNature.SelectedIndex = 0;
+
         }
 
         private void btnContact_Click(object sender, EventArgs e) // Permet d'ouvrir la fenêtre Nouveau contact par le biais du bouton "Contacts" de la fenêtre Nouveau client
         {
-            frmNouveauContact frmContact = new frmNouveauContact(txtBoxNumClient.Text.ToString(), txtBoxRaisonSocial.Text);
-
-            frmContact.ShowDialog();
+            if (this.controleClient())
+            {
+                frmNouveauContact frmContact = new frmNouveauContact(txtBoxNumClient.Text.ToString(), txtBoxRaisonSocial.Text);
+                frmContact.ShowDialog();
+            }
         }
+
+        private Boolean controleClient()
+        {
+            Boolean codeClient = true; // le code de retour ; OK a priori
+                                       // appel fonction générique de contrôle
+            if (!(estEntier(this.txtBoxNumClient.Text)))
+            {
+                // la chaîne reçue n'est pas convertible
+                codeClient = false;
+                MessageBox.Show("Le numéro client saisi n'est pas correct", "Attention !!!", MessageBoxButtons.OK);
+            }
+            return codeClient;
+        }
+
+
 
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
@@ -64,12 +85,17 @@ namespace GestionCommercialeUIW
             {
                 if (this.instancie())
                 {
-
+                    // cas général :
+                    // si l'instanciation stagiaire et
+                    // son ajout à la collection est OK :
+                    // - incrémentation compteurs de stagiaires
+                    // - fermeture de la boite de dialogue par validation
                     this.DialogResult = DialogResult.OK;
                 }
             }
 
         }
+
 
         private Boolean controle()
         {
@@ -167,6 +193,7 @@ namespace GestionCommercialeUIW
             return code;
         }
 
+
         private Boolean estEntierTelephone(String s)
         {
 
@@ -196,7 +223,7 @@ namespace GestionCommercialeUIW
 
         private Boolean instancie()
         {
-            // créer une référence d'objet nouveauClient
+            // créer une référence d'objet MStagiaire
             GestionCommercialeDll.Client nouveauClient = new GestionCommercialeDll.Client();
             try
             {// déclenchement des méthodes get/set du Client.cs
@@ -240,16 +267,12 @@ namespace GestionCommercialeUIW
 
         }
 
-
-
         private void txtBoxNumClient_TextChanged(object sender, EventArgs e)
         {
             if (txtBoxNumClient.Text != "")
                 btnContact.Enabled = true;
             else
                 btnContact.Enabled = false;
-
-
         }
 
 

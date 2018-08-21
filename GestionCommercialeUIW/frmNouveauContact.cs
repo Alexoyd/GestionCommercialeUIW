@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace GestionCommercialeUIW
 {
@@ -17,7 +18,7 @@ namespace GestionCommercialeUIW
             InitializeComponent();
             this.lblContactNumClient.Text = unNumClient;
             this.lblNomClient.Text = uneRaisonSociale;
-            this.JeanBurgerStuveux();
+            this.ComboBoxInitMetier();
         }
 
         private void btnAnnulerContact_Click(object sender, EventArgs e)
@@ -156,7 +157,7 @@ namespace GestionCommercialeUIW
 
         }
 
-        private void JeanBurgerStuveux()
+        private void ComboBoxInitMetier()
         {
             // vide la combobox
             this.cmbBoxFonctionMetier.Items.Clear();

@@ -123,9 +123,13 @@
             // 
             // grdClients
             // 
+            this.grdClients.AllowUserToAddRows = false;
+            this.grdClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grdClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdClients.Location = new System.Drawing.Point(12, 75);
             this.grdClients.Name = "grdClients";
+            this.grdClients.ReadOnly = true;
+            this.grdClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdClients.Size = new System.Drawing.Size(776, 334);
             this.grdClients.TabIndex = 1;
             this.grdClients.DoubleClick += new System.EventHandler(this.grdClients_DoubleClick);
