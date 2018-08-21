@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblVille = new System.Windows.Forms.Label();
             this.lblTelephone = new System.Windows.Forms.Label();
             this.lblCP = new System.Windows.Forms.Label();
             this.lblAdresse1 = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@
             this.lblCA = new System.Windows.Forms.Label();
             this.lblEffectif = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblVille = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -84,28 +84,24 @@
             this.groupBox1.Text = "Identification";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // lblVille
-            // 
-            this.lblVille.AutoSize = true;
-            this.lblVille.Location = new System.Drawing.Point(206, 147);
-            this.lblVille.Name = "lblVille";
-            this.lblVille.Size = new System.Drawing.Size(0, 13);
-            this.lblVille.TabIndex = 9;
-            // 
             // lblTelephone
             // 
             this.lblTelephone.AutoSize = true;
+            this.lblTelephone.BackColor = System.Drawing.Color.White;
+            this.lblTelephone.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTelephone.Location = new System.Drawing.Point(147, 173);
             this.lblTelephone.Name = "lblTelephone";
-            this.lblTelephone.Size = new System.Drawing.Size(0, 13);
+            this.lblTelephone.Size = new System.Drawing.Size(2, 15);
             this.lblTelephone.TabIndex = 11;
             // 
             // lblCP
             // 
             this.lblCP.AutoSize = true;
+            this.lblCP.BackColor = System.Drawing.Color.White;
+            this.lblCP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCP.Location = new System.Drawing.Point(147, 147);
             this.lblCP.Name = "lblCP";
-            this.lblCP.Size = new System.Drawing.Size(0, 13);
+            this.lblCP.Size = new System.Drawing.Size(2, 15);
             this.lblCP.TabIndex = 8;
             // 
             // lblAdresse1
@@ -119,25 +115,33 @@
             // lblAdresse
             // 
             this.lblAdresse.AutoSize = true;
+            this.lblAdresse.BackColor = System.Drawing.Color.White;
+            this.lblAdresse.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblAdresse.Location = new System.Drawing.Point(147, 93);
             this.lblAdresse.Name = "lblAdresse";
-            this.lblAdresse.Size = new System.Drawing.Size(0, 13);
+            this.lblAdresse.Size = new System.Drawing.Size(2, 15);
             this.lblAdresse.TabIndex = 5;
             // 
             // lblRSociale
             // 
             this.lblRSociale.AutoSize = true;
+            this.lblRSociale.BackColor = System.Drawing.Color.White;
+            this.lblRSociale.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblRSociale.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblRSociale.ForeColor = System.Drawing.SystemColors.InfoText;
             this.lblRSociale.Location = new System.Drawing.Point(147, 63);
             this.lblRSociale.Name = "lblRSociale";
-            this.lblRSociale.Size = new System.Drawing.Size(0, 13);
+            this.lblRSociale.Size = new System.Drawing.Size(2, 15);
             this.lblRSociale.TabIndex = 3;
             // 
             // lblNumClient
             // 
             this.lblNumClient.AutoSize = true;
+            this.lblNumClient.BackColor = System.Drawing.Color.White;
+            this.lblNumClient.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblNumClient.Location = new System.Drawing.Point(147, 34);
             this.lblNumClient.Name = "lblNumClient";
-            this.lblNumClient.Size = new System.Drawing.Size(0, 13);
+            this.lblNumClient.Size = new System.Drawing.Size(2, 15);
             this.lblNumClient.TabIndex = 1;
             // 
             // label4
@@ -301,34 +305,43 @@
             // lblNature
             // 
             this.lblNature.AutoSize = true;
+            this.lblNature.BackColor = System.Drawing.Color.White;
+            this.lblNature.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNature.ForeColor = System.Drawing.Color.Black;
             this.lblNature.Location = new System.Drawing.Point(311, 101);
             this.lblNature.Name = "lblNature";
-            this.lblNature.Size = new System.Drawing.Size(0, 13);
+            this.lblNature.Size = new System.Drawing.Size(2, 15);
             this.lblNature.TabIndex = 9;
             // 
             // lblActivite
             // 
             this.lblActivite.AutoSize = true;
+            this.lblActivite.BackColor = System.Drawing.Color.White;
+            this.lblActivite.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblActivite.Location = new System.Drawing.Point(74, 101);
             this.lblActivite.Name = "lblActivite";
-            this.lblActivite.Size = new System.Drawing.Size(0, 13);
+            this.lblActivite.Size = new System.Drawing.Size(2, 15);
             this.lblActivite.TabIndex = 7;
             this.lblActivite.Click += new System.EventHandler(this.lblActivite_Click);
             // 
             // lblCA
             // 
             this.lblCA.AutoSize = true;
+            this.lblCA.BackColor = System.Drawing.Color.White;
+            this.lblCA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCA.Location = new System.Drawing.Point(293, 62);
             this.lblCA.Name = "lblCA";
-            this.lblCA.Size = new System.Drawing.Size(0, 13);
+            this.lblCA.Size = new System.Drawing.Size(2, 15);
             this.lblCA.TabIndex = 5;
             // 
             // lblEffectif
             // 
             this.lblEffectif.AutoSize = true;
+            this.lblEffectif.BackColor = System.Drawing.Color.White;
+            this.lblEffectif.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblEffectif.Location = new System.Drawing.Point(71, 63);
             this.lblEffectif.Name = "lblEffectif";
-            this.lblEffectif.Size = new System.Drawing.Size(0, 13);
+            this.lblEffectif.Size = new System.Drawing.Size(2, 15);
             this.lblEffectif.TabIndex = 3;
             this.lblEffectif.Click += new System.EventHandler(this.lblEffectif_Click);
             // 
@@ -339,6 +352,16 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(575, 109);
             this.dataGridView1.TabIndex = 7;
+            // 
+            // lblVille
+            // 
+            this.lblVille.AutoSize = true;
+            this.lblVille.BackColor = System.Drawing.Color.White;
+            this.lblVille.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblVille.Location = new System.Drawing.Point(206, 147);
+            this.lblVille.Name = "lblVille";
+            this.lblVille.Size = new System.Drawing.Size(2, 15);
+            this.lblVille.TabIndex = 9;
             // 
             // frmConsultClient
             // 
@@ -385,7 +408,6 @@
         private System.Windows.Forms.Label Nature;
         private System.Windows.Forms.GroupBox groupBox2;
         public System.Windows.Forms.Label lblRSociale;
-        internal System.Windows.Forms.Label lblVille;
         internal System.Windows.Forms.Label lblTelephone;
         internal System.Windows.Forms.Label lblCP;
         internal System.Windows.Forms.Label lblAdresse1;
@@ -396,5 +418,6 @@
         internal System.Windows.Forms.Label lblEffectif;
         private System.Windows.Forms.DataGridView dataGridView1;
         internal System.Windows.Forms.CheckBox checkPrive;
+        internal System.Windows.Forms.Label lblVille;
     }
 }
