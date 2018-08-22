@@ -173,7 +173,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 160);
+            this.label4.Location = new System.Drawing.Point(53, 160);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 13);
             this.label4.TabIndex = 7;
@@ -182,7 +182,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(36, 195);
+            this.label5.Location = new System.Drawing.Point(47, 195);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 13);
             this.label5.TabIndex = 10;
@@ -191,7 +191,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 96);
+            this.label3.Location = new System.Drawing.Point(60, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 4;
@@ -200,7 +200,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 63);
+            this.label2.Location = new System.Drawing.Point(38, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 2;
@@ -275,7 +275,7 @@
             // Effectif
             // 
             this.Effectif.AutoSize = true;
-            this.Effectif.Location = new System.Drawing.Point(24, 63);
+            this.Effectif.Location = new System.Drawing.Point(65, 58);
             this.Effectif.Name = "Effectif";
             this.Effectif.Size = new System.Drawing.Size(49, 13);
             this.Effectif.TabIndex = 2;
@@ -284,7 +284,7 @@
             // CA
             // 
             this.CA.AutoSize = true;
-            this.CA.Location = new System.Drawing.Point(352, 63);
+            this.CA.Location = new System.Drawing.Point(326, 58);
             this.CA.Name = "CA";
             this.CA.Size = new System.Drawing.Size(30, 13);
             this.CA.TabIndex = 4;
@@ -293,7 +293,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(24, 101);
+            this.label9.Location = new System.Drawing.Point(63, 96);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 13);
             this.label9.TabIndex = 6;
@@ -303,7 +303,7 @@
             // Nature
             // 
             this.Nature.AutoSize = true;
-            this.Nature.Location = new System.Drawing.Point(334, 101);
+            this.Nature.Location = new System.Drawing.Point(308, 96);
             this.Nature.Name = "Nature";
             this.Nature.Size = new System.Drawing.Size(48, 13);
             this.Nature.TabIndex = 8;
@@ -348,7 +348,7 @@
             this.lblActivite.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActivite.Location = new System.Drawing.Point(147, 96);
             this.lblActivite.Name = "lblActivite";
-            this.lblActivite.Size = new System.Drawing.Size(166, 22);
+            this.lblActivite.Size = new System.Drawing.Size(121, 22);
             this.lblActivite.TabIndex = 7;
             this.lblActivite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblActivite.Click += new System.EventHandler(this.lblActivite_Click);
@@ -371,7 +371,7 @@
             this.lblEffectif.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEffectif.Location = new System.Drawing.Point(147, 58);
             this.lblEffectif.Name = "lblEffectif";
-            this.lblEffectif.Size = new System.Drawing.Size(166, 22);
+            this.lblEffectif.Size = new System.Drawing.Size(121, 22);
             this.lblEffectif.TabIndex = 3;
             this.lblEffectif.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblEffectif.Click += new System.EventHandler(this.lblEffectif_Click);
