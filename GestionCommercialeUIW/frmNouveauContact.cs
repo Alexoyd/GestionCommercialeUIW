@@ -215,7 +215,7 @@ namespace GestionCommercialeUIW
             ofd.Title = "Explorateur de fichiers";
             // Filter représente le type de fichier qu'il est possible d'ouvrir, ce qu'il y a en bas de la fenetre
             // Tu commence par le texte qui s'affiche, ensuite |, ensuite les extensions correspondante
-            ofd.Filter = "Images(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|Tous les fichiers (*.*)|*.* ";
+            ofd.Filter = "Images(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|Tous les fichiers (*.*)|*.* ";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 picBoxPhotoContact.Image = Image.FromFile(ofd.FileName); // Code d'ouverture du fichier
