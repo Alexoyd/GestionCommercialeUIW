@@ -32,6 +32,7 @@
             this.lblContactNumClient = new System.Windows.Forms.Label();
             this.lblNomClient = new System.Windows.Forms.Label();
             this.groupBoxIdentification = new System.Windows.Forms.GroupBox();
+            this.btnImage = new System.Windows.Forms.Button();
             this.txtBoxMail = new System.Windows.Forms.TextBox();
             this.txtBoxTel = new System.Windows.Forms.TextBox();
             this.txtBoxPrenomContact = new System.Windows.Forms.TextBox();
@@ -45,7 +46,6 @@
             this.btnAnnulerContact = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbBoxFonctionMetier = new System.Windows.Forms.ComboBox();
-            this.btnImage = new System.Windows.Forms.Button();
             this.groupBoxIdentification.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPhotoContact)).BeginInit();
             this.SuspendLayout();
@@ -96,33 +96,43 @@
             this.groupBoxIdentification.TabStop = false;
             this.groupBoxIdentification.Text = "Identification";
             // 
+            // btnImage
+            // 
+            this.btnImage.Location = new System.Drawing.Point(298, 129);
+            this.btnImage.Name = "btnImage";
+            this.btnImage.Size = new System.Drawing.Size(106, 23);
+            this.btnImage.TabIndex = 8;
+            this.btnImage.Text = "Choisir une image..";
+            this.btnImage.UseVisualStyleBackColor = true;
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
+            // 
             // txtBoxMail
             // 
             this.txtBoxMail.Location = new System.Drawing.Point(72, 126);
             this.txtBoxMail.Name = "txtBoxMail";
             this.txtBoxMail.Size = new System.Drawing.Size(199, 20);
-            this.txtBoxMail.TabIndex = 8;
+            this.txtBoxMail.TabIndex = 7;
             // 
             // txtBoxTel
             // 
             this.txtBoxTel.Location = new System.Drawing.Point(72, 97);
             this.txtBoxTel.Name = "txtBoxTel";
             this.txtBoxTel.Size = new System.Drawing.Size(199, 20);
-            this.txtBoxTel.TabIndex = 7;
+            this.txtBoxTel.TabIndex = 5;
             // 
             // txtBoxPrenomContact
             // 
             this.txtBoxPrenomContact.Location = new System.Drawing.Point(72, 70);
             this.txtBoxPrenomContact.Name = "txtBoxPrenomContact";
             this.txtBoxPrenomContact.Size = new System.Drawing.Size(199, 20);
-            this.txtBoxPrenomContact.TabIndex = 6;
+            this.txtBoxPrenomContact.TabIndex = 3;
             // 
             // txtBoxNomContact
             // 
             this.txtBoxNomContact.Location = new System.Drawing.Point(72, 41);
             this.txtBoxNomContact.Name = "txtBoxNomContact";
             this.txtBoxNomContact.Size = new System.Drawing.Size(199, 20);
-            this.txtBoxNomContact.TabIndex = 5;
+            this.txtBoxNomContact.TabIndex = 1;
             this.txtBoxNomContact.TextChanged += new System.EventHandler(this.txtBoxNomContact_TextChanged);
             // 
             // picBoxPhotoContact
@@ -141,7 +151,7 @@
             this.label4.Location = new System.Drawing.Point(6, 129);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 3;
+            this.label4.TabIndex = 6;
             this.label4.Text = "Email :";
             // 
             // label3
@@ -150,7 +160,7 @@
             this.label3.Location = new System.Drawing.Point(6, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 13);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 4;
             this.label3.Text = "Téléphone : ";
             // 
             // label2
@@ -159,7 +169,7 @@
             this.label2.Location = new System.Drawing.Point(6, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Prénom : ";
             // 
             // label1
@@ -209,16 +219,6 @@
             this.cmbBoxFonctionMetier.Size = new System.Drawing.Size(199, 21);
             this.cmbBoxFonctionMetier.TabIndex = 4;
             this.cmbBoxFonctionMetier.SelectedIndexChanged += new System.EventHandler(this.cmbBoxFonctionMetier_SelectedIndexChanged);
-            // 
-            // btnImage
-            // 
-            this.btnImage.Location = new System.Drawing.Point(298, 129);
-            this.btnImage.Name = "btnImage";
-            this.btnImage.Size = new System.Drawing.Size(106, 23);
-            this.btnImage.TabIndex = 7;
-            this.btnImage.Text = "Choisir une image..";
-            this.btnImage.UseVisualStyleBackColor = true;
-            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
             // 
             // frmNouveauContact
             // 
