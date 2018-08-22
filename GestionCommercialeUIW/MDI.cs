@@ -82,5 +82,19 @@ namespace GestionCommercialeUIW
             GestionCommercialeDll.Donnees.TabClients.Remove(leClient);
 
         }
+
+        private void nouveauToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            // instancie un form de saisie de client et l'affiche en modal
+            frmNouveauClient frmAjout = new frmNouveauClient();
+
+            // si on sort de la saisie par OK
+            if (frmAjout.ShowDialog() == DialogResult.OK)
+            {
+                frmListe.grdClients.DataSource = null;
+                frmListe.afficheClients();
+            }
+        }
     }
 }

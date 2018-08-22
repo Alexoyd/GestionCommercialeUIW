@@ -32,11 +32,12 @@
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.annulerSaisieDuDernierClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fenêtreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.annulerSaisieDuDernierClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nouveauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@
             // fichierToolStripMenuItem
             // 
             this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nouveauToolStripMenuItem,
             this.quitterToolStripMenuItem});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
@@ -64,7 +66,7 @@
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
@@ -75,6 +77,14 @@
             this.editionToolStripMenuItem.Name = "editionToolStripMenuItem";
             this.editionToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.editionToolStripMenuItem.Text = "Edition";
+            // 
+            // annulerSaisieDuDernierClientToolStripMenuItem
+            // 
+            this.annulerSaisieDuDernierClientToolStripMenuItem.Enabled = false;
+            this.annulerSaisieDuDernierClientToolStripMenuItem.Name = "annulerSaisieDuDernierClientToolStripMenuItem";
+            this.annulerSaisieDuDernierClientToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.annulerSaisieDuDernierClientToolStripMenuItem.Text = "Annuler saisie du dernier client";
+            this.annulerSaisieDuDernierClientToolStripMenuItem.Click += new System.EventHandler(this.annulerSaisieDuDernierClientToolStripMenuItem_Click);
             // 
             // fenêtreToolStripMenuItem
             // 
@@ -106,13 +116,12 @@
             this.aProposDeToolStripMenuItem.Text = "A propos de ...";
             this.aProposDeToolStripMenuItem.Click += new System.EventHandler(this.aProposDeToolStripMenuItem_Click);
             // 
-            // annulerSaisieDuDernierClientToolStripMenuItem
+            // nouveauToolStripMenuItem
             // 
-            this.annulerSaisieDuDernierClientToolStripMenuItem.Enabled = false;
-            this.annulerSaisieDuDernierClientToolStripMenuItem.Name = "annulerSaisieDuDernierClientToolStripMenuItem";
-            this.annulerSaisieDuDernierClientToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
-            this.annulerSaisieDuDernierClientToolStripMenuItem.Text = "Annuler saisie du dernier client";
-            this.annulerSaisieDuDernierClientToolStripMenuItem.Click += new System.EventHandler(this.annulerSaisieDuDernierClientToolStripMenuItem_Click);
+            this.nouveauToolStripMenuItem.Name = "nouveauToolStripMenuItem";
+            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nouveauToolStripMenuItem.Text = "Nouveau";
+            this.nouveauToolStripMenuItem.Click += new System.EventHandler(this.nouveauToolStripMenuItem_Click);
             // 
             // MDI
             // 
@@ -142,6 +151,7 @@
         private System.Windows.Forms.ToolStripMenuItem aProposDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listeClientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem annulerSaisieDuDernierClientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nouveauToolStripMenuItem;
     }
 }
 

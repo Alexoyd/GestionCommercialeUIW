@@ -36,7 +36,7 @@ namespace GestionCommercialeUIW
             return singleton;
         }
 
-        private void btnNouveauClient_Click(object sender, EventArgs e)
+        public void btnNouveauClient_Click(object sender, EventArgs e)
         {
             // instancie un form de saisie de client et l'affiche en modal
             frmNouveauClient frmAjout = new frmNouveauClient();
