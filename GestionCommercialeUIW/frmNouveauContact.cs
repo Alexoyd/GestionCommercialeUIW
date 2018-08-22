@@ -40,7 +40,7 @@ namespace GestionCommercialeUIW
                 if (this.instancie())
                 {
                     // son ajout à la collection est OK :
-                    // - incrémentation compteurs de stagiaires
+                    // - incrémentation compteurs de contacts
                     // - fermeture de la boite de dialogue par validation
                     this.DialogResult = DialogResult.OK;
                 }

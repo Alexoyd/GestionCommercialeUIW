@@ -14,6 +14,8 @@ namespace GestionCommercialeUIW
     {
         BindingSource bs = new BindingSource();
 
+        public event EventHandler MenuAnnuler;
+
         private static frmListeClients singleton = null;
 
         private frmListeClients()
@@ -105,22 +107,10 @@ namespace GestionCommercialeUIW
             txtRecherche.Text = "";
             btnTous.Enabled = false;
 
+            bs.DataSource = null;
             grdClients.DataSource = null;
 
-            grdClients.DataSource = GestionCommercialeDll.Donnees.TabClients;
-
-            grdClients.Columns[0].Visible = false;
-            grdClients.Columns[1].HeaderText = "Raison Sociale";
-            grdClients.Columns[2].Visible = false;
-            grdClients.Columns[3].Visible = false;
-            grdClients.Columns[4].HeaderText = "Ville";
-            grdClients.Columns[5].HeaderText = "Code Postal";
-            grdClients.Columns[6].Visible = false;
-            grdClients.Columns[7].HeaderText = "Privé ?";
-            grdClients.Columns[8].Visible = false;
-            grdClients.Columns[9].Visible = false;
-            grdClients.Columns[10].HeaderText = "Activité";
-            grdClients.Columns[11].HeaderText = "Nature";
+            afficheClients();
         }
 
         private void grdClients_DoubleClick(object sender, EventArgs e)
@@ -196,6 +186,9 @@ namespace GestionCommercialeUIW
 
         private void grdClients_SelectionChanged(object sender, EventArgs e)
         {
+            if (this.MenuAnnuler != null)
+                this.MenuAnnuler(this, e);
+
             if (this.grdClients.SelectedRows.Count > 0)
             {
                 btnSupprimer.Enabled = true;

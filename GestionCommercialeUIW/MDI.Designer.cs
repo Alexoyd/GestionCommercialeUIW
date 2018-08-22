@@ -36,6 +36,7 @@
             this.listeClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.annulerSaisieDuDernierClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,12 +64,14 @@
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
             // editionToolStripMenuItem
             // 
+            this.editionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.annulerSaisieDuDernierClientToolStripMenuItem});
             this.editionToolStripMenuItem.Name = "editionToolStripMenuItem";
             this.editionToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.editionToolStripMenuItem.Text = "Edition";
@@ -84,7 +87,7 @@
             // listeClientToolStripMenuItem
             // 
             this.listeClientToolStripMenuItem.Name = "listeClientToolStripMenuItem";
-            this.listeClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listeClientToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.listeClientToolStripMenuItem.Text = "Liste Client";
             this.listeClientToolStripMenuItem.Click += new System.EventHandler(this.listeClientToolStripMenuItem_Click);
             // 
@@ -99,9 +102,17 @@
             // aProposDeToolStripMenuItem
             // 
             this.aProposDeToolStripMenuItem.Name = "aProposDeToolStripMenuItem";
-            this.aProposDeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aProposDeToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.aProposDeToolStripMenuItem.Text = "A propos de ...";
             this.aProposDeToolStripMenuItem.Click += new System.EventHandler(this.aProposDeToolStripMenuItem_Click);
+            // 
+            // annulerSaisieDuDernierClientToolStripMenuItem
+            // 
+            this.annulerSaisieDuDernierClientToolStripMenuItem.Enabled = false;
+            this.annulerSaisieDuDernierClientToolStripMenuItem.Name = "annulerSaisieDuDernierClientToolStripMenuItem";
+            this.annulerSaisieDuDernierClientToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.annulerSaisieDuDernierClientToolStripMenuItem.Text = "Annuler saisie du dernier client";
+            this.annulerSaisieDuDernierClientToolStripMenuItem.Click += new System.EventHandler(this.annulerSaisieDuDernierClientToolStripMenuItem_Click);
             // 
             // MDI
             // 
@@ -130,6 +141,7 @@
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aProposDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listeClientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem annulerSaisieDuDernierClientToolStripMenuItem;
     }
 }
 

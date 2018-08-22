@@ -168,6 +168,6 @@
         private System.Windows.Forms.Button btnFermer;
         private System.Windows.Forms.Button btnNouveauClient;
         private System.Windows.Forms.Button btnSupprimer;
-        private System.Windows.Forms.DataGridView grdClients;
+        internal System.Windows.Forms.DataGridView grdClients;
     }
 }

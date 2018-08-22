@@ -86,9 +86,9 @@ namespace GestionCommercialeUIW
                 if (this.instancie())
                 {
                     // cas général :
-                    // si l'instanciation stagiaire et
+                    // si l'instanciation client et
                     // son ajout à la collection est OK :
-                    // - incrémentation compteurs de stagiaires
+                    // - incrémentation compteurs de client
                     // - fermeture de la boite de dialogue par validation
                     this.DialogResult = DialogResult.OK;
                 }
@@ -232,7 +232,7 @@ namespace GestionCommercialeUIW
 
         private Boolean instancie()
         {
-            // créer une référence d'objet MStagiaire
+            // créer une référence d'objet Client
             GestionCommercialeDll.Client nouveauClient = new GestionCommercialeDll.Client();
             try
             {// déclenchement des méthodes get/set du Client.cs
