@@ -53,11 +53,14 @@ namespace GestionCommercialeUIW
             this.lblCP.Text = unClient.CP;
             this.lblVille.Text = unClient.Ville;
             this.lblTelephone.Text = unClient.Telephone;
-            this.lblEffectif.Text = unClient.Effectif.ToString();
             this.lblActivite.Text = unClient.Activite;
-            this.lblCA.Text = unClient.CA.ToString();
             this.lblNature.Text = unClient.Nature;
             this.checkPrive.Checked = unClient.Prive;
+
+            if (unClient.Effectif != 0)
+                this.lblEffectif.Text = unClient.Effectif.ToString();
+            if (unClient.CA != 0 )
+                this.lblCA.Text = unClient.CA.ToString();
 
         }
 

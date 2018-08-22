@@ -98,9 +98,7 @@ namespace GestionCommercialeUIW
 
 
         private Boolean controle()
-        {
-            
-            
+        {           
             // contrôler la vraissemblance de tous les champs
             Boolean code = true; // le code de retour ; OK a priori
                                  // appel fonction générique de contrôle
@@ -122,17 +120,29 @@ namespace GestionCommercialeUIW
                 MessageBox.Show("Le numéro de téléphone saisi n'est pas un entier valide !", "Erreur !", MessageBoxButtons.OK);
             }
 
-            if (!(estEntier(this.txtBoxEffectif.Text)))
+            if (this.txtBoxEffectif.Text != "")
             {
-                // la chaîne reçue n'est pas convertible
-                code = false;
-                MessageBox.Show("L'effectif saisi n'est pas un entier valide !", "Erreur !", MessageBoxButtons.OK);
+                if (!(estEntier(this.txtBoxEffectif.Text)))
+                {
+                    // la chaîne reçue n'est pas convertible
+                    code = false;
+                    MessageBox.Show("L'effectif saisi n'est pas un entier valide !", "Erreur !", MessageBoxButtons.OK);
+                }
             }
-            if (!(estEntier(this.txtBoxCA.Text)))
+            else
+                txtBoxEffectif.Text = "0";
+            if(this.txtBoxCA.Text != "")
             {
-                code = false;
-                MessageBox.Show("Le chiffre d'affaire saisi n'est pas correct !","Erreur !", MessageBoxButtons.OK);
+                if (!(estEntier(this.txtBoxCA.Text)))
+                {
+                    code = false;
+                    MessageBox.Show("Le chiffre d'affaire saisi n'est pas correct !", "Erreur !", MessageBoxButtons.OK);
+                }
+
             }
+            else
+                txtBoxCA.Text = "0";
+
             return code;
         }
 
