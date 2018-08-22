@@ -38,7 +38,7 @@ namespace GestionCommercialeUIW
             if (this.controle())
             {
                 if (this.instancie())
-                {                                        
+                {
                     // son ajout à la collection est OK :
                     // - incrémentation compteurs de stagiaires
                     // - fermeture de la boite de dialogue par validation
@@ -135,10 +135,70 @@ namespace GestionCommercialeUIW
 
             }
 
+            if (!(NomEstEntre(this.txtBoxNomContact.Text)))
+            {
+                MessageBox.Show("Veuillez entrer un Nom", "ERREUR");
+                code = false;
+            }
+
+            if (!(PrenomEstEntre(this.txtBoxPrenomContact.Text)))
+            {
+                MessageBox.Show("Veuillez entrer un Prénom", "ERREUR");
+                code = false;
+            }
 
             return code;
         }
 
+        private Boolean NomEstEntre(string a)
+        {
+            int i;
+            Char c;
+            Boolean controle = true;
+            if (a.Length == 0)
+            {
+
+                controle = false;
+            }
+            else
+            {
+                for (i = 0; i < a.Length; i++)
+                {
+                    c = a[i]; // extrait le i° car
+                    if (!(Char.IsLetter(c))) // si ce n'est pas un chiffre
+                    {
+                        controle = false; // erreur détectée
+                    }
+
+                } // fin de boucle for
+
+            }
+            return controle;
+        }
+        private Boolean PrenomEstEntre(string a)
+        {
+            int i;
+            Char c;
+            Boolean controle = true;
+            if (a.Length == 0)
+            {
+                controle = false;
+            }
+            else
+            {
+                for (i = 0; i < a.Length; i++)
+                {
+                    c = a[i]; // extrait le i° car
+                    if (!(Char.IsLetter(c))) // si ce n'est pas un chiffre
+                    {
+                        controle = false; // erreur détectée
+                    }
+
+                } // fin de boucle for
+
+            }
+            return controle;
+        }
 
         private Boolean estEntierTelephone(String s)
         {
@@ -147,7 +207,7 @@ namespace GestionCommercialeUIW
             Char c; // caractère courant
             Boolean code = true; // code retour; OK a priori
                                  // test longueur chaîne reçue
-            if (s.Length == 10)
+            if (s.Length == 10 || s.Length == 0)
             {
                 // vérifier 1 à 1 que tous les caractères sont des chiffres
                 for (i = 0; i < s.Length; i++)
@@ -221,7 +281,7 @@ namespace GestionCommercialeUIW
                 picBoxPhotoContact.Image = Image.FromFile(ofd.FileName); // Code d'ouverture du fichier
             }
 
-            
+
         }
     }
 
