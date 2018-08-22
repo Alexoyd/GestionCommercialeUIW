@@ -39,8 +39,6 @@ namespace GestionCommercialeUIW
             {
                 if (this.instancie())
                 {
-                    // cas général :
-                    // si l'instanciation stagiaire et
                     // son ajout à la collection est OK :
                     // - incrémentation compteurs de stagiaires
                     // - fermeture de la boite de dialogue par validation
@@ -75,7 +73,7 @@ namespace GestionCommercialeUIW
             if (invalid)
                 return false;
 
-            // Return true if strIn is in valid email format.
+            // Renvoie true si strIn est dans un format de mail correct.
             try
             {
                 return Regex.IsMatch(strIn,
@@ -137,10 +135,70 @@ namespace GestionCommercialeUIW
 
             }
 
+            if (!(NomEstEntre(this.txtBoxNomContact.Text)))
+            {
+                MessageBox.Show("Veuillez entrer un Nom", "ERREUR");
+                code = false;
+            }
+
+            if (!(PrenomEstEntre(this.txtBoxPrenomContact.Text)))
+            {
+                MessageBox.Show("Veuillez entrer un Prénom", "ERREUR");
+                code = false;
+            }
 
             return code;
         }
 
+        private Boolean NomEstEntre(string a)
+        {
+            int i;
+            Char c;
+            Boolean controle = true;
+            if (a.Length == 0)
+            {
+
+                controle = false;
+            }
+            else
+            {
+                for (i = 0; i < a.Length; i++)
+                {
+                    c = a[i]; // extrait le i° car
+                    if (!(Char.IsLetter(c))) // si ce n'est pas un chiffre
+                    {
+                        controle = false; // erreur détectée
+                    }
+
+                } // fin de boucle for
+
+            }
+            return controle;
+        }
+        private Boolean PrenomEstEntre(string a)
+        {
+            int i;
+            Char c;
+            Boolean controle = true;
+            if (a.Length == 0)
+            {
+                controle = false;
+            }
+            else
+            {
+                for (i = 0; i < a.Length; i++)
+                {
+                    c = a[i]; // extrait le i° car
+                    if (!(Char.IsLetter(c))) // si ce n'est pas un chiffre
+                    {
+                        controle = false; // erreur détectée
+                    }
+
+                } // fin de boucle for
+
+            }
+            return controle;
+        }
 
         private Boolean estEntierTelephone(String s)
         {
@@ -149,7 +207,7 @@ namespace GestionCommercialeUIW
             Char c; // caractère courant
             Boolean code = true; // code retour; OK a priori
                                  // test longueur chaîne reçue
-            if (s.Length == 10)
+            if (s.Length == 10 || s.Length == 0)
             {
                 // vérifier 1 à 1 que tous les caractères sont des chiffres
                 for (i = 0; i < s.Length; i++)
@@ -171,7 +229,7 @@ namespace GestionCommercialeUIW
 
         private Boolean instancie()
         {
-            // créer une référence d'objet MStagiaire
+            // créer une référence d'objet GestionCommercialeDll
             GestionCommercialeDll.Contact nouveauContact = new GestionCommercialeDll.Contact();
             try
             {// déclenchement des méthodes get/set du Client.cs
@@ -217,13 +275,13 @@ namespace GestionCommercialeUIW
             ofd.Title = "Explorateur de fichiers";
             // Filter représente le type de fichier qu'il est possible d'ouvrir, ce qu'il y a en bas de la fenetre
             // Tu commence par le texte qui s'affiche, ensuite |, ensuite les extensions correspondante
-            ofd.Filter = "Images(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|Tous les fichiers (*.*)|*.* ";
+            ofd.Filter = "Images(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG|Tous les fichiers (*.*)|*.* ";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 picBoxPhotoContact.Image = Image.FromFile(ofd.FileName); // Code d'ouverture du fichier
             }
 
-            
+
         }
     }
 
