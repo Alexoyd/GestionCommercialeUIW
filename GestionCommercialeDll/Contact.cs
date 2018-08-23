@@ -9,6 +9,7 @@ namespace GestionCommercialeDll
     public class Contact
     {
         private int numContact;
+        private string raisonSocialeContact;
         private string nomContact;
         private string prenomContact;
         private string telContact;
@@ -18,6 +19,7 @@ namespace GestionCommercialeDll
         public static Int32 NContact;
 
         public int NumContact { get => numContact; set => numContact = value; }
+        public string RaisonSocialeContact { get => raisonSocialeContact; set => raisonSocialeContact = value; }
         public string NomContact { get => nomContact; set => nomContact = value; }
         public string PrenomContact { get => prenomContact; set => prenomContact = value; }
         public string TelContact { get => telContact; set => telContact = value; }

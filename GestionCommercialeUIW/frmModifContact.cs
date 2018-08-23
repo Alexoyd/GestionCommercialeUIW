@@ -10,27 +10,35 @@ using System.Windows.Forms;
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-
 namespace GestionCommercialeUIW
 {
-    public partial class frmNouveauContact : Form
+    public partial class frmModifContact : Form
     {
-        public frmNouveauContact(string unNumClient, string uneRaisonSociale)
+        private GestionCommercialeDll.Contact leContact;
+
+        public frmModifContact(GestionCommercialeDll.Contact unContact)
         {
+            this.leContact = unContact;
+
             InitializeComponent();
-            this.lblContactNumClient.Text = unNumClient;
-            this.lblNomClient.Text = uneRaisonSociale;
-            this.ComboBoxInitMetier();
+
+            ComboBoxInitMetier();
         }
 
-        private void btnAnnulerContact_Click(object sender, EventArgs e)
+        private void afficheContact(GestionCommercialeDll.Contact unContact)
         {
-            this.Close();
+            this.lblContactNumClient.Text = unContact.NumContact.ToString();
+            this.lblNomClient.Text = unContact.RaisonSocialeContact;
+            this.txtBoxNomContact.Text = unContact.NomContact;
+            this.txtBoxPrenomContact.Text = unContact.PrenomContact;
+            this.txtBoxTel.Text = unContact.TelContact;
+            this.txtBoxMail.Text = unContact.MailContact;
+
         }
 
-        private void txtBoxNomContact_TextChanged(object sender, EventArgs e)
+        private void frmModifContact_Load(object sender, EventArgs e)
         {
-
+            afficheContact(leContact);
         }
 
         private void btnOkContact_Click(object sender, EventArgs e)
@@ -39,16 +47,12 @@ namespace GestionCommercialeUIW
             {
                 if (this.instancie())
                 {
-                    // son ajout à la collection est OK :
-                    // - incrémentation compteurs de contacts
-                    // - fermeture de la boite de dialogue par validation
+
                     this.DialogResult = DialogResult.OK;
+                    this.Close();
+
                 }
-
-
             }
-
-
         }
 
         bool invalid = false;
@@ -229,27 +233,18 @@ namespace GestionCommercialeUIW
 
         private Boolean instancie()
         {
-            // créer une référence d'objet GestionCommercialeDll
-            GestionCommercialeDll.Contact nouveauContact = new GestionCommercialeDll.Contact();
-            try
-            {// déclenchement des méthodes get/set du Client.cs
-                nouveauContact.NumContact = Convert.ToInt32(lblContactNumClient.Text);
-                nouveauContact.RaisonSocialeContact = lblNomClient.Text;
-                nouveauContact.NomContact = txtBoxNomContact.Text;
-                nouveauContact.PrenomContact = txtBoxPrenomContact.Text;
-                nouveauContact.TelContact = txtBoxTel.Text;
-                nouveauContact.MailContact = txtBoxMail.Text;
-                nouveauContact.CmbBoxFonctionMetier = cmbBoxFonctionMetier.Text;
 
-                GestionCommercialeDll.Donnees.TabContacts.Add(nouveauContact);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                nouveauContact = null;
-                MessageBox.Show("Erreur : \n" + ex.Message, "Ajout de Contact");
-                return false;
-            }
+            // déclenchement des méthodes get/set du Client.cs
+            leContact.NumContact = Convert.ToInt32(lblContactNumClient.Text);
+            leContact.RaisonSocialeContact = lblNomClient.Text;
+            leContact.NomContact = txtBoxNomContact.Text;
+            leContact.PrenomContact = txtBoxPrenomContact.Text;
+            leContact.TelContact = txtBoxTel.Text;
+            leContact.MailContact = txtBoxMail.Text;
+            leContact.CmbBoxFonctionMetier = cmbBoxFonctionMetier.Text;
+
+            return true;
+
 
         }
 
@@ -284,9 +279,9 @@ namespace GestionCommercialeUIW
 
 
         }
+        private void btnAnnulerContact_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
-
 }
-
-
-

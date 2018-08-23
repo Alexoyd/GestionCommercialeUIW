@@ -191,11 +191,37 @@ namespace GestionCommercialeUIW
             }
         }
 
-        private void btnModifContact_Click(object sender, EventArgs e)
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
-            frmNouveauContact frmModContact = new frmNouveauContact(lblNumClient.Text.ToString(), lblRSociale.Text);
-            if (frmModContact.ShowDialog() == DialogResult.OK)
-                this.afficheContacts();
+            try
+            {
+                // ouvrir la feuille détail en y affichant
+                // le client correspondant à la ligne double-cliquée
+                Int32 iContact; // rang du client dans le tableau
+                               // récupérer indice du client cliqué en DataGridView
+
+                iContact = this.dataGridView1.CurrentRow.Index;
+
+                // instancier un objet client pointant vers
+                // le client d'origine dans la collection
+                GestionCommercialeDll.Contact leContact = GestionCommercialeDll.Donnees.TabContacts[iContact] as GestionCommercialeDll.Contact;
+
+                // instancier un form détail pour ce client
+                frmModifContact frmConsult = new frmModifContact(leContact);
+
+                // afficher le form détail en modal
+                frmConsult.ShowDialog();
+
+                if (frmConsult.DialogResult == DialogResult.OK)
+                {
+                    dt.Clear();
+                    afficheContacts();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Vous n'avez sélectionné aucun client");
+            }
         }
 
     }
