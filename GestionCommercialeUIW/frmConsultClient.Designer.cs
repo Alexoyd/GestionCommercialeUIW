@@ -57,6 +57,8 @@
             this.lblCA = new System.Windows.Forms.Label();
             this.lblEffectif = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.BtnSupContact = new System.Windows.Forms.Button();
+            this.btnModifContact = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -217,7 +219,7 @@
             // 
             // btnModifClient
             // 
-            this.btnModifClient.Location = new System.Drawing.Point(283, 561);
+            this.btnModifClient.Location = new System.Drawing.Point(389, 560);
             this.btnModifClient.Name = "btnModifClient";
             this.btnModifClient.Size = new System.Drawing.Size(96, 23);
             this.btnModifClient.TabIndex = 4;
@@ -227,7 +229,7 @@
             // 
             // btnNouveauContactModif
             // 
-            this.btnNouveauContactModif.Location = new System.Drawing.Point(385, 561);
+            this.btnNouveauContactModif.Location = new System.Drawing.Point(102, 561);
             this.btnNouveauContactModif.Name = "btnNouveauContactModif";
             this.btnNouveauContactModif.Size = new System.Drawing.Size(100, 23);
             this.btnNouveauContactModif.TabIndex = 5;
@@ -387,11 +389,33 @@
             this.dataGridView1.Size = new System.Drawing.Size(575, 109);
             this.dataGridView1.TabIndex = 7;
             // 
+            // BtnSupContact
+            // 
+            this.BtnSupContact.Location = new System.Drawing.Point(308, 560);
+            this.BtnSupContact.Name = "BtnSupContact";
+            this.BtnSupContact.Size = new System.Drawing.Size(75, 23);
+            this.BtnSupContact.TabIndex = 8;
+            this.BtnSupContact.Text = "Supprimer";
+            this.BtnSupContact.UseVisualStyleBackColor = true;
+            this.BtnSupContact.Click += new System.EventHandler(this.BtnSupContact_Click);
+            // 
+            // btnModifContact
+            // 
+            this.btnModifContact.Location = new System.Drawing.Point(208, 560);
+            this.btnModifContact.Name = "btnModifContact";
+            this.btnModifContact.Size = new System.Drawing.Size(94, 23);
+            this.btnModifContact.TabIndex = 9;
+            this.btnModifContact.Text = "Modifier contact";
+            this.btnModifContact.UseVisualStyleBackColor = true;
+            this.btnModifContact.Click += new System.EventHandler(this.btnModifContact_Click);
+            // 
             // frmConsultClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 612);
+            this.Controls.Add(this.btnModifContact);
+            this.Controls.Add(this.BtnSupContact);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnFermer);
@@ -443,5 +467,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         internal System.Windows.Forms.CheckBox checkPrive;
         internal System.Windows.Forms.Label lblVille;
+        private System.Windows.Forms.Button BtnSupContact;
+        private System.Windows.Forms.Button btnModifContact;
     }
 }

@@ -20,11 +20,11 @@ namespace GestionCommercialeUIW
         public frmConsultClient(GestionCommercialeDll.Client unClient)
         {
             this.leClient = unClient;
-
+            
             InitializeComponent();
         }
 
-        
+
 
         private void frmConsultClient_Load(object sender, EventArgs e)
         {
@@ -59,7 +59,7 @@ namespace GestionCommercialeUIW
 
             if (unClient.Effectif != 0)
                 this.lblEffectif.Text = unClient.Effectif.ToString();
-            if (unClient.CA != 0 )
+            if (unClient.CA != 0)
                 this.lblCA.Text = unClient.CA.ToString();
 
         }
@@ -87,7 +87,7 @@ namespace GestionCommercialeUIW
             frmNouveauContact frmNewContact = new frmNouveauContact(lblNumClient.Text.ToString(), lblRSociale.Text);
             frmNewContact.ShowDialog();
 
-            if(frmNewContact.DialogResult == DialogResult.OK)
+            if (frmNewContact.DialogResult == DialogResult.OK)
             {
                 dt.Clear();
                 afficheContacts();
@@ -166,12 +166,37 @@ namespace GestionCommercialeUIW
         {
 
         }
+
+        private void BtnSupContact_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Int32 iContact; // rang du contact dans le tableau
+                                // récupérer indice du contact cliqué en DataGridView
+
+                iContact = this.dataGridView1.CurrentRow.Index;
+
+                // instancier un objet contact pointant vers
+                // le contact d'origine dans la collection
+                GestionCommercialeDll.Contact leContact = GestionCommercialeDll.Donnees.TabContacts[iContact] as GestionCommercialeDll.Contact;
+
+                GestionCommercialeDll.Donnees.TabContacts.Remove(leContact);
+
+                dt.Clear();
+                afficheContacts();
+            }
+            catch
+            {
+                MessageBox.Show("Vous n'avez sélectionné aucun contact");
+            }
+        }
+
+        //private void btnModifContact_Click(object sender, EventArgs e)
+        //{
+        //    frmNouveauContact frmModContact = new frmNouveauContact(lblNumClient.Text.ToString(), lblRSociale.Text);
+        //    if (frmModContact.ShowDialog() == DialogResult.OK)
+        //        this.afficheContacts();
+        //}
+
     }
 }
-
-
-
-
-
-
-
