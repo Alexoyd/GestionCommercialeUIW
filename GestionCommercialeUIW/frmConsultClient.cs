@@ -191,12 +191,12 @@ namespace GestionCommercialeUIW
             }
         }
 
-        //private void btnModifContact_Click(object sender, EventArgs e)
-        //{
-        //    frmNouveauContact frmModContact = new frmNouveauContact(lblNumClient.Text.ToString(), lblRSociale.Text);
-        //    if (frmModContact.ShowDialog() == DialogResult.OK)
-        //        this.afficheContacts();
-        //}
+        private void btnModifContact_Click(object sender, EventArgs e)
+        {
+            frmNouveauContact frmModContact = new frmNouveauContact(lblNumClient.Text.ToString(), lblRSociale.Text);
+            if (frmModContact.ShowDialog() == DialogResult.OK)
+                this.afficheContacts();
+        }
 
     }
 }

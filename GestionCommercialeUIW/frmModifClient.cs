@@ -120,12 +120,32 @@ namespace GestionCommercialeUIW
                 code = false;
                 MessageBox.Show("l'effectif saisi n'est pas un entier valide", "ERREUR", MessageBoxButtons.OK);
             }
+
             if (!(estEntier(this.txtBoxCA.Text)))
             {
                 code = false;
                 MessageBox.Show("le chiffre d'affaire saisi n'est pas correct",
                "ERREUR", MessageBoxButtons.OK);
             }
+
+            if (this.txtBoxRaisonSocial.Text == "")
+            {
+                code = false;
+                MessageBox.Show("Le champs 'Raison Sociale' est vide !", "Erreur !", MessageBoxButtons.OK);
+            }
+
+            if (this.txtBoxAdresse.Text == "")
+            {
+                code = false;
+                MessageBox.Show("Le champs 'Adresse' est vide !", "Erreur !", MessageBoxButtons.OK);
+            }
+
+            if (this.txtBoxVille.Text == "")
+            {
+                code = false;
+                MessageBox.Show("Le champs 'Ville' est vide !", "Erreur !", MessageBoxButtons.OK);
+            }
+
             return code;
         }
 

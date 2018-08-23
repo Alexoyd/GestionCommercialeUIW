@@ -18,10 +18,7 @@ namespace GestionCommercialeUIW
             InitializeComponent();
             this.InitActivité();
             this.InitNature();
-
-
         }
-
 
         private void InitActivité()
         {
@@ -131,6 +128,7 @@ namespace GestionCommercialeUIW
             }
             else
                 txtBoxEffectif.Text = "0";
+
             if(this.txtBoxCA.Text != "")
             {
                 if (!(estEntier(this.txtBoxCA.Text)))
@@ -142,6 +140,24 @@ namespace GestionCommercialeUIW
             }
             else
                 txtBoxCA.Text = "0";
+
+            if (this.txtBoxRaisonSocial.Text == "")
+            {
+                code = false;
+                MessageBox.Show("Le champs 'Raison Sociale' est vide !", "Erreur !", MessageBoxButtons.OK);
+            }
+
+            if (this.txtBoxAdresse1.Text == "")
+            {
+                code = false;
+                MessageBox.Show("Le champs 'Adresse' est vide !", "Erreur !", MessageBoxButtons.OK);
+            }
+
+            if (this.txtBoxVille.Text == "")
+            {
+                code = false;
+                MessageBox.Show("Le champs 'Ville' est vide !", "Erreur !", MessageBoxButtons.OK);
+            }
 
             return code;
         }
